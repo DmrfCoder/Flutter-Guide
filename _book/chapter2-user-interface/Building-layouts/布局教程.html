@@ -1,0 +1,682 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>布局实例教程 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="处理盒约束.html" />
+    
+    
+    <link rel="prev" href="在Flutter中构建布局.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../chapter1-dart/ch1-readme.html">
+            
+                <a href="../../chapter1-dart/ch1-readme.html">
+            
+                    
+                    第一章：Dart入门学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../chapter1-dart/dart1.html">
+            
+                <a href="../../chapter1-dart/dart1.html">
+            
+                    
+                    Dart基础语法入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../chapter1-dart/dart2.html">
+            
+                <a href="../../chapter1-dart/dart2.html">
+            
+                    
+                    Dart高级特性学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ch2-readme.html">
+            
+                <a href="../ch2-readme.html">
+            
+                    
+                    第二章：Flutter UI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Widgets介绍.html">
+            
+                <a href="../Widgets介绍.html">
+            
+                    
+                    Widget介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    构建布局
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="在Flutter中构建布局.html">
+            
+                <a href="在Flutter中构建布局.html">
+            
+                    
+                    在Flutter中构建布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2.2" data-path="布局教程.html">
+            
+                <a href="布局教程.html">
+            
+                    
+                    布局实例教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="处理盒约束.html">
+            
+                <a href="处理盒约束.html">
+            
+                    
+                    Flutter中的盒约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../给你的App添加交互.html">
+            
+                <a href="../给你的App添加交互.html">
+            
+                    
+                    给你的App添加交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >布局实例教程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5E03;&#x5C40;&#x6559;&#x7A0B;">&#x5E03;&#x5C40;&#x6559;&#x7A0B;</h1>
+<h3 id="&#x6458;&#x8981;">&#x6458;&#x8981;</h3>
+<p>&#x672C;&#x6587;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#x6765;&#x9010;&#x6B65;&#x4E3A;&#x5927;&#x5BB6;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x5728;<code>Flutter</code>&#x4E2D;&#x6784;&#x5EFA;&#x6F02;&#x4EAE;&#x7684;&#x5E03;&#x5C40;&#xFF0C;&#x901A;&#x8FC7;&#x672C;&#x6587;&#x4F60;&#x5C06;&#x4F1A;&#x4E86;&#x89E3;&#x5230;&#x4EE5;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
+<ul>
+<li><code>Flutter</code>&#x7684;&#x5E03;&#x5C40;&#x673A;&#x5236;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;</li>
+<li>&#x5982;&#x4F55;&#x5728;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x548C;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x5E03;&#x5C40;<code>Widget</code></li>
+<li>&#x5982;&#x4F55;&#x5728;<code>Flutter</code>&#x4E2D;&#x8FDB;&#x884C;<code>Widget</code>&#x7684;&#x5E03;&#x5C40;</li>
+</ul>
+<p>&#x672C;&#x6587;&#x6863;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x5728;<code>Flutter</code>&#x4E2D;&#x8FDB;&#x884C;&#x5E03;&#x5C40;&#xFF0C;&#x4F60;&#x5C06;&#x6700;&#x7EC8;&#x4F1A;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x4E0B;&#x56FE;&#x8FD9;&#x6837;&#x7684;&#x9875;&#x9762;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-10-050013.jpg" alt="The finished app"></p>
+<p>&#x672C;&#x6587;&#x5C06;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x5E26;&#x4F60;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x50CF;&#x4E0A;&#x56FE;&#x90A3;&#x6837;&#x7684;&#x9875;&#x9762;&#x3002;</p>
+<h3 id="&#x7B2C;0&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;flutter&#x9879;&#x76EE;">&#x7B2C;0&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>Flutter</code>&#x9879;&#x76EE;</h3>
+<ol>
+<li><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>Flutter</code>&#x9879;&#x76EE;</p>
+</li>
+<li><p>&#x5C06;&#x8BE5;&#x9879;&#x76EE;&#x7684;app bar&#x7684;&#x6807;&#x9898;&#x548C;app&#x7684;&#x6807;&#x9898;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code class="lang-dart"> Widget build(BuildContext context) {            
+       <span class="hljs-keyword">return</span> MaterialApp(
+              title: <span class="hljs-string">&apos;Flutter layout demo&apos;</span>,
+              home: Scaffold(
+                appBar: AppBar(
+                  title: Text(<span class="hljs-string">&apos;Flutter layout demo&apos;</span>),
+                ),
+                body: Center(
+                  child: Text(<span class="hljs-string">&apos;Hello World&apos;</span>),
+                ),
+              ));
+ }
+</code></pre>
+</li>
+</ol>
+<p>&#x8BBE;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#x8FD0;&#x884C;&#x8D77;&#x6765;&#x6548;&#x679C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-10-050958.png" alt="image-20190610130957545"></p>
+<h3 id="&#x7B2C;1&#x6B65;&#xFF1A;&#x5206;&#x6790;&#x9875;&#x9762;&#x7684;&#x5E03;&#x5C40;&#x903B;&#x8F91;">&#x7B2C;1&#x6B65;&#xFF1A;&#x5206;&#x6790;&#x9875;&#x9762;&#x7684;&#x5E03;&#x5C40;&#x903B;&#x8F91;</h3>
+<p>&#x7B2C;&#x4E00;&#x6B65;&#x662F;&#x5C06;&#x6574;&#x4E2A;&#x9875;&#x9762;&#x5E03;&#x5C40;&#x5206;&#x89E3;&#x4E3A;&#x57FA;&#x672C;&#x5143;&#x7D20;&#xFF0C;&#x4E3B;&#x8981;&#x4ECE;&#x4EE5;&#x4E0B;&#x51E0;&#x70B9;&#x5165;&#x624B;</p>
+<ul>
+<li>&#x8FA8;&#x8BC6;&#x884C;&#xFF08;<code>Row</code>&#xFF09;&#x548C;&#x5217;&#xFF08;<code>Column</code>&#xFF09;</li>
+<li>&#x5E03;&#x5C40;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x7F51;&#x683C;(<code>grid</code>)&#xFF1F;</li>
+<li>&#x662F;&#x5426;&#x5B58;&#x5728;<code>Widget</code>&#x4E4B;&#x95F4;&#x7684;&#x8986;&#x76D6;&#xFF1F;</li>
+<li>&#x6574;&#x4E2A;UI&#x5E03;&#x5C40;&#x662F;&#x5426;&#x9700;&#x8981;<code>tab</code>&#x680F;&#xFF1F;</li>
+<li>&#x5173;&#x6CE8;&#x9700;&#x8981;&#x5BF9;&#x5176;&#xFF08;<code>alignment</code>&#xFF09;&#x3001;&#x586B;&#x5145;&#xFF08;<code>padding</code>&#xFF09;&#x3001;&#x8FB9;&#x6846;&#xFF08;<code>border</code>&#xFF09;&#x7684;&#x533A;&#x57DF;</li>
+</ul>
+<p>&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x6574;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x4E3B;&#x8981;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-10-051413.png" alt="Title section"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6574;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x4E3B;&#x8981;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#x5C31;&#x662F;&#x7531;&#x7EA2;&#x8272;&#x6846;&#x6807;&#x6CE8;&#x51FA;&#x6765;&#x7684;4&#x90E8;&#x5206;&#xFF0C;&#x8FD9;4&#x90E8;&#x5206;&#x4F4D;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x5217;(<code>Column</code>)&#xFF0C;&#x5206;&#x522B;&#x662F;&#xFF1A;1&#x4E2A;<code>Image</code>&#x3001;2&#x4E2A;<code>Row</code>&#x3001;1&#x4E2A;<code>Text</code>&#x3002;</p>
+<p>&#x518D;&#x6DF1;&#x5165;&#x5730;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x6BCF;&#x4E00;&#x4E2A;&#x884C;(<code>Row</code>)&#xFF1A;</p>
+<ul>
+<li><p>&#x7B2C;1&#x884C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6807;&#x9898;&#x680F;(Title section)&#xFF0C;&#x5B83;&#x6709;3&#x5217;&#xFF1A;1&#x4E2A;&#x7531;2&#x884C;text&#x7EC4;&#x6210;&#x7684;&#x5217;(Column)&#x3001;1&#x4E2A;&#x661F;&#x661F;&#x7684;Icon&#x3001;1&#x4E2A;&#x6570;&#x5B57;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-10-051913.png" alt="Title section"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x7531;&#x4E8E;&#x7B2C;1&#x4E2A;&#x5217;(<code>Column</code>)&#x5360;&#x636E;&#x4E86;&#x6574;&#x4E2A;&#x884C;&#x7684;&#x5927;&#x90E8;&#x5206;&#x7A7A;&#x95F4;&#xFF0C;&#x6240;&#x4EE5;&#x5176;&#x5E94;&#x8BE5;&#x88AB;<code>Expanded Widget</code>&#x5305;&#x88F9;&#x3002;</p>
+</li>
+<li><p>&#x7B2C;&#x4E8C;&#x884C;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x5C31;&#x662F;&#x6309;&#x94AE;&#x5217;(<code>button section</code>)&#xFF0C;&#x540C;&#x6837;&#x4E5F;&#x5305;&#x542B;&#x4E86;3&#x4E2A;&#x5B50;&#x5143;&#x7D20;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5B50;&#x5143;&#x7D20;&#x90FD;&#x662F;1&#x4E2A;&#x884C;&#xFF0C;&#x884C;&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x662F;1&#x4E2A;<code>icon</code>&#x548C;1&#x4E2A;<code>text</code>&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-10-052136.png" alt="Button section"></p>
+</li>
+<li><p>&#x7B2C;&#x4E09;&#x884C;&#xFF1A;&#x7B2C;&#x4E09;&#x884C;&#x6CA1;&#x6709;&#x5F88;&#x590D;&#x6742;&#x7684;&#x6784;&#x6210;&#xFF0C;&#x5C31;&#x662F;&#x5355;&#x7EAF;&#x7684;<code>text</code>&#x5757;&#x3002;</p>
+</li>
+</ul>
+<p>&#x7ECF;&#x8FC7;&#x4EE5;&#x4E0A;&#x7684;&#x5206;&#x6790;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7684;&#x9875;&#x9762;&#x5206;&#x89E3;&#x4E3A;&#x4E86;&#x591A;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x6574;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x5E03;&#x5C40;&#x4EE3;&#x7801;&#x7684;&#x6DF7;&#x4E71;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5229;&#x7528;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#x6765;&#x6784;&#x5EFA;&#x5E03;&#x5C40;&#x7684;&#x5B50;&#x90E8;&#x5206;&#xFF0C;&#x8FD9;&#x4E00;&#x70B9;&#x6211;&#x4F1A;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x8FDB;&#x884C;&#x6F14;&#x793A;&#x3002;</p>
+<h3 id="&#x7B2C;2&#x6B65;&#xFF1A;&#x5B9E;&#x73B0;&#x7B2C;&#x4E00;&#x884C;title-row">&#x7B2C;2&#x6B65;&#xFF1A;&#x5B9E;&#x73B0;&#x7B2C;&#x4E00;&#x884C;(<code>title Row</code>)</h3>
+<p>&#x76F4;&#x63A5;&#x7ED9;&#x51FA;&#x4EE3;&#x7801;&#xFF0C;&#x5177;&#x4F53;&#x7684;&#x89E3;&#x91CA;&#x5728;&#x4EE3;&#x7801;&#x7684;&#x6CE8;&#x91CA;&#x4E2D;&#xFF0C;&#x5927;&#x5BB6;&#x6CE8;&#x610F;&#x770B;&#x6CE8;&#x91CA;&#xFF1A;</p>
+<pre><code class="lang-dart">Widget titleSection = Container(
+  <span class="hljs-comment">//&#x4E3A;&#x6574;&#x4E2A;Widget&#xFF08;&#x5373;&#x8FD9;&#x4E00;&#x884C;&#xFF09;&#x7684;&#x6240;&#x6709;&#x6240;&#x6709;&#x65B9;&#x5411;&#x8BBE;&#x7F6E;32px&#x7684;&#x586B;&#x5145;</span>
+  padding: <span class="hljs-keyword">const</span> EdgeInsets.all(<span class="hljs-number">32</span>),
+  child: Row(
+    children: [
+      Expanded(
+        <span class="hljs-comment"><span class="markdown">/**
+<span class="hljs-code">        &#x5C06;Column&#x653E;&#x7F6E;&#x5728;Expanded&#x4E2D;&#xFF0C;&#x7531;&#x4E8E;Expanded&#x4F1A;&#x9ED8;&#x8BA4;&#x5360;&#x636E;&#x6240;&#x6709;&#x5F53;&#x524D;Row&#x7684;&#x7A7A;&#x95F2;&#x53EF;&#x7528;&#x7A7A;&#x95F4;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;Column&#x4E5F;&#x4F1A;&#x81EA;&#x7136;&#x88AB;&#x62C9;&#x4F38;&#x7684;&#x5360;&#x636E;&#x5B8C;&#x6240;&#x6709;&#x5F53;&#x524D;Row&#x53EF;&#x7528;&#x7684;&#x7A7A;&#x95F2;&#x7A7A;&#x95F4;&#x3002;</span>
+<span class="hljs-code">        */</span></span></span>
+        child: Column(
+          <span class="hljs-comment"><span class="markdown">/**&#x5C06;Column&#x7684;crossAxisAlignment&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x4E3A;CrossAxisAlignment.start&#x4EE5;&#x4FDD;&#x8BC1;&#x8FD9;&#x4E2A;&#x5217;&#x4E2D;&#x7684;&#x5143;&#x7D20;(&#x5373;children&#x5C5E;&#x6027;&#x4E2D;&#x7684;Widget)&#x5728;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x4E0A;&#x6392;&#x5217;&#x5728;&#x5F53;&#x524D;Column&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;
+<span class="hljs-code">          */</span></span></span>
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            <span class="hljs-comment"><span class="markdown">/**
+<span class="hljs-code">            &#x5C06;&#x8FD9;&#x4E2A;Text&#x653E;&#x5728;Container&#x4E2D;&#x7684;&#x76EE;&#x7684;&#x662F;&#x901A;&#x8FC7;Container&#x6765;&#x6DFB;&#x52A0;&#x586B;&#x5145;(padding)</span>
+<span class="hljs-code">                        */</span></span></span>
+            Container(
+              padding: <span class="hljs-keyword">const</span> EdgeInsets.only(bottom: <span class="hljs-number">8</span>),
+              child: Text(
+                <span class="hljs-string">&apos;Oeschinen Lake Campground&apos;</span>,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Text(
+              <span class="hljs-string">&apos;Kandersteg, Switzerland&apos;</span>,
+              style: TextStyle(
+                color: Colors.grey[<span class="hljs-number">500</span>],
+              ),
+            ),
+          ],
+        ),
+      ),
+      <span class="hljs-comment"><span class="markdown">/**
+<span class="hljs-code">      &#x6700;&#x540E;&#x7684;2&#x4E2A;&#x5143;&#x7D20;&#x5206;&#x522B;&#x662F;1&#x4E2A;Icon&#x548C;1&#x4E2A;Text,&#x5206;&#x522B;&#x7528;&#x6765;&#x663E;&#x793A;&#x661F;&#x661F;&#x548C;&#x6570;&#x5B57;</span>
+<span class="hljs-code">      */</span></span></span>
+      Icon(
+        Icons.star,
+        color: Colors.red[<span class="hljs-number">500</span>],
+      ),
+      Text(<span class="hljs-string">&apos;41&apos;</span>),
+    ],
+  ),
+);
+</code></pre>
+<p>&#x76F4;&#x63A5;&#x5C06;&#x4E0A;&#x9762;&#x7684;&#x53D8;&#x91CF;<code>titleSection</code>&#x653E;&#x5728;&#x5728;<code>app body</code>&#x4E2D;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-meta">@override</span>
+  Widget build(BuildContext context) {
+    <span class="hljs-keyword">return</span> MaterialApp(
+        title: <span class="hljs-string">&apos;Flutter layout demo&apos;</span>,
+        debugShowCheckedModeBanner: <span class="hljs-keyword">false</span>,
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text(<span class="hljs-string">&apos;Flutter layout demo&apos;</span>),
+            ),
+            body: Column(
+              children: &lt;Widget&gt;[titleSection],
+            )));
+  }
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x53D8;&#x91CF;titleSection&#x6765;&#x8FBE;&#x5230;&#x7B80;&#x5316;&#x5E03;&#x5C40;&#x4EE3;&#x7801;&#x7684;&#x76EE;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x4F1A;&#x5BFC;&#x81F4;<code>MaterialApp(..)</code>&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x592A;&#x957F;&#x3001;&#x592A;&#x6DF7;&#x4E71;&#x3002;</p>
+<p>&#x8FD0;&#x884C;&#x8D77;&#x6765;&#x7684;&#x6548;&#x679C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-10-053211.png" alt="image-20190610133211088"></p>
+<h3 id="&#x7B2C;3&#x6B65;&#xFF1A;&#x5B9E;&#x73B0;&#x6309;&#x94AE;&#x884C;button-row">&#x7B2C;3&#x6B65;&#xFF1A;&#x5B9E;&#x73B0;&#x6309;&#x94AE;&#x884C;(<code>button row</code>)</h3>
+<p>&#x6309;&#x94AE;&#x884C;(<code>button section</code>)&#x6709;3&#x4E2A;&#x5217;&#xFF0C;&#x6BCF;&#x4E2A;&#x5217;&#x90FD;&#x662F;&#x540C;&#x6837;&#x7684;&#x5E03;&#x5C40;&#x7EC4;&#x6210;&#xFF1A;1&#x4E2A;<code>Icon</code>&#x3001;1&#x4E2A;<code>Text</code>&#x3002;&#x8FD9;&#x4E00;&#x884C;&#x4E2D;&#x7684;&#x5217;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x8DDD;&#x90FD;&#x662F;&#x5747;&#x5300;&#x7684;&#xFF0C;&#x7531;&#x4E8E;&#x6784;&#x5EFA;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x4EE3;&#x7801;&#x51E0;&#x4E4E;&#x76F8;&#x540C;&#xFF0C;&#x56E0;&#x6B64;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>buildbuttoncolumn&#xFF08;&#xFF09;</code>&#x7684;&#x79C1;&#x6709;&#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x989C;&#x8272;&#xFF08;<code>Color</code>&#xFF09;&#x53C2;&#x6570;&#x3001;&#x4E00;&#x4E2A;&#x56FE;&#x6807;&#xFF08;<code>Icon</code>&#xFF09;&#x53C2;&#x6570;&#x548C;1&#x4E2A;&#x6587;&#x672C;&#xFF08;<code>Text</code>&#xFF09;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x4EE5;&#x7ED9;&#x5B9A;&#x989C;&#x8272;&#x7ED8;&#x5236;&#x7684;<code>Widget</code>&#x7684;&#x5217;&#xFF08;<code>Column</code>&#xFF09;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">StatelessWidget</span> </span>{
+  <span class="hljs-meta">@override</span>
+  Widget build(BuildContext context) {
+    <span class="hljs-comment">// &#xB7;&#xB7;&#xB7;</span>
+  }
+
+  Column _buildButtonColumn(Color color, IconData icon, <span class="hljs-built_in">String</span> label) {
+    <span class="hljs-keyword">return</span> Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(icon, color: color),
+        Container(
+          margin: <span class="hljs-keyword">const</span> EdgeInsets.only(top: <span class="hljs-number">8</span>),
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: <span class="hljs-number">12</span>,
+              fontWeight: FontWeight.w400,
+              color: color,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+</code></pre>
+<p><code>_buildButtonColumn()</code>&#x65B9;&#x6CD5;&#x5C06;<code>Icon</code>&#x76F4;&#x63A5;&#x6DFB;&#x52A0;&#x5230;<code>Column</code>&#x4E2D;&#xFF0C;&#x800C;<code>Text</code>&#x662F;&#x5148;&#x7528;<code>Container</code>&#x8FDB;&#x884C;&#x5305;&#x88F9;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5C06;<code>Container</code>&#x6DFB;&#x52A0;&#x5230;<code>Column</code>&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x76EE;&#x7684;&#x662F;&#x501F;&#x52A9;<code>Container</code>&#x4E3A;<code>Text</code>&#x8BBE;&#x7F6E;&#x9876;&#x90E8;&#x586B;&#x5145;(<code>padding</code>)&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x81F3;&#x4E8E;<code>Text</code>&#x548C;<code>Icon</code>&#x8DDD;&#x79BB;&#x8FC7;&#x8FD1;&#x3002;</p>
+<p>&#x5B8C;&#x6210;&#x4E86;<code>_buildButtonColumn()</code>&#x51FD;&#x6570;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5728;&#x9700;&#x8981;&#x6784;&#x5EFA;&#x5217;&#xFF08;<code>Column</code>&#xFF09;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x5E76;&#x4F20;&#x5165;&#x5BF9;&#x5E94;&#x7684;3&#x4E2A;&#x53C2;&#x6570;&#x5373;&#x53EF;&#x6784;&#x5EFA;&#x51FA;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x5217;&#xFF1A;</p>
+<pre><code class="lang-dart">Color color = Theme.of(context).primaryColor;
+
+Widget buttonSection = Container(
+  child: Row(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      _buildButtonColumn(color, Icons.call, <span class="hljs-string">&apos;CALL&apos;</span>),
+      _buildButtonColumn(color, Icons.near_me, <span class="hljs-string">&apos;ROUTE&apos;</span>),
+      _buildButtonColumn(color, Icons.share, <span class="hljs-string">&apos;SHARE&apos;</span>),
+    ],
+  ),
+);
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;<code>Row</code>&#x7684;<code>mainAxisAlignment</code>&#x5C5E;&#x6027;&#x503C;&#x4E3A;<code>MainAxisAlignment.spaceEvenly</code>&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x8BA9;<code>Row</code>&#x4E2D;&#x7684;&#x5217;&#x5747;&#x5300;&#x5730;&#x5360;&#x6EE1;&#x6574;&#x4E2A;&#x884C;&#x7684;&#x53EF;&#x7528;&#x7A7A;&#x95F4;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x5C06;&#x53D8;&#x91CF;<code>buttonSection</code>&#x653E;&#x5728;<code>app body</code>&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-dart"> <span class="hljs-keyword">return</span> MaterialApp(
+        title: <span class="hljs-string">&apos;Flutter layout demo&apos;</span>,
+        debugShowCheckedModeBanner: <span class="hljs-keyword">false</span>,
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text(<span class="hljs-string">&apos;Flutter layout demo&apos;</span>),
+            ),
+            body: Column(
+              children: &lt;Widget&gt;[titleSection, buttonSection],
+            )));
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x6548;&#x679C;&#x56FE;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-10-060530.png" alt="image-20190610140530038"></p>
+<h3 id="&#x7B2C;4&#x6B65;&#xFF1A;&#x5B9E;&#x73B0;text-&#x90E8;&#x5206;">&#x7B2C;4&#x6B65;&#xFF1A;&#x5B9E;&#x73B0;<code>Text</code> &#x90E8;&#x5206;</h3>
+<p>&#x5C06;<code>Text</code>&#x90E8;&#x5206;&#x5B9A;&#x4E49;&#x4E3A;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x5C06;<code>Text</code>&#x653E;&#x7F6E;&#x5728;&#x4E00;&#x4E2A;<code>Container</code>&#x4E2D;&#xFF0C;&#x5E76;&#x4E3A;<code>Container</code>&#x8BBE;&#x7F6E;<code>padding</code>&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-dart">Widget textSection = Container(
+  padding: <span class="hljs-keyword">const</span> EdgeInsets.all(<span class="hljs-number">32</span>),
+  child: Text(
+    <span class="hljs-string">&apos;Lake Oeschinen lies at the foot of the Bl&#xFC;emlisalp in the Bernese &apos;</span>
+        <span class="hljs-string">&apos;Alps. Situated 1,578 meters above sea level, it is one of the &apos;</span>
+        <span class="hljs-string">&apos;larger Alpine Lakes. A gondola ride from Kandersteg, followed by a &apos;</span>
+        <span class="hljs-string">&apos;half-hour walk through pastures and pine forest, leads you to the &apos;</span>
+        <span class="hljs-string">&apos;lake, which warms to 20 degrees Celsius in the summer. Activities &apos;</span>
+        <span class="hljs-string">&apos;enjoyed here include rowing, and riding the summer toboggan run.&apos;</span>,
+    softWrap: <span class="hljs-keyword">true</span>,
+  ),
+);
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;<code>softwrap</code>&#x5C5E;&#x6027;&#x503C;&#x4E3A;<code>true</code>&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x6587;&#x5B57;&#x53EF;&#x4EE5;&#x5728;&#x5355;&#x8BCD;&#x5206;&#x754C;&#x7684;&#x5730;&#x65B9;&#x6362;&#x884C;&#x800C;&#x4E0D;&#x662F;&#x5728;&#x5355;&#x8BCD;&#x4E2D;&#x95F4;&#x6362;&#x884C;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x5C06;&#x4E0A;&#x9762;&#x7684;<code>textSection</code>&#x53D8;&#x91CF;&#x653E;&#x5728;<code>app body</code>&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-dart"> <span class="hljs-keyword">return</span> MaterialApp(
+        title: <span class="hljs-string">&apos;Flutter layout demo&apos;</span>,
+        debugShowCheckedModeBanner: <span class="hljs-keyword">false</span>,
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text(<span class="hljs-string">&apos;Flutter layout demo&apos;</span>),
+            ),
+            body: Column(
+              children: &lt;Widget&gt;[titleSection, buttonSection, textSection],
+            )));
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x6548;&#x679C;&#x56FE;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-10-061009.png" alt="image-20190610141009130"></p>
+<h3 id="&#x7B2C;5&#x6B65;&#xFF1A;&#x5B9E;&#x73B0;image&#x90E8;&#x5206;">&#x7B2C;5&#x6B65;&#xFF1A;&#x5B9E;&#x73B0;<code>Image</code>&#x90E8;&#x5206;</h3>
+<p>&#x5230;&#x73B0;&#x5728;&#x4E3A;&#x6B62;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x4E86;4&#x884C;&#x4E2D;&#x7684;3&#x884C;&#xFF0C;&#x53EA;&#x5269;&#x4E0B;&#x56FE;&#x50CF;&#x90A3;&#x884C;&#x8FD8;&#x6CA1;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x4E00;&#x6B65;&#x6211;&#x4EEC;&#x6765;&#x5B9E;&#x73B0;&#x56FE;&#x50CF;&#x7684;&#x663E;&#x793A;&#xFF1A;</p>
+<ul>
+<li><p>&#x5728;&#x9879;&#x76EE;&#x7684;&#x9876;&#x7EA7;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>images</code>&#x6587;&#x4EF6;&#x5939;</p>
+</li>
+<li><p>&#x5C06;&#x4E0B;&#x56FE;&#x653E;&#x5728;&#x521A;&#x624D;&#x521B;&#x5EFA;&#x7684;<code>images</code>&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x547D;&#x540D;&#x4E3A;<code>lake.jpg</code></p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-10-061805.jpg" alt="img"></p>
+</li>
+<li><p>&#x66F4;&#x65B0;<code>pubspec.yaml</code>&#x6587;&#x4EF6;&#xFF0C;&#x6DFB;&#x52A0;<code>assets</code>&#x6807;&#x7B7E;&#xFF0C;&#x914D;&#x7F6E;&#x56FE;&#x7247;&#x8DEF;&#x5F84;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x8BBF;&#x95EE;&#x5230;&#x4F60;&#x5B58;&#x653E;&#x7684;&#x56FE;&#x7247;&#xFF1A;</p>
+<pre><code class="lang-dart">flutter:            
+                uses-material-design: <span class="hljs-keyword">true</span>            
+              assets:            
+                - images/lake.jpg
+</code></pre>
+</li>
+</ul>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x5F15;&#x7528;&#x8BE5;&#x56FE;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">return</span> MaterialApp(
+        title: <span class="hljs-string">&apos;Flutter layout demo&apos;</span>,
+        debugShowCheckedModeBanner: <span class="hljs-keyword">false</span>,
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text(<span class="hljs-string">&apos;Flutter layout demo&apos;</span>),
+            ),
+            body: Column(
+              children: &lt;Widget&gt;[
+                Image.asset(
+                  <span class="hljs-string">&apos;images/lake.jpg&apos;</span>,
+                  width: <span class="hljs-number">600</span>,
+                  height: <span class="hljs-number">240</span>,
+                  fit: BoxFit.cover,
+                ),
+                titleSection,
+                buttonSection,
+                textSection
+              ],
+            )));
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x8D77;&#x6765;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-10-064829.png" alt="image-20190610144829576"></p>
+<h3 id="&#x7B2C;6&#x6B65;&#xFF1A;&#x53E6;&#x4E00;&#x79CD;&#x5C1D;&#x8BD5;">&#x7B2C;6&#x6B65;&#xFF1A;&#x53E6;&#x4E00;&#x79CD;&#x5C1D;&#x8BD5;</h3>
+<p>&#x6211;&#x4EEC;&#x6765;&#x770B;&#x524D;&#x51E0;&#x6B65;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x7684;&#x6700;&#x7EC8;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">return</span> MaterialApp(
+        title: <span class="hljs-string">&apos;Flutter layout demo&apos;</span>,
+        debugShowCheckedModeBanner: <span class="hljs-keyword">false</span>,
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text(<span class="hljs-string">&apos;Flutter layout demo&apos;</span>),
+            ),
+            body: Column(
+              children: &lt;Widget&gt;[
+                Image.asset(
+                  <span class="hljs-string">&apos;images/lake.jpg&apos;</span>,
+                  width: <span class="hljs-number">600</span>,
+                  height: <span class="hljs-number">240</span>,
+                  fit: BoxFit.cover,
+                ),
+                titleSection,
+                buttonSection,
+                textSection
+              ],
+            )));
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;<code>body</code>&#x7684;&#x5C5E;&#x6027;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E86;<code>Column</code>&#xFF0C;&#x7136;&#x540E;&#x5728;<code>Column</code>&#x4E2D;&#x653E;&#x7F6E;&#x4E86;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;&#x7684;&#x51E0;&#x4E2A;&#x5B50;<code>Widget</code>&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6362;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528;<code>ListView</code>&#x6765;&#x53D6;&#x4EE3;&#x8FD9;&#x4E2A;<code>Column</code>&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">return</span> MaterialApp(
+        title: <span class="hljs-string">&apos;Flutter layout demo&apos;</span>,
+        debugShowCheckedModeBanner: <span class="hljs-keyword">false</span>,
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text(<span class="hljs-string">&apos;Flutter layout demo&apos;</span>),
+            ),
+            body: ListView(
+              children: [
+                Image.asset(
+                  <span class="hljs-string">&apos;images/lake.jpg&apos;</span>,
+                  width: <span class="hljs-number">600</span>,
+                  height: <span class="hljs-number">240</span>,
+                  fit: BoxFit.cover,
+                ),
+                titleSection,
+                buttonSection,
+                textSection
+              ],
+            )));
+</code></pre>
+<p>&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-10-065152.png" alt="image-20190610145151596"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x4F7F;&#x7528;<code>Column</code>&#x548C;&#x4F7F;&#x7528;<code>ListView</code>&#x7684;&#x9759;&#x6001;&#x89C6;&#x89C9;&#x6548;&#x679C;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x5230;&#x5E95;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;<code>Column</code>&#x8FD8;&#x662F;<code>ListView</code>&#x5462;&#xFF1F;&#x4E8C;&#x8005;&#x7684;&#x533A;&#x522B;&#x5728;&#x54EA;&#x91CC;&#x5462;&#xFF1F;&#x7B54;&#x6848;&#x5C31;&#x5728;&quot;&#x52A8;&#x6001;&quot;&#xFF0C;&#x4E8C;&#x8005;&#x5728;&#x52A8;&#x6001;&#x4E0B;&#x7684;&#x6548;&#x679C;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x518D;&#x5177;&#x4F53;&#x70B9;&#xFF0C;&#x4F7F;&#x7528;<code>Column</code>&#x6784;&#x5EFA;&#x7684;<code>Widget</code>&#x662F;&#x4E0D;&#x652F;&#x6301;&#x6EDA;&#x52A8;&#x7684;&#xFF0C;&#x5373;&#x4E0D;&#x652F;&#x6301;&#x8FDB;&#x884C;&#x4E0A;&#x4E0B;&#x6216;&#x8005;&#x5DE6;&#x53F3;&#x7684;&#x6EDA;&#x52A8;&#x4E8B;&#x4EF6;&#xFF0C;&#x800C;&#x4F7F;&#x7528;<code>ListView</code>&#x4F1A;&#x652F;&#x6301;&#x6EDA;&#x52A8;&#x4E8B;&#x4EF6;&#xFF0C;&#x5C31;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-10-065838.gif" alt="&#x5C4F;&#x5E55;&#x5F55;&#x5236; 2019-06-10 14.55.48"></p>
+<p>&#x4EE5;&#x4E0A;&#x5C31;&#x662F;&#x672C;&#x6587;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#xFF0C;&#x5E0C;&#x671B;&#x5927;&#x5BB6;&#x901A;&#x8FC7;&#x672C;&#x6587;&#x53EF;&#x4EE5;&#x5BF9;<code>Flutter</code>&#x7684;&#x5E03;&#x5C40;&#x6709;&#x66F4;&#x6DF1;&#x5165;&#x7684;&#x4E86;&#x89E3;&#x548C;&#x8BA4;&#x77E5;&#xFF0C;&#x6211;&#x4EEC;&#x4E0B;&#x7BC7;&#x6587;&#x7AE0;&#x518D;&#x89C1;~</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="在Flutter中构建布局.html" class="navigation navigation-prev " aria-label="Previous page: 在Flutter中构建布局">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="处理盒约束.html" class="navigation navigation-next " aria-label="Next page: Flutter中的盒约束">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"布局实例教程","level":"1.3.2.2","depth":3,"next":{"title":"Flutter中的盒约束","level":"1.3.2.3","depth":3,"path":"chapter2-user-interface/Building-layouts/处理盒约束.md","ref":"chapter2-user-interface/Building-layouts/处理盒约束.md","articles":[]},"previous":{"title":"在Flutter中构建布局","level":"1.3.2.1","depth":3,"path":"chapter2-user-interface/Building-layouts/在Flutter中构建布局.md","ref":"chapter2-user-interface/Building-layouts/在Flutter中构建布局.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2-user-interface/Building-layouts/布局教程.md","mtime":"2019-06-10T08:02:55.452Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-10T14:21:30.740Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

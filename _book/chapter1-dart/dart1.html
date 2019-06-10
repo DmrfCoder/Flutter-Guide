@@ -1,0 +1,1570 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Dart基础语法入门 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dart2.html" />
+    
+    
+    <link rel="prev" href="ch1-readme.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch1-readme.html">
+            
+                <a href="ch1-readme.html">
+            
+                    
+                    第一章：Dart入门学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="dart1.html">
+            
+                <a href="dart1.html">
+            
+                    
+                    Dart基础语法入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="dart2.html">
+            
+                <a href="dart2.html">
+            
+                    
+                    Dart高级特性学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2-user-interface/ch2-readme.html">
+            
+                <a href="../chapter2-user-interface/ch2-readme.html">
+            
+                    
+                    第二章：Flutter UI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2-user-interface/Widgets介绍.html">
+            
+                <a href="../chapter2-user-interface/Widgets介绍.html">
+            
+                    
+                    Widget介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    构建布局
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../chapter2-user-interface/Building-layouts/在Flutter中构建布局.html">
+            
+                <a href="../chapter2-user-interface/Building-layouts/在Flutter中构建布局.html">
+            
+                    
+                    在Flutter中构建布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../chapter2-user-interface/Building-layouts/布局教程.html">
+            
+                <a href="../chapter2-user-interface/Building-layouts/布局教程.html">
+            
+                    
+                    布局实例教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../chapter2-user-interface/Building-layouts/处理盒约束.html">
+            
+                <a href="../chapter2-user-interface/Building-layouts/处理盒约束.html">
+            
+                    
+                    Flutter中的盒约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2-user-interface/给你的App添加交互.html">
+            
+                <a href="../chapter2-user-interface/给你的App添加交互.html">
+            
+                    
+                    给你的App添加交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Dart基础语法入门</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>@[toc]</p>
+<h3 id="&#x53D8;&#x91CF;">&#x53D8;&#x91CF;</h3>
+<p>&#x4E0B;&#x9762;&#x662F;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x5E76;&#x8D4B;&#x503C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> name = <span class="hljs-string">&apos;Bob&apos;</span>;
+</code></pre>
+<p>&#x53D8;&#x91CF;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#xFF0C;&#x4E0A;&#x9762;&#x540D;&#x5B57;&#x4E3A; <code>name</code> &#x7684;&#x53D8;&#x91CF;&#x5F15;&#x7528;&#x4E86; &#x4E00;&#x4E2A;&#x5185;&#x5BB9;&#x4E3A; <code>&#x201C;Bob&#x201D;</code> &#x7684; <code>String</code> &#x5BF9;&#x8C61;&#x3002;</p>
+<h4 id="&#x9ED8;&#x8BA4;&#x503C;">&#x9ED8;&#x8BA4;&#x503C;</h4>
+<p>&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;&#x7684;&#x53D8;&#x91CF;&#x4F1A;&#x81EA;&#x52A8;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x503C; <code>null</code>&#x3002;&#x7C7B;&#x578B;&#x4E3A;&#x6570;&#x5B57;&#x7684;&#x53D8;&#x91CF;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;&#x5176;&#x503C;&#x4E5F;&#x662F; <code>null</code>&#xFF0C;&#x56E0;&#x4E3A;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x4E5F;&#x662F;&#x5BF9;&#x8C61;&#x3002;</p>
+<pre><code class="lang-dart"><span class="hljs-built_in">int</span> lineCount;
+<span class="hljs-keyword">assert</span>(lineCount == <span class="hljs-keyword">null</span>);
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> <code>assert()</code>&#x8D77;&#x5230;&#x65AD;&#x8A00;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5F53;<code>assert()</code>&#x4E2D;&#x7684;&#x6761;&#x4EF6;&#x4E3A;<code>true</code>&#x65F6;&#x8BED;&#x53E5;&#x4F1A;&#x6B63;&#x5E38;&#x6267;&#x884C;&#xFF0C;&#x5982;&#x679C;&#x6761;&#x4EF6;&#x4E3A;<code>false</code> &#x5219;&#x4F1A;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x3002;</p>
+<h4 id="&#x53EF;&#x9009;&#x7684;&#x7C7B;&#x578B;">&#x53EF;&#x9009;&#x7684;&#x7C7B;&#x578B;</h4>
+<p>&#x5728;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x6027;&#x5730;&#x52A0;&#x4E0A;&#x5177;&#x4F53;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-built_in">String</span> name = <span class="hljs-string">&apos;Bob&apos;</span>;
+</code></pre>
+<p>&#x6DFB;&#x52A0;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x66F4;&#x52A0;&#x6E05;&#x6670;&#x7684;&#x8868;&#x8FBE;&#x4F60;&#x7684;&#x610F;&#x56FE;&#x3002; <code>IDE</code> &#x7F16;&#x8BD1;&#x5668;&#x7B49;&#x5DE5;&#x5177;&#x6709;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F60;&#x58F0;&#x660E;&#x7684;&#x7C7B;&#x578B;&#x4E3A;&#x4F60;&#x63D0;&#x4F9B;&#x4EE3;&#x7801;&#x8865;&#x5168;&#x3001;&#x63D0;&#x524D;&#x53D1;&#x73B0; <code>bug</code> &#x7B49;&#x529F;&#x80FD;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong>&#x6839;&#x636E; <strong>&#x4EE3;&#x7801;&#x98CE;&#x683C;&#x63A8;&#x8350;</strong> &#x90E8;&#x5206;&#x7684;&#x5EFA;&#x8BAE;&#xFF0C;&#x5BF9;&#x4E8E;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x4F7F;&#x7528; <code>var</code> &#x800C;&#x4E0D;&#x662F;&#x5177;&#x4F53;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+<h4 id="final&#x4EE5;&#x53CA;const">final&#x4EE5;&#x53CA;const</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x4E4B;&#x540E;&#x4E0D;&#x6253;&#x7B97;&#x4FEE;&#x6539;&#x67D0;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x5219;&#x5E94;&#x8BE5;&#x4F7F;&#x7528; <code>final</code> &#x6216;&#x8005; <code>const</code>&#x4FEE;&#x9970;&#x8BE5;&#x53D8;&#x91CF;&#x3002; &#x4E00;&#x4E2A; <code>final</code> &#x53D8;&#x91CF;&#x53EA;&#x80FD;&#x8D4B;&#x503C;&#x4E00;&#x6B21;&#xFF0C;&#x4E00;&#x4E2A; <code>const</code> &#x53D8;&#x91CF;&#x662F;&#x7F16;&#x8BD1;&#x65F6;&#x5E38;&#x91CF;&#xFF08;<code>const</code> &#x53D8;&#x91CF;&#x662F;&#x7279;&#x6B8A;&#x7684; <code>final</code> &#x53D8;&#x91CF;&#xFF09;&#xFF0C; &#x9876;&#x7EA7;&#x7684; final &#x53D8;&#x91CF;&#x6216;&#x8005;&#x7C7B;&#x4E2D;&#x7684; final &#x53D8;&#x91CF;&#x5728; &#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x53EF;&#x80FD;&#x6709;&#x8BFB;&#x8005;&#x4F1A;&#x6709;&#x7591;&#x60D1;&#xFF0C;&#x4EC0;&#x4E48;&#x662F;&#x7F16;&#x8BD1;&#x65F6;&#x5E38;&#x91CF;&#xFF1F;&#x6211;&#x4EEC;&#x7528;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x6765;&#x8BF4;&#x660E;final&#x548C;const&#x7684;&#x771F;&#x6B63;&#x533A;&#x522B;&#xFF1A;</p>
+<pre><code class="lang-dart">buildName() {
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;running name&apos;</span>;
+}
+
+finalAndConstDemo() {
+  <span class="hljs-keyword">final</span> finalName = buildName();
+  <span class="hljs-keyword">const</span> constName = <span class="hljs-string">&apos;Joey&apos;</span>;
+}
+</code></pre>
+<p>&#x5982;&#x4E0A;&#x4EE3;&#x7801;&#xFF0C;<code>buildName()</code>&#x662F;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x4F5C;&#x7528;&#x662F;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6CE8;&#x610F;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x7A0B;&#x5E8F;&#x771F;&#x6B63;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x624D;&#x4F1A;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;<code>buildName()</code>&#x65B9;&#x6CD5;&#x5230;&#x5E95;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x5373;&#x8FD9;&#x4E2A;<code>buildName()</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x4E0D;&#x662F;&quot;&#x7F16;&#x8BD1;&#x65F6;&#x5E38;&#x91CF;&quot;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x5176;&#x5BF9;<code>const</code>&#x4FEE;&#x9970;&#x7684;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;<code>final</code>&#x7684;&#x8981;&#x6C42;&#x6BD4;<code>const</code>&#x4F4E;&#x4E00;&#x70B9;&#xFF0C;&#x5B83;&#x53EA;&#x8981;&#x6C42;&#x53EA;&#x80FD;&#x5BF9;&#x5176;&#x4FEE;&#x9970;&#x7684;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#x4E00;&#x6B21;&#xFF0C;&#x81F3;&#x4E8E;&#x662F;&#x7F16;&#x8BD1;&#x65F6;&#x8D4B;&#x503C;&#x8FD8;&#x662F;&#x8FD0;&#x884C;&#x65F6;&#x8D4B;&#x503C;&#x662F;&#x4E0D;&#x8981;&#x6C42;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x4F1A;&#x901A;&#x8FC7;&#x7F16;&#x8F91;&#x5E76;&#x6B63;&#x786E;&#x6267;&#x884C;&#xFF0C;&#x5018;&#x82E5;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">const</span> constName=buildName()
+</code></pre>
+<p>&#x5219;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x6BEB;&#x4E0D;&#x7559;&#x60C5;&#x5730;&#x62A5;&#x9519;&#xFF0C;&#x56E0;&#x4E3A;<code>buildName()</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4E0D;&#x80FD;&#x518D;&#x7F16;&#x8BD1;&#x65F6;&#x88AB;&#x786E;&#x5B9A;&#x3002;</p>
+<p>&#x5982;&#x679C; <code>const</code> &#x53D8;&#x91CF;&#x5728;&#x7C7B;&#x4E2D;&#xFF0C;&#x5219;&#x5E94;&#x8BE5;&#x5B9A;&#x4E49;&#x4E3A; <code>static const</code>&#x3002; &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5B9A;&#x4E49; <code>const</code> &#x548C;&#x5176;&#x503C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x4ED6; <code>const</code> &#x53D8;&#x91CF;&#x7684;&#x503C;&#x6765;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A; <code>const</code> &#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">const</span> bar = <span class="hljs-number">1000000</span>;       
+<span class="hljs-keyword">const</span> atm = <span class="hljs-number">1.01325</span> * bar;
+</code></pre>
+<p><code>const</code> &#x5173;&#x952E;&#x5B57;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x4FEE;&#x9970;&#x5E38;&#x91CF;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x4FEE;&#x9970;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> foo = <span class="hljs-keyword">const</span> [];   
+<span class="hljs-keyword">final</span> bar = <span class="hljs-keyword">const</span> []; 
+<span class="hljs-keyword">const</span> baz = <span class="hljs-keyword">const</span> [];
+</code></pre>
+<p><code>[]</code> &#x7684;&#x4F5C;&#x7528;&#x662F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;<code>list</code>&#xFF0C;<code>const []</code> &#x7684;&#x4F5C;&#x7528;&#x662F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x3001;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x7684;<code>list</code>&#xFF08;<code>empty, immutable list (EIA)</code>&#xFF09;&#xFF0C;&#x5BF9;&#x4E0A;&#x9762;&#x7684;&#x4E09;&#x884C;&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x7B2C;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x6BD4;&#x8868;&#x793A;<code>foo</code>&#x5F53;&#x524D;&#x5F15;&#x7528;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x3001;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x7684;<code>list</code>&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x4E4B;&#x540E;&#x8BA9;<code>foo</code>&#x5F15;&#x7528;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#xFF0C;&#x6BD4;&#x5982;<code>foo=name</code>&#xFF0C;&#x8FD9;&#x662F;&#x5408;&#x6CD5;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x6B64;&#x4E4B;&#x524D;&#x4E0D;&#x80FD;&#x8FDB;&#x884C;&#x50CF;<code>foo.add(&quot;name&quot;)</code>&#x8FD9;&#x6837;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x56E0;&#x4E3A;&#x6B64;&#x65F6;foo&#x6307;&#x5411;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x7684;<code>list</code>&#x3002;</li>
+<li>&#x7B2C;&#x4E8C;&#x884C;&#x4EE3;&#x7801;&#x8868;&#x793A;<code>bar</code>&#x5C06;&#x4F1A;&#x4E00;&#x76F4;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x3001;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x7684;<code>list</code>&#xFF0C;&#x5728;&#x4E4B;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x4E0D;&#x80FD;&#x5BF9;<code>bar</code>&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;<code>bar.add(&quot;name&quot;)</code>&#x5C06;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;</li>
+<li>&#x7B2C;&#x4E09;&#x884C;&#x4EE3;&#x7801;&#x8868;&#x793A;<code>baz</code>&#x5C06;&#x4F1A;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x3001;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x7684;<code>list</code>&#xFF0C;&#x5728;&#x4E4B;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x4E0D;&#x80FD;&#x5BF9;<code>baz</code>&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;<code>baz.add(&quot;name&quot;)</code>&#x5C06;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;</li>
+</ol>
+<h4 id="&#x5185;&#x7F6E;&#x7684;&#x7C7B;&#x578B;">&#x5185;&#x7F6E;&#x7684;&#x7C7B;&#x578B;</h4>
+<p>Dart &#x5185;&#x7F6E;&#x652F;&#x6301;&#x4E0B;&#x9762;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ul>
+<li>numbers</li>
+<li>strings</li>
+<li>booleans</li>
+<li>lists (&#x4E5F;&#x88AB;&#x79F0;&#x4E4B;&#x4E3A; arrays)</li>
+<li>maps</li>
+<li>runes (&#x7528;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x8868;&#x793A; Unicode &#x5B57;&#x7B26;)</li>
+<li>symbols</li>
+</ul>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5B57;&#x9762;&#x91CF;&#x6765;&#x521D;&#x59CB;&#x5316;&#x4E0A;&#x9762;&#x7684;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x3002; &#x4F8B;&#x5982; <code>&apos;this is a string&apos;</code> &#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5B57;&#x9762;&#x91CF;&#xFF0C; <code>true</code> &#x662F;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x5B57;&#x9762;&#x91CF;&#x3002;</p>
+<p>&#x7531;&#x4E8E; Dart &#x4E2D;&#x6BCF;&#x4E2A;&#x53D8;&#x91CF;&#x5F15;&#x7528;&#x7684;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61; &#xFF08;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF09;&#xFF0C; &#x6240;&#x4EE5;&#x4F60;&#x901A;&#x5E38;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6765;&#x521D;&#x59CB;&#x5316;&#x53D8;&#x91CF;&#x3002; &#x4E00;&#x4E9B;&#x5185;&#x7F6E;&#x7684;&#x7C7B;&#x578B;&#x5177;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF0C; &#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>Map()</code>&#x6784;&#x9020;&#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; map&#xFF0C; &#x6BD4;&#x5982;&#xFF1A; <code>new Map()</code>&#x3002;</p>
+<h5 id="numbers&#xFF08;&#x6570;&#x503C;&#xFF09;">Numbers&#xFF08;&#x6570;&#x503C;&#xFF09;</h5>
+<p>Dart &#x652F;&#x6301;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x5B57;&#xFF1A;</p>
+<ul>
+<li><p><code>int</code></p>
+<p>&#x6574;&#x6570;&#x503C;&#xFF0C;&#x5176;&#x53D6;&#x503C;&#x901A;&#x5E38;&#x4F4D;&#x4E8E; <code>-253</code> &#x548C; <code>253</code> &#x4E4B;&#x95F4;&#x3002;</p>
+</li>
+<li><p><code>double</code></p>
+<p><code>64-bit</code> (&#x53CC;&#x7CBE;&#x5EA6;) &#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x7B26;&#x5408; <code>IEEE 754</code> &#x6807;&#x51C6;&#x3002;</p>
+</li>
+</ul>
+<p><code>int</code> &#x548C; <code>double</code> &#x90FD;&#x662F; <code>num</code>&#x7684;&#x5B50;&#x7C7B;&#x3002; <code>num</code> &#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x4E86;&#x57FA;&#x672C;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x4F8B;&#x5982; <code>+, -, /,  *</code>&#xFF0C; &#x8FD8;&#x5B9A;&#x4E49;&#x4E86; <code>abs()</code>&#x3001;<code>ceil()</code>&#x3001;&#x548C; <code>floor()</code> &#x7B49;&#x51FD;&#x6570;&#x3002; (&#x4F4D;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x4F8B;&#x5982; <code>&gt;&gt;</code> &#x5B9A;&#x4E49;&#x5728; <code>int</code> &#x7C7B;&#x4E2D;) &#x5982;&#x679C; <code>num</code> &#x6216;&#x8005;&#x5176;&#x5B50;&#x7C7B;&#x578B;&#x5177;&#x6709;&#x7684;&#x7684;&#x57FA;&#x672C;&#x8FD0;&#x7B97;&#x4E0D;&#x6EE1;&#x8DB3;&#x4F60;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x8BF7;&#x67E5;&#x627E; <code>dart:math</code>&#xFF08;&#x5730;&#x5740;&#xFF1A;<code>https://api.dartlang.org/stable/dart-math/dart-math-library.html</code>&#xFF09;&#x5E93;&#x4EE5;&#x5BFB;&#x627E;&#x66F4;&#x591A;&#x7684;&#x8FD0;&#x7B97;&#x652F;&#x6301;&#x3002;</p>
+<p>&#x6574;&#x6570;&#x662F;&#x4E0D;&#x5E26;&#x5C0F;&#x6570;&#x70B9;&#x7684;&#x6570;&#x5B57;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E9B;&#x5B9A;&#x4E49;&#x6574;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> x = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">var</span> hex = <span class="hljs-number">0xDEADBEEF</span>;
+<span class="hljs-keyword">var</span> bigInt = <span class="hljs-number">34653465834652437659238476592374958739845729</span>;
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6570;&#x5E26;&#x5C0F;&#x6570;&#x70B9;&#xFF0C;&#x5219;&#x5176;&#x4E3A; <code>double</code>&#xFF0C; &#x4E0B;&#x9762;&#x662F;&#x5B9A;&#x4E49; <code>double</code> &#x7684;&#x4E00;&#x4E9B;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> y = <span class="hljs-number">1.1</span>;
+<span class="hljs-keyword">var</span> exponents = <span class="hljs-number">1.42e5</span>;
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x6570;&#x5B57;&#x4E4B;&#x95F4;&#x8F6C;&#x6362;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-comment">// String -&gt; int</span>
+<span class="hljs-keyword">var</span> one = <span class="hljs-built_in">int</span>.parse(<span class="hljs-string">&apos;1&apos;</span>);
+<span class="hljs-keyword">assert</span>(one == <span class="hljs-number">1</span>);
+
+<span class="hljs-comment">// String -&gt; double</span>
+<span class="hljs-keyword">var</span> onePointOne = <span class="hljs-built_in">double</span>.parse(<span class="hljs-string">&apos;1.1&apos;</span>);
+<span class="hljs-keyword">assert</span>(onePointOne == <span class="hljs-number">1.1</span>);
+
+<span class="hljs-comment">// int -&gt; String</span>
+<span class="hljs-built_in">String</span> oneAsString = <span class="hljs-number">1.</span>toString();
+<span class="hljs-keyword">assert</span>(oneAsString == <span class="hljs-string">&apos;1&apos;</span>);
+
+<span class="hljs-comment">// double -&gt; String</span>
+<span class="hljs-built_in">String</span> piAsString = <span class="hljs-number">3.14159</span>.toStringAsFixed(<span class="hljs-number">2</span>);
+<span class="hljs-keyword">assert</span>(piAsString == <span class="hljs-string">&apos;3.14&apos;</span>);
+</code></pre>
+<p>&#x6574;&#x6570;&#x7C7B;&#x578B;&#x652F;&#x6301;&#x4F20;&#x7EDF;&#x7684;&#x4F4D;&#x79FB;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x6BD4;&#x5982;<code>&#x5DE6;&#x79FB;&#xFF08;&lt;&lt;&#xFF09;</code>,<code>&#x53F3;&#x79FB;(&gt;&gt;)</code>, <code>&#x4E0E; (&amp;)</code>, <code>&#x6216; (|)</code>&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">assert</span>((<span class="hljs-number">3</span> &lt;&lt; <span class="hljs-number">1</span>) == <span class="hljs-number">6</span>);  <span class="hljs-comment">// 0011 &lt;&lt; 1 == 0110</span>
+<span class="hljs-keyword">assert</span>((<span class="hljs-number">3</span> &gt;&gt; <span class="hljs-number">1</span>) == <span class="hljs-number">1</span>);  <span class="hljs-comment">// 0011 &gt;&gt; 1 == 0001</span>
+<span class="hljs-keyword">assert</span>((<span class="hljs-number">3</span> | <span class="hljs-number">4</span>)  == <span class="hljs-number">7</span>);  <span class="hljs-comment">// 0011 | 0100 == 0111</span>
+</code></pre>
+<p>&#x6570;&#x5B57;&#x5B57;&#x9762;&#x91CF;&#x4E3A;&#x7F16;&#x8BD1;&#x65F6;&#x5E38;&#x91CF;&#x3002; &#x5F88;&#x591A;&#x7B97;&#x672F;&#x8868;&#x8FBE;&#x5F0F;&#x53EA;&#x8981;&#x5176;&#x64CD;&#x4F5C;&#x6570;&#x662F;&#x5E38;&#x91CF;&#xFF0C;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7ED3;&#x679C;&#x4E5F;&#x662F;&#x7F16;&#x8BD1;&#x65F6;&#x5E38;&#x91CF;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">const</span> msPerSecond = <span class="hljs-number">1000</span>;
+<span class="hljs-keyword">const</span> secondsUntilRetry = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">const</span> msUntilRetry = secondsUntilRetry * msPerSecond;
+</code></pre>
+<p>&#x5982;&#x4E0A;&#x4EE3;&#x7801;&#xFF0C;<code>msPerSecond</code>&#x548C;<code>secondsUntilRetry</code>&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x65F6;&#x5E38;&#x91CF;&#xFF0C;&#x6240;&#x4EE5;&#x7531;<code>secondsUntilRetry * msPerSecond</code>&#x8D4B;&#x503C;&#x7684;<code>msUntilRetry</code>&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x4E5F;&#x4F1A;&#x662F;&#x5E38;&#x91CF;&#x3002;</p>
+<h5 id="strings&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#xFF09;">Strings&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#xFF09;</h5>
+<p>Dart &#x5B57;&#x7B26;&#x4E32;&#x662F; <code>UTF-16</code> &#x7F16;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x5E8F;&#x5217;&#x3002; &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5355;&#x5F15;&#x53F7;&#x6216;&#x8005;&#x53CC;&#x5F15;&#x53F7;&#x6765;&#x521B;&#x5EFA;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> s1 = <span class="hljs-string">&apos;Single quotes work well for string literals.&apos;</span>;
+<span class="hljs-keyword">var</span> s2 = <span class="hljs-string">&quot;Double quotes work just as well.&quot;</span>;
+<span class="hljs-keyword">var</span> s3 = <span class="hljs-string">&apos;It\&apos;s easy to escape the string delimiter.&apos;</span>;
+<span class="hljs-keyword">var</span> s4 = <span class="hljs-string">&quot;It&apos;s even easier to use the other delimiter.&quot;</span>;
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x7528;&#x6CD5;&#x4E3A;&#xFF1A; <code>${expression}</code>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8868;&#x8FBE;&#x5F0F;&#x662F;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x7701;&#x7565; <code>{}</code>&#x3002; &#x5982;&#x679C;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7ED3;&#x679C;&#x4E3A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5219; Dart &#x4F1A;&#x8C03;&#x7528;&#x5BF9;&#x8C61;&#x7684; <code>toString()</code> &#x51FD;&#x6570;&#x6765;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> s = <span class="hljs-string">&apos;string interpolation&apos;</span>;
+
+<span class="hljs-keyword">assert</span>(<span class="hljs-string">&apos;Dart has $s, which is very handy.&apos;</span> ==
+       <span class="hljs-string">&apos;Dart has string interpolation, &apos;</span> +
+       <span class="hljs-string">&apos;which is very handy.&apos;</span>);
+<span class="hljs-keyword">assert</span>(<span class="hljs-string">&apos;That deserves all caps. &apos;</span> +
+       <span class="hljs-string">&apos;<span class="hljs-subst">${s.toUpperCase()}</span> is very handy!&apos;</span> ==
+       <span class="hljs-string">&apos;That deserves all caps. &apos;</span> +
+       <span class="hljs-string">&apos;STRING INTERPOLATION is very handy!&apos;</span>);
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> <code>==</code> &#x64CD;&#x4F5C;&#x7B26;&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;<strong>&#x5185;&#x5BB9;</strong>&#x662F;&#x5426;&#x4E00;&#x6837;&#x3002; &#x5982;&#x679C;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5305;&#x542B;&#x4E00;&#x6837;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x5E8F;&#x5217;&#xFF0C; &#x5219;&#x4ED6;&#x4EEC;&#x662F;&#x76F8;&#x7B49;&#x7684;&#x3002;</p>
+<p>&#x62FC;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ol>
+<li>&#x4F7F;&#x7528; <code>+</code> &#x64CD;&#x4F5C;&#x7B26;&#x6765;&#x628A;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x94FE;&#x63A5;&#x4E3A;&#x4E00;&#x4E2A;</li>
+<li>&#x76F4;&#x63A5;&#x628A;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x653E;&#x5230;&#x4E00;&#x8D77;</li>
+</ol>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> s1 = <span class="hljs-string">&apos;String &apos;</span> <span class="hljs-string">&apos;concatenation&apos;</span>
+         <span class="hljs-string">&quot; works even over line breaks.&quot;</span>;<span class="hljs-comment">//&#x76F4;&#x63A5;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x653E;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x4F1A;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x62FC;&#x63A5;</span>
+<span class="hljs-keyword">assert</span>(s1 == <span class="hljs-string">&apos;String concatenation works even over &apos;</span>
+             <span class="hljs-string">&apos;line breaks.&apos;</span>);
+
+<span class="hljs-keyword">var</span> s2 = <span class="hljs-string">&apos;The + operator &apos;</span>
+         + <span class="hljs-string">&apos;works, as well.&apos;</span>;<span class="hljs-comment">//&#x4F7F;&#x7528;+&#x8FD0;&#x7B97;&#x7B26;&#x6765;&#x8FDB;&#x884C;&#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5;</span>
+<span class="hljs-keyword">assert</span>(s2 == <span class="hljs-string">&apos;The + operator works, as well.&apos;</span>);
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x4E09;&#x4E2A;&#x5355;&#x5F15;&#x53F7;&#x6216;&#x8005;&#x4E09;&#x4E2A;&#x53CC;&#x5F15;&#x53F7;&#x6765;&#x521B;&#x5EFA;&#x591A;&#x884C;&#x5B57;&#x7B26;&#x4E32;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> s1 = <span class="hljs-string">&apos;&apos;&apos;
+You can create
+multi-line strings like this one.
+&apos;&apos;&apos;</span>;
+
+<span class="hljs-keyword">var</span> s2 = <span class="hljs-string">&quot;&quot;&quot;This is also a
+multi-line string.&quot;&quot;&quot;</span>;
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A; <code>r</code> &#x524D;&#x7F00;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x539F;&#x59CB;<code>(raw&#xFF09;</code>&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5373;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#x4F1A;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-dart">stringDemo() {
+  <span class="hljs-keyword">var</span> s1 = <span class="hljs-string">r&apos;\n1234&apos;</span>;
+  <span class="hljs-keyword">var</span> s2 = <span class="hljs-string">&apos;\n1234&apos;</span>;
+  <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;s1:&apos;</span> + s1);
+  <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;s2:&apos;</span> + s2);
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-06-092813.png" alt="image-20190530214504777"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x52A0;&#x4E86;<code>r</code>&#x524D;&#x7F00;&#x540E;<code>\n</code>&#x4E2D;&#x7684;&#x8F6C;&#x4E49;&#x7B26;<code>\</code>&#x5931;&#x6548;&#x4E86;&#x3002;</p>
+<h5 id="booleans&#xFF08;&#x5E03;&#x5C14;&#x503C;&#xFF09;">Booleans&#xFF08;&#x5E03;&#x5C14;&#x503C;&#xFF09;</h5>
+<p>&#x4E3A;&#x4E86;&#x4EE3;&#x8868;&#x5E03;&#x5C14;&#x503C;&#xFF0C;Dart &#x6709;&#x4E00;&#x4E2A; <code>bool</code> &#x7C7B;&#x578B;&#x3002; &#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x7684;&#xFF1A;<code>true</code> &#x548C; <code>false</code> &#xFF0C; &#x8FD9;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x4E5F;&#x90FD;&#x662F;&#x7F16;&#x8BD1;&#x65F6;&#x5E38;&#x91CF;&#x3002;</p>
+<p>&#x5F53; Dart &#x9700;&#x8981;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x6709; <code>true</code> &#x5BF9;&#x8C61;&#x624D;&#x88AB;&#x8BA4;&#x4E3A;&#x662F; <code>true</code>&#x3002; &#x6240;&#x6709;&#x5176;&#x4ED6;&#x7684;&#x503C;&#x90FD;&#x662F; <code>flase</code>&#xFF0C;&#x50CF; <code>1</code>&#x3001; <code>&quot;aString&quot;</code>&#x3001; &#x4EE5;&#x53CA; <code>someObject</code> &#x7B49;&#x503C;&#x90FD;&#x88AB;&#x8BA4;&#x4E3A;&#x662F; <code>false</code>&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> name = <span class="hljs-string">&apos;Bob&apos;</span>;
+<span class="hljs-keyword">if</span> (name) {
+  <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;You have a name!&apos;</span>);
+}
+</code></pre>
+<p>&#x5728;Dart<strong>&#x751F;&#x4EA7;&#x6A21;&#x5F0F;</strong>&#x4E0B;&#x8FD0;&#x884C;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#xFF0C;&#x4E0D;&#x4F1A;&#x8F93;&#x51FA;<code>&apos;You have a name!&apos;</code>&#xFF0C;&#x56E0;&#x4E3A;<code>name</code>&#x7684;&#x503C;&#x4E0D;&#x662F;<code>true</code>&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x4F1A;&#x8BA4;&#x4E3A;&#x662F;<code>false</code>&#x3002;</p>
+<h5 id="lists&#xFF08;&#x5217;&#x8868;&#xFF09;">Lists&#xFF08;&#x5217;&#x8868;&#xFF09;</h5>
+<p> <code>array</code> &#xFF08;&#x6216;&#x8005;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#xFF09;&#x51E0;&#x4E4E;&#x662F;&#x6240;&#x6709;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E2D;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x96C6;&#x5408;&#x7C7B;&#x578B;&#x3002;  Dart &#x4E2D;&#x7684;<code>List</code>&#x5BF9;&#x8C61;&#x6307;&#x7684;&#x5C31;&#x662F;&#x6570;&#x7EC4;&#xFF0C;&#x901A;&#x5E38;&#x6211;&#x4EEC;&#x90FD;&#x79F0;&#x4E4B;&#x4E3A; <code>lists</code>&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A; Dart <code>list</code> &#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> list = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+</code></pre>
+<p><code>Lists</code> &#x7684;&#x4E0B;&#x6807;&#x7D22;&#x5F15;&#x4ECE; 0 &#x5F00;&#x59CB;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x662F; 0&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x662F;<code>list.length - 1</code> &#x3002; </p>
+<p>List&#x7C7B;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x64CD;&#x4F5C;&#xFF0C;&#x6211;&#x4F1A;&#x5728;&#x540E;&#x9762;&#x8BB2;&#x89E3;&#x6CDB;&#x578B;&#x548C;&#x96C6;&#x5408;&#x7684;&#x65F6;&#x5019;&#x5C55;&#x5F00;&#x53D9;&#x8FF0;&#x3002;</p>
+<h5 id="maps">Maps</h5>
+<p>&#x901A;&#x5E38;&#x6765;&#x8BF4;&#xFF0C;<code>Map</code> &#x662F;&#x4E00;&#x4E2A;&#x952E;&#x503C;&#x5BF9;&#x76F8;&#x5173;&#x7684;&#x5BF9;&#x8C61;&#x3002; &#x952E;&#x548C;&#x503C;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x6BCF;&#x4E2A;&#x952E;&#x53EA;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#xFF0C; &#x800C;&#x4E00;&#x4E2A;&#x503C;&#x5219;&#x53EF;&#x4EE5;&#x51FA;&#x73B0;&#x591A;&#x6B21;&#x3002;Dart &#x901A;&#x8FC7; <code>map</code> &#x5B57;&#x9762;&#x91CF; &#x548C; <code>Map</code>&#x7C7B;&#x652F;&#x6301; <code>map</code>&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E9B;&#x521B;&#x5EFA;&#x7B80;&#x5355; <code>map</code> &#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> gifts = {
+    <span class="hljs-comment">// Keys      Values</span>
+  <span class="hljs-string">&apos;first&apos;</span> : <span class="hljs-string">&apos;partridge&apos;</span>,
+  <span class="hljs-string">&apos;second&apos;</span>: <span class="hljs-string">&apos;turtledoves&apos;</span>,
+  <span class="hljs-string">&apos;fifth&apos;</span> : <span class="hljs-string">&apos;golden rings&apos;</span>
+};
+
+<span class="hljs-keyword">var</span> nobleGases = {
+    <span class="hljs-comment">// Keys  Values</span>
+  <span class="hljs-number">2</span> :   <span class="hljs-string">&apos;helium&apos;</span>,
+  <span class="hljs-number">10</span>:   <span class="hljs-string">&apos;neon&apos;</span>,
+  <span class="hljs-number">18</span>:   <span class="hljs-string">&apos;argon&apos;</span>,
+};
+</code></pre>
+<p>&#x4F7F;&#x7528; <code>Map</code> &#x6784;&#x9020;&#x51FD;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x540C;&#x6837;&#x7684;&#x529F;&#x80FD;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> gifts = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+gifts[<span class="hljs-string">&apos;first&apos;</span>] = <span class="hljs-string">&apos;partridge&apos;</span>;
+gifts[<span class="hljs-string">&apos;second&apos;</span>] = <span class="hljs-string">&apos;turtledoves&apos;</span>;
+gifts[<span class="hljs-string">&apos;fifth&apos;</span>] = <span class="hljs-string">&apos;golden rings&apos;</span>;
+
+<span class="hljs-keyword">var</span> nobleGases = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+nobleGases[<span class="hljs-number">2</span>] = <span class="hljs-string">&apos;helium&apos;</span>;
+nobleGases[<span class="hljs-number">10</span>] = <span class="hljs-string">&apos;neon&apos;</span>;
+nobleGases[<span class="hljs-number">18</span>] = <span class="hljs-string">&apos;argon&apos;</span>;
+</code></pre>
+<p>&#x5F80; <code>map</code> &#x4E2D;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x952E;&#x503C;&#x5BF9;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> gifts = {<span class="hljs-string">&apos;first&apos;</span>: <span class="hljs-string">&apos;partridge&apos;</span>};
+gifts[<span class="hljs-string">&apos;fourth&apos;</span>] = <span class="hljs-string">&apos;calling birds&apos;</span>; <span class="hljs-comment">// Add a key-value pair</span>
+</code></pre>
+<p>&#x83B7;&#x53D6; <code>map</code> &#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> gifts = {<span class="hljs-string">&apos;first&apos;</span>: <span class="hljs-string">&apos;partridge&apos;</span>};
+<span class="hljs-keyword">assert</span>(gifts[<span class="hljs-string">&apos;first&apos;</span>] == <span class="hljs-string">&apos;partridge&apos;</span>);
+</code></pre>
+<p>&#x5982;&#x679C;&#x6240;&#x67E5;&#x627E;&#x7684;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; <code>null</code>&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> gifts = {<span class="hljs-string">&apos;first&apos;</span>: <span class="hljs-string">&apos;partridge&apos;</span>};
+<span class="hljs-keyword">assert</span>(gifts[<span class="hljs-string">&apos;fifth&apos;</span>] == <span class="hljs-keyword">null</span>);
+</code></pre>
+<p>&#x4F7F;&#x7528; <code>.length</code> &#x6765;&#x83B7;&#x53D6; <code>map</code> &#x4E2D;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x6570;&#x76EE;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> gifts = {<span class="hljs-string">&apos;first&apos;</span>: <span class="hljs-string">&apos;partridge&apos;</span>};
+gifts[<span class="hljs-string">&apos;fourth&apos;</span>] = <span class="hljs-string">&apos;calling birds&apos;</span>;
+<span class="hljs-keyword">assert</span>(gifts.length == <span class="hljs-number">2</span>);
+</code></pre>
+<p>&#x540C;&#x6837;&#x4F7F;&#x7528; <code>const</code> &#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; &#x7F16;&#x8BD1;&#x65F6;&#x5E38;&#x91CF;&#x7684; <code>map</code>&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">final</span> constantMap = <span class="hljs-keyword">const</span> {
+  <span class="hljs-number">2</span>: <span class="hljs-string">&apos;helium&apos;</span>,
+  <span class="hljs-number">10</span>: <span class="hljs-string">&apos;neon&apos;</span>,
+  <span class="hljs-number">18</span>: <span class="hljs-string">&apos;argon&apos;</span>,
+};
+
+<span class="hljs-comment">// constantMap[2] = &apos;Helium&apos;; // Uncommenting this causes an error.</span>
+</code></pre>
+<h5 id="runes">Runes</h5>
+<p>&#x5728;<code>Dart</code>&#x4E2D;&#xFF0C;<code>Runes</code>&#x4EE3;&#x8868;&#x5B57;&#x7B26;&#x4E32;&#x7684;<code>UTF-32</code>&#x5B57;&#x7B26;&#x96C6;, <code>Unicode</code>&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x3001;&#x6807;&#x70B9;&#x7B26;&#x53F7;&#x3001;&#x8868;&#x60C5;&#x7B26;&#x53F7;&#x7B49;&#x90FD;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x7531;&#x4E8E;<code>Dart</code>&#x5B57;&#x7B26;&#x4E32;&#x662F;<code>UTF-16</code>&#x7684;&#x5B57;&#x7B26;&#x5E8F;&#x5217;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x8868;&#x8FBE;32&#x4F4D;&#x7684;&#x7684;&#x5B57;&#x7B26;&#x5E8F;&#x5217;&#x65F6;&#x5C31;&#x9700;&#x8981;&#x65B0;&#x7684;&#x8BED;&#x6CD5;&#x4E86;&#x3002;&#x901A;&#x5E38;&#x4F7F;&#x7528;<code>\uXXXX</code>&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8868;&#x793A;, &#x8FD9;&#x91CC;&#x7684;<code>XXXX</code>&#x662F;4&#x4E2A;16&#x8FDB;&#x5236;&#x7684;&#x6570;, &#x5982;&#xFF0C;&#x5FC3;&#x5F62;&#x7B26;&#x53F7;<code>(&#x2665;)</code>&#x662F;<code>\u2665</code>&#xFF0C;&#x5BF9;&#x4E8E;&#x975E;4&#x4E2A;&#x6570;&#x503C;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x628A;&#x7F16;&#x7801;&#x503C;&#x653E;&#x5230;&#x5927;&#x62EC;&#x53F7;&#x4E2D;&#x5373;&#x53EF;, &#x5982;&#x7B11;&#x8138;<code>emoji</code> (&#x1F606;) &#x662F;<code>\u{1f600}</code></p>
+<p><code>String</code>&#x7C7B;&#x6709;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x63D0;&#x53D6; <code>rune</code> &#x4FE1;&#x606F;&#xFF1A;</p>
+<ol>
+<li><code>codeUnitAt</code> &#x548C; <code>codeUnit</code> &#x5C5E;&#x6027;&#x8FD4;&#x56DE;16&#x4F4D;&#x5B57;&#x7B26;</li>
+<li>&#x4F7F;&#x7528; <code>runes</code> &#x5C5E;&#x6027;&#x6765;&#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x7684; <code>runes</code> &#x4FE1;&#x606F;</li>
+</ol>
+<pre><code class="lang-dart">runesDemo() {
+  Runes runes = <span class="hljs-keyword">new</span> Runes(<span class="hljs-string">&apos;\u2665, \u{1f605}, \u{1f60e}&apos;</span>);
+  <span class="hljs-built_in">print</span>(runes);
+  <span class="hljs-built_in">print</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>.fromCharCodes(runes));
+}
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#x4E3A;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-06-092814.png" alt="image-20190530220322602"></p>
+<h3 id="&#x51FD;&#x6570;">&#x51FD;&#x6570;</h3>
+<p>Dart &#x662F;&#x4E00;&#x4E2A;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BED;&#x8A00;&#xFF0C;&#x51FD;&#x6570;&#x4E5F;&#x662F;&#x5BF9;&#x8C61;&#x5E76;&#x4E14;&#x5177;&#x6709;&#x4E00;&#x79CD;&#x7C7B;&#x578B;&#xFF1A;<code>Function</code>&#x3002; &#x8FD9;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8D4B;&#x503C;&#x7ED9;&#x53D8;&#x91CF;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5F53;&#x505A;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x53EF;&#x4EE5;&#x628A; Dart &#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5F53;&#x505A;&#x51FD;&#x6570;&#x6765;&#x8C03;&#x7528;&#x3002; </p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-built_in">bool</span> isNoble(<span class="hljs-built_in">int</span> atomicNumber) {
+  <span class="hljs-keyword">return</span> _nobleGases[atomicNumber] != <span class="hljs-keyword">null</span>;
+}
+</code></pre>
+<p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4E0D;&#x663E;&#x793A;&#x6307;&#x5B9A;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#xFF1A;</p>
+<pre><code class="lang-dart">isNoble(atomicNumber) {
+  <span class="hljs-keyword">return</span> _nobleGases[atomicNumber] != <span class="hljs-keyword">null</span>;
+}
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#x7F29;&#x5199;&#x8BED;&#x6CD5;&#x6765;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-built_in">bool</span> isNoble(<span class="hljs-built_in">int</span> atomicNumber) =&gt; _nobleGases[atomicNumber] != <span class="hljs-keyword">null</span>;
+</code></pre>
+<p>&#x8FD9;&#x4E2A; <code>=&gt; expr</code> &#x8BED;&#x6CD5;&#x662F; <code>{ return expr; }</code> &#x5F62;&#x5F0F;&#x7684;&#x7F29;&#x5199;&#x3002;<code>=&gt;</code> &#x5F62;&#x5F0F;&#x6709;&#x65F6;&#x5019;&#x4E5F;&#x79F0;&#x4E4B;&#x4E3A;<strong>&#x80D6;&#x7BAD;&#x5934;</strong>&#x8BED;&#x6CD5;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> &#x5728;&#x7BAD;&#x5934; (<code>=&gt;</code>) &#x548C;&#x5206;&#x53F7; (<code>;</code>) &#x4E4B;&#x95F4;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x4E00;&#x4E2A; <strong>&#x8868;&#x8FBE;&#x5F0F;</strong>&#x800C; &#x2013; &#x4E0D;&#x80FD;&#x4F7F;&#x7528;<strong>&#x8BED;&#x53E5;</strong>&#x3002;</p>
+<p>&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x6709;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x53C2;&#x6570;&#xFF1A;<strong>&#x5FC5;&#x9700;&#x7684;</strong>&#x548C;<strong>&#x53EF;&#x9009;&#x7684;</strong>&#x3002; &#x5FC5;&#x9700;&#x7684;&#x53C2;&#x6570;&#x5728;&#x53C2;&#x6570;&#x5217;&#x8868;&#x524D;&#x9762;&#xFF0C;&#x53EF;&#x9009;&#x7684;&#x53C2;&#x6570;&#x5728;&#x53C2;&#x6570;&#x5217;&#x8868;&#x540E;&#x9762;&#x3002;</p>
+<h4 id="&#x53EF;&#x9009;&#x53C2;&#x6570;">&#x53EF;&#x9009;&#x53C2;&#x6570;</h4>
+<p>&#x53EF;&#x9009;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x662F;<strong>&#x547D;&#x540D;&#x53C2;&#x6570;</strong>&#x6216;&#x8005;<strong>&#x57FA;&#x4E8E;&#x4F4D;&#x7F6E;</strong>&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E24;&#x79CD;&#x53C2;&#x6570;<strong>&#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x5F53;&#x505A;&#x53EF;&#x9009;&#x53C2;&#x6570;</strong>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x8981;&#x4E48;&#x662F;&#x547D;&#x540D;&#x53C2;&#x6570;&#xFF0C;&#x8981;&#x4E48;&#x662F;&#x57FA;&#x4E8E;&#x4F4D;&#x7F6E;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x4E0D;&#x80FD;&#x8BF4;&#x67D0;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x65E2;&#x6709;&#x547D;&#x540D;&#x53C2;&#x6570;&#xFF0C;&#x4E5F;&#x6709;&#x57FA;&#x4E8E;&#x4F4D;&#x7F6E;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<h5 id="&#xFF08;&#x53EF;&#x9009;&#xFF09;&#x547D;&#x540D;&#x53C2;&#x6570;">&#xFF08;&#x53EF;&#x9009;&#xFF09;&#x547D;&#x540D;&#x53C2;&#x6570;</h5>
+<p>&#x8C03;&#x7528;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x5F62;&#x5F0F; <code>paramName: value</code> &#x6765;&#x6307;&#x5B9A;&#x547D;&#x540D;&#x53C2;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-dart">enableFlags(bold: <span class="hljs-keyword">true</span>, hidden: <span class="hljs-keyword">false</span>);
+</code></pre>
+<p>&#x5728;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F7F;&#x7528; <code>{param1, param2, &#x2026;}</code> &#x7684;&#x5F62;&#x5F0F;&#x6765;&#x6307;&#x5B9A;&#x547D;&#x540D;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-dart">enableFlags({<span class="hljs-built_in">bool</span> bold, <span class="hljs-built_in">bool</span> hidden}) {
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<h5 id="&#xFF08;&#x53EF;&#x9009;&#xFF09;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;">&#xFF08;&#x53EF;&#x9009;&#xFF09;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;</h5>
+<p>&#x628A;&#x4E00;&#x4E9B;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x653E;&#x5230; <code>[]</code> &#x4E2D;&#x5C31;&#x53D8;&#x6210;&#x53EF;&#x9009;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-built_in">String</span> say(<span class="hljs-built_in">String</span> from, <span class="hljs-built_in">String</span> msg, [<span class="hljs-built_in">String</span> device]) {
+  <span class="hljs-keyword">var</span> result = <span class="hljs-string">&apos;$from says $msg&apos;</span>;
+  <span class="hljs-keyword">if</span> (device != <span class="hljs-keyword">null</span>) {
+    result = <span class="hljs-string">&apos;$result with a $device&apos;</span>;
+  }
+  <span class="hljs-keyword">return</span> result;
+}
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E0D;&#x4F7F;&#x7528;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x8C03;&#x7528;&#x4E0A;&#x9762;&#x51FD;&#x6570;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">assert</span>(say(<span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Howdy&apos;</span>) == <span class="hljs-string">&apos;Bob says Howdy&apos;</span>);
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4F7F;&#x7528;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x8C03;&#x7528;&#x4E0A;&#x9762;&#x51FD;&#x6570;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">assert</span>(say(<span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Howdy&apos;</span>, <span class="hljs-string">&apos;smoke signal&apos;</span>) ==
+    <span class="hljs-string">&apos;Bob says Howdy with a smoke signal&apos;</span>);
+</code></pre>
+<h4 id="&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x503C;">&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x503C;</h4>
+<p>&#x5728;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>=</code> &#x6765;&#x5B9A;&#x4E49;<strong>&#x53EF;&#x9009;&#x53C2;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x503C;</strong>&#x3002; &#x9ED8;&#x8BA4;&#x503C;&#x53EA;&#x80FD;&#x662F;&#x7F16;&#x8BD1;&#x65F6;&#x5E38;&#x91CF;&#x3002; &#x5982;&#x679C;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>null</code>&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x8BBE;&#x7F6E;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x503C;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">void</span> enableFlags({<span class="hljs-built_in">bool</span> bold = <span class="hljs-keyword">false</span>, <span class="hljs-built_in">bool</span> hidden = <span class="hljs-keyword">false</span>}) {
+  <span class="hljs-comment">// ...</span>
+}
+<span class="hljs-comment">// bold&#x5C06;&#x4F1A;&#x662F;true; hidden&#x5C06;&#x4F1A;&#x662F;false.</span>
+enableFlags(bold: <span class="hljs-keyword">true</span>);
+</code></pre>
+<p><strong>&#x7248;&#x672C;&#x95EE;&#x9898;&#xFF1A;</strong> &#x65E7;&#x7248;&#x672C;&#x4EE3;&#x7801;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5192;&#x53F7; (<code>:</code>) &#x800C;&#x4E0D;&#x662F; <code>=</code> &#x6765;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x503C;&#x3002; &#x539F;&#x56E0;&#x5728;&#x4E8E; Dart SDK 1.21 &#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x547D;&#x540D;&#x53C2;&#x6570;&#x53EA;&#x652F;&#x6301; <code>:</code>&#x3002; <code>:</code> &#x8BBE;&#x7F6E;&#x547D;&#x540D;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x503C;&#x5728;&#x4EE5;&#x540E;&#x7248;&#x672C;&#x4E2D;&#x5C06;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#xFF0C; &#x6240;&#x4EE5;&#x63A8;&#x8350;&#x4F60;<strong>&#x4F7F;&#x7528; = &#x6765;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C; &#x5E76;&#x6307;&#x5B9A; Dart SDK &#x7248;&#x672C;&#x4E3A; 1.21 &#x6216;&#x8005;&#x66F4;&#x9AD8;&#x7684;&#x7248;&#x672C;&#x3002;</strong></p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x663E;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x8BBE;&#x7F6E;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-built_in">String</span> say(<span class="hljs-built_in">String</span> from, <span class="hljs-built_in">String</span> msg,
+    [<span class="hljs-built_in">String</span> device = <span class="hljs-string">&apos;carrier pigeon&apos;</span>, <span class="hljs-built_in">String</span> mood]) {
+  <span class="hljs-keyword">var</span> result = <span class="hljs-string">&apos;$from says $msg&apos;</span>;
+  <span class="hljs-keyword">if</span> (device != <span class="hljs-keyword">null</span>) {
+    result = <span class="hljs-string">&apos;$result with a $device&apos;</span>;
+  }
+  <span class="hljs-keyword">if</span> (mood != <span class="hljs-keyword">null</span>) {
+    result = <span class="hljs-string">&apos;$result (in a $mood mood)&apos;</span>;
+  }
+  <span class="hljs-keyword">return</span> result;
+}
+
+<span class="hljs-keyword">assert</span>(say(<span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Howdy&apos;</span>) ==
+    <span class="hljs-string">&apos;Bob says Howdy with a carrier pigeon&apos;</span>);
+</code></pre>
+<p>&#x8FD8;&#x53EF;&#x4EE5;&#x4E3A; <code>list</code> &#x6216;&#x8005; <code>map</code> &#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x503C;&#x3002; &#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x51FD;&#x6570; <code>doStuff()</code>&#xFF0C; &#x5E76;&#x5206;&#x522B;&#x4E3A; <code>list</code> &#x548C; <code>gifts</code> &#x53C2;&#x6570;&#x6307;&#x5B9A;&#x4E86; &#x9ED8;&#x8BA4;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">void</span> doStuff(
+    {<span class="hljs-built_in">List</span>&lt;<span class="hljs-built_in">int</span>&gt; list = <span class="hljs-keyword">const</span> [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>],
+    <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">String</span>, <span class="hljs-built_in">String</span>&gt; gifts = <span class="hljs-keyword">const</span> {
+      <span class="hljs-string">&apos;first&apos;</span>: <span class="hljs-string">&apos;paper&apos;</span>,
+      <span class="hljs-string">&apos;second&apos;</span>: <span class="hljs-string">&apos;cotton&apos;</span>,
+      <span class="hljs-string">&apos;third&apos;</span>: <span class="hljs-string">&apos;leather&apos;</span>
+    }}) {
+  <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;list:  $list&apos;</span>);
+  <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;gifts: $gifts&apos;</span>);
+}
+</code></pre>
+<h4 id="&#x5165;&#x53E3;&#x51FD;&#x6570;">&#x5165;&#x53E3;&#x51FD;&#x6570;</h4>
+<p>&#x6BCF;&#x4E2A;&#x5E94;&#x7528;&#x90FD;&#x9700;&#x8981;&#x6709;&#x4E2A;&#x9876;&#x7EA7;&#x7684; <code>main()</code> &#x5165;&#x53E3;&#x51FD;&#x6570;&#x624D;&#x80FD;&#x6267;&#x884C;&#x3002; <code>main()</code> &#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4E3A; <code>void</code> &#x5E76;&#x4E14;&#x6709;&#x4E2A;&#x53EF;&#x9009;&#x7684; <code>List&lt;String&gt;</code> &#x53C2;&#x6570;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A; <code>web</code> &#x5E94;&#x7528;&#x7684; <code>main()</code> &#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">void</span> main() {
+  <span class="hljs-built_in">querySelector</span>(<span class="hljs-string">&quot;#sample_text_id&quot;</span>)
+    ..text = <span class="hljs-string">&quot;Click me!&quot;</span>
+    ..onClick.listen(reverseText);
+}
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> &#x524D;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#x7684; <code>..</code> &#x8BED;&#x6CD5;&#x4E3A; <strong>&#x7EA7;&#x8054;&#x8C03;&#x7528;&#xFF08;cascade&#xFF09;</strong>&#x3002; &#x4F7F;&#x7528;&#x7EA7;&#x8054;&#x8C03;&#x7528;&#x8BED;&#x6CD5;&#xFF0C; &#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0A;&#x6267;&#x884C;&#x591A;&#x4E2A;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#x5E94;&#x7528;&#x7684; <code>main()</code> &#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x4F7F;&#x7528;&#x4E86;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-comment">// Run the app like this: dart args.dart 1 test</span>
+<span class="hljs-keyword">void</span> main(<span class="hljs-built_in">List</span>&lt;<span class="hljs-built_in">String</span>&gt; arguments) {
+  <span class="hljs-built_in">print</span>(arguments);
+  <span class="hljs-keyword">assert</span>(arguments.length == <span class="hljs-number">2</span>);
+  <span class="hljs-keyword">assert</span>(<span class="hljs-built_in">int</span>.parse(arguments[<span class="hljs-number">0</span>]) == <span class="hljs-number">1</span>);
+  <span class="hljs-keyword">assert</span>(arguments[<span class="hljs-number">1</span>] == <span class="hljs-string">&apos;test&apos;</span>);
+}
+</code></pre>
+<h4 id="&#x4E00;&#x7B49;&#x51FD;&#x6570;&#x5BF9;&#x8C61;">&#x4E00;&#x7B49;&#x51FD;&#x6570;&#x5BF9;&#x8C61;</h4>
+<p>&#x53EF;&#x4EE5;&#x628A;&#x51FD;&#x6570;&#x5F53;&#x505A;&#x53C2;&#x6570;&#x8C03;&#x7528;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-dart">printElement(element) {
+  <span class="hljs-built_in">print</span>(element);
+}
+
+<span class="hljs-keyword">var</span> list = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-comment">// Pass printElement as a parameter.</span>
+list.forEach(printElement);
+</code></pre>
+<p>&#x51FD;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x8D4B;&#x503C;&#x7ED9;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> loudify = (msg) =&gt; <span class="hljs-string">&apos;!!! <span class="hljs-subst">${msg.toUpperCase()}</span> !!!&apos;</span>;
+<span class="hljs-keyword">assert</span>(loudify(<span class="hljs-string">&apos;hello&apos;</span>) == <span class="hljs-string">&apos;!!! HELLO !!!&apos;</span>);
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x51FD;&#x6570;&#x4E3A;&#x4E0B;&#x9762;&#x5373;&#x5C06;&#x4ECB;&#x7ECD;&#x7684;&#x533F;&#x540D;&#x51FD;&#x6570;&#x3002;</p>
+<h4 id="&#x533F;&#x540D;&#x51FD;&#x6570;">&#x533F;&#x540D;&#x51FD;&#x6570;</h4>
+<p>&#x5927;&#x90E8;&#x5206;&#x51FD;&#x6570;&#x90FD;&#x5E26;&#x6709;&#x540D;&#x5B57;&#xFF0C;&#x4F8B;&#x5982; <code>main()</code> &#x6216;&#x8005; <code>printElement()</code>&#x3002; &#x4F60;&#x6709;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x6CA1;&#x6709;&#x540D;&#x5B57;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x79F0;&#x4E4B;&#x4E3A; <strong>&#x533F;&#x540D;&#x51FD;&#x6570;</strong>&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A; <em>lambda</em> &#x6216;&#x8005; <em>closure &#x95ED;&#x5305;</em>&#x3002; &#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x533F;&#x540D;&#x51FD;&#x6570;&#x8D4B;&#x503C;&#x7ED9;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C; &#x7136;&#x540E;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982;&#x6DFB;&#x52A0;&#x5230;&#x96C6;&#x5408;&#x6216;&#x8005;&#x4ECE;&#x96C6;&#x5408;&#x4E2D;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x533F;&#x540D;&#x51FD;&#x6570;&#x548C;&#x547D;&#x540D;&#x51FD;&#x6570;&#x770B;&#x8D77;&#x6765;&#x6709;&#x70B9;&#x7C7B;&#x4F3C;&#xFF0C;&#x90FD;&#x662F;&#x5728;&#x62EC;&#x53F7;&#x4E4B;&#x95F4;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#xFF0C;&#x53C2;&#x6570;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x5206;&#x5272;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x3002; &#x540E;&#x9762;&#x5927;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x4E3A;&#x51FD;&#x6570;&#x4F53;&#xFF1A;</p>
+<pre><code>([[Type] param1[, &#x2026;]]) {   codeBlock; };
+</code></pre><p>&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;<code>i</code> &#xFF08;&#x8BE5;&#x53C2;&#x6570;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#xFF09;&#x7684;&#x533F;&#x540D;&#x51FD;&#x6570;&#x3002; <code>list</code> &#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6765; &#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x540C;&#x65F6;&#x6765;&#x8BA1;&#x7B97;&#x4E86;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x5728; <code>list</code> &#x4E2D;&#x7684;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;&#x3002;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> list = [<span class="hljs-string">&apos;apples&apos;</span>, <span class="hljs-string">&apos;oranges&apos;</span>, <span class="hljs-string">&apos;grapes&apos;</span>, <span class="hljs-string">&apos;bananas&apos;</span>, <span class="hljs-string">&apos;plums&apos;</span>];
+list.forEach((i) {
+  <span class="hljs-built_in">print</span>(list.indexOf(i).toString() + <span class="hljs-string">&apos;: &apos;</span> + i);
+});
+</code></pre>
+<p>&#x5982;&#x679C;&#x51FD;&#x6570;&#x53EA;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x8BED;&#x53E5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x80D6;&#x7BAD;&#x5934;&#x8BED;&#x6CD5;&#x7F29;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-dart">list.forEach((i) =&gt; <span class="hljs-built_in">print</span>(list.indexOf(i).toString() + <span class="hljs-string">&apos;: &apos;</span> + i));
+</code></pre>
+<h4 id="&#x9759;&#x6001;&#x4F5C;&#x7528;&#x57DF;">&#x9759;&#x6001;&#x4F5C;&#x7528;&#x57DF;</h4>
+<p>Dart &#x662F;&#x9759;&#x6001;&#x4F5C;&#x7528;&#x57DF;&#x8BED;&#x8A00;&#xFF0C;&#x53D8;&#x91CF;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x5728;&#x5199;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x786E;&#x5B9A;&#x8FC7;&#x4E86;&#x3002; &#x5927;&#x62EC;&#x53F7;&#x91CC;&#x9762;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x5C31;&#x53EA;&#x80FD;&#x5728;&#x5927;&#x62EC;&#x53F7;&#x91CC;&#x9762;&#x8BBF;&#x95EE;&#xFF0C;&#x548C; Java &#x4F5C;&#x7528;&#x57DF;&#x7C7B;&#x4F3C;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> topLevel = <span class="hljs-keyword">true</span>;
+
+main() {
+  <span class="hljs-keyword">var</span> insideMain = <span class="hljs-keyword">true</span>;
+
+  myFunction() {
+    <span class="hljs-keyword">var</span> insideFunction = <span class="hljs-keyword">true</span>;
+
+    nestedFunction() {
+      <span class="hljs-keyword">var</span> insideNestedFunction = <span class="hljs-keyword">true</span>;
+
+      <span class="hljs-keyword">assert</span>(topLevel);
+      <span class="hljs-keyword">assert</span>(insideMain);
+      <span class="hljs-keyword">assert</span>(insideFunction);
+      <span class="hljs-keyword">assert</span>(insideNestedFunction);
+    }
+  }
+}
+</code></pre>
+<p>&#x6CE8;&#x610F; <code>nestedFunction()</code> &#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x6240;&#x6709;&#x7684;&#x53D8;&#x91CF;&#xFF0C; &#x5305;&#x542B;&#x9876;&#x7EA7;&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x662F;&#x5728;<code>main()</code>&#x51FD;&#x6570;&#x4E2D;&#x5C31;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;<code>myFunction()</code>&#x4EE5;&#x53CA;<code>nestedFunction()</code>&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x53D8;&#x91CF;&#x662F;&#x5411;&#x4E0B;&#x53EF;&#x89C1;&#x3001;&#x5411;&#x4E0A;&#x4E0D;&#x53EF;&#x89C1;&#x7684;&#x3002;</p>
+<h4 id="&#x8BCD;&#x6CD5;&#x95ED;&#x5305;">&#x8BCD;&#x6CD5;&#x95ED;&#x5305;</h4>
+<p>&#x4E00;&#x4E2A; <strong>&#x95ED;&#x5305;</strong> &#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x7BA1;&#x8BE5;&#x5BF9;&#x8C61;&#x5728;&#x4F55;&#x5904;&#x88AB;&#x8C03;&#x7528;&#xFF0C; &#x8BE5;&#x5BF9;&#x8C61;&#x90FD;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5176;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x7684;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5C01;&#x95ED;&#x5B9A;&#x4E49;&#x5230;&#x5176;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x7684;&#x53D8;&#x91CF;&#x3002; &#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;<code>makeAdder()</code> &#x6355;&#x83B7;&#x5230;&#x4E86;&#x53D8;&#x91CF; <code>addBy</code>&#x3002; &#x4E0D;&#x7BA1;&#x4F60;&#x5728;&#x90A3;&#x91CC;&#x6267;&#x884C; <code>makeAdder()</code> &#x6240;&#x8FD4;&#x56DE;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>addBy</code> &#x53C2;&#x6570;&#x3002;</p>
+<pre><code class="lang-dart"><span class="hljs-comment"><span class="markdown">/// Returns </span>a<span class="markdown"> function that adds [addBy] to </span>the<span class="markdown"></span></span>
+<span class="hljs-comment"><span class="markdown">/// function&apos;s argument.</span></span>
+<span class="hljs-built_in">Function</span> makeAdder(<span class="hljs-built_in">num</span> addBy) {
+  <span class="hljs-keyword">return</span> (<span class="hljs-built_in">num</span> i) =&gt; addBy + i;
+}
+
+main() {
+  <span class="hljs-comment">// Create a function that adds 2.</span>
+  <span class="hljs-keyword">var</span> add2 = makeAdder(<span class="hljs-number">2</span>);
+
+  <span class="hljs-comment">// Create a function that adds 4.</span>
+  <span class="hljs-keyword">var</span> add4 = makeAdder(<span class="hljs-number">4</span>);
+
+  <span class="hljs-keyword">assert</span>(add2(<span class="hljs-number">3</span>) == <span class="hljs-number">5</span>);
+  <span class="hljs-keyword">assert</span>(add4(<span class="hljs-number">3</span>) == <span class="hljs-number">7</span>);
+}
+</code></pre>
+<h4 id="&#x6D4B;&#x8BD5;&#x51FD;&#x6570;&#x662F;&#x5426;&#x76F8;&#x7B49;">&#x6D4B;&#x8BD5;&#x51FD;&#x6570;&#x662F;&#x5426;&#x76F8;&#x7B49;</h4>
+<p>&#x4E0B;&#x9762;&#x662F;&#x6D4B;&#x8BD5;&#x9876;&#x7EA7;&#x51FD;&#x6570;&#x3001;&#x9759;&#x6001;&#x51FD;&#x6570;&#x548C;&#x5B9E;&#x4F8B;&#x51FD;&#x6570;&#x76F8;&#x7B49;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart">foo() {}               <span class="hljs-comment">// A top-level function</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> bar() {} <span class="hljs-comment">// A static method</span>
+  <span class="hljs-keyword">void</span> baz() {}        <span class="hljs-comment">// An instance method</span>
+}
+
+main() {
+  <span class="hljs-keyword">var</span> x;
+
+  <span class="hljs-comment">// Comparing top-level functions.</span>
+  x = foo;
+  <span class="hljs-keyword">assert</span>(foo == x);
+
+  <span class="hljs-comment">// Comparing static methods.</span>
+  x = A.bar;
+  <span class="hljs-keyword">assert</span>(A.bar == x);
+
+  <span class="hljs-comment">// Comparing instance methods.</span>
+  <span class="hljs-keyword">var</span> v = <span class="hljs-keyword">new</span> A(); <span class="hljs-comment">// Instance #1 of A</span>
+  <span class="hljs-keyword">var</span> w = <span class="hljs-keyword">new</span> A(); <span class="hljs-comment">// Instance #2 of A</span>
+  <span class="hljs-keyword">var</span> y = w;
+  x = w.baz;
+
+  <span class="hljs-comment">// These closures refer to the same instance (#2),</span>
+  <span class="hljs-comment">// so they&apos;re equal.</span>
+  <span class="hljs-keyword">assert</span>(y.baz == x);
+
+  <span class="hljs-comment">// These closures refer to different instances,</span>
+  <span class="hljs-comment">// so they&apos;re unequal.</span>
+  <span class="hljs-keyword">assert</span>(v.baz != w.baz);
+}
+</code></pre>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<p>&#x6240;&#x6709;&#x7684;&#x51FD;&#x6570;&#x90FD;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x503C;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x628A;&#x8BED;&#x53E5; <code>return null;</code> &#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x3002;</p>
+<h3 id="&#x64CD;&#x4F5C;&#x7B26;">&#x64CD;&#x4F5C;&#x7B26;</h3>
+<p>&#x4E0B;&#x8868;&#x662F; Dart &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#x3002; &#x5F88;&#x591A;&#x64CD;&#x4F5C;&#x7B26;&#x90FD;&#x53EF;&#x4EE5;&#x91CD;&#x8F7D;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+<th style="text-align:left">&#x64CD;&#x4F5C;&#x7B26;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x4E00;&#x5143;&#x540E;&#x7F00;</td>
+<td style="text-align:left"><code>expr++</code>    <code>expr--</code>    <code>()</code>    <code>[]</code>    <code>.</code>    <code>?.</code></td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E00;&#x5143;&#x524D;&#x7F00;</td>
+<td style="text-align:left"><code>-expr</code>    <code>!expr</code>    <code>~expr</code>    <code>++expr</code>    <code>--expr</code></td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E58;&#x9664;&#x4F59;</td>
+<td style="text-align:left"><code>*</code>    <code>/</code>    <code>%</code>  <code>~/</code></td>
+</tr>
+<tr>
+<td style="text-align:left">&#x52A0;&#x51CF;</td>
+<td style="text-align:left"><code>+</code>    <code>-</code></td>
+</tr>
+<tr>
+<td style="text-align:left">&#x79FB;&#x4F4D;</td>
+<td style="text-align:left"><code>&lt;&lt;</code>    <code>&gt;&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4F4D;&#x8FD0;&#x7B97;</td>
+<td style="text-align:left"><code>&amp;</code> <code>^</code>   `</td>
+<td>`</td>
+</tr>
+<tr>
+<td style="text-align:left">relational and type test</td>
+<td style="text-align:left"><code>&gt;=</code>    <code>&gt;</code>    <code>&lt;=</code>    <code>&lt;</code>    <code>as</code>    <code>is</code>    <code>is!</code></td>
+</tr>
+<tr>
+<td style="text-align:left">equality</td>
+<td style="text-align:left"><code>==</code>    <code>!=</code></td>
+</tr>
+<tr>
+<td style="text-align:left">logical AND</td>
+<td style="text-align:left"><code>&amp;&amp;</code> `</td>
+<td></td>
+<td>`</td>
+</tr>
+<tr>
+<td style="text-align:left">if null</td>
+<td style="text-align:left"><code>??</code></td>
+</tr>
+<tr>
+<td style="text-align:left">conditional</td>
+<td style="text-align:left"><code>expr1 ? expr2 : expr3</code></td>
+</tr>
+<tr>
+<td style="text-align:left">cascade</td>
+<td style="text-align:left"><code>..</code></td>
+</tr>
+<tr>
+<td style="text-align:left">assignment</td>
+<td style="text-align:left"><code>=</code>    <code>*=</code>    <code>/=</code>    <code>~/=</code>    <code>%=</code>    <code>+=</code>    <code>-=</code>    <code>&lt;&lt;=</code>    <code>&gt;&gt;=</code>    <code>&amp;=</code>    <code>^=</code>    `</td>
+<td>=<code>`??=</code></td>
+</tr>
+</tbody>
+</table>
+<p>&#x5728;&#x4F7F;&#x7528;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x7B26;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-dart">a++
+a + b
+a = b
+a == b
+a ? b: c
+a <span class="hljs-keyword">is</span> T
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x8868;&#x4E2D;&#x6240;&#x5217;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#x90FD;&#x662F;&#x6309;&#x7167;&#x4F18;&#x5148;&#x7EA7;&#x987A;&#x5E8F;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#xFF0C;&#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5217;&#x51FA;&#x7684;&#xFF0C; &#x4E0A;&#x9762;&#x548C;&#x5DE6;&#x8FB9;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#x4F18;&#x5148;&#x7EA7;&#x8981;&#x9AD8;&#x4E8E;&#x4E0B;&#x9762;&#x548C;&#x53F3;&#x8FB9;&#x7684;&#x3002; &#x4F8B;&#x5982; <code>%</code> &#x64CD;&#x4F5C;&#x7B26;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E; <code>==</code>&#xFF0C;&#x800C; &#x7B49;&#x53F7; &#x9AD8;&#x4E8E; <code>&amp;&amp;</code>&#x3002;&#x6240;&#x4EE5;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-comment">// 1: Parens improve readability.</span>
+<span class="hljs-keyword">if</span> ((n % i == <span class="hljs-number">0</span>) &amp;&amp; (d % i == <span class="hljs-number">0</span>))
+
+<span class="hljs-comment">// 2: Harder to read, but equivalent.</span>
+<span class="hljs-keyword">if</span> (n % i == <span class="hljs-number">0</span> &amp;&amp; d % i == <span class="hljs-number">0</span>)
+</code></pre>
+<p><strong>&#x8B66;&#x544A;&#xFF1A;</strong> &#x5BF9;&#x4E8E;&#x6709;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x5DE6;&#x8FB9;&#x7684;&#x64CD;&#x4F5C;&#x6570;&#x51B3;&#x5B9A;&#x4E86;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x529F;&#x80FD;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x4E00;&#x4E2A; Vector &#x5BF9;&#x8C61;&#x548C;&#x4E00;&#x4E2A; Point &#x5BF9;&#x8C61;&#xFF0C; <code>aVector + aPoint</code> &#x4F7F;&#x7528;&#x7684;&#x4F1A;&#x662F;<code>Vector</code> &#x5BF9;&#x8C61;&#x4E2D;&#x5B9A;&#x4E49;&#x7684; + &#x64CD;&#x4F5C;&#x7B26;&#x3002;</p>
+<h5 id="&#x7B97;&#x672F;&#x64CD;&#x4F5C;&#x7B26;">&#x7B97;&#x672F;&#x64CD;&#x4F5C;&#x7B26;</h5>
+<p>Dart &#x652F;&#x6301;&#x5E38;&#x7528;&#x7684;&#x7B97;&#x672F;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x64CD;&#x4F5C;&#x7B26;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>+</code></td>
+<td style="text-align:left">&#x52A0;&#x53F7;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&#x2013;</code></td>
+<td style="text-align:left">&#x51CF;&#x53F7;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-*expr*</code></td>
+<td style="text-align:left">&#x8D1F;&#x53F7;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>*</code></td>
+<td style="text-align:left">&#x4E58;&#x53F7;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/</code></td>
+<td style="text-align:left">&#x9664;&#x53F7;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>~/</code></td>
+<td style="text-align:left">&#x9664;&#x53F7;&#xFF0C;&#x4F46;&#x662F;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x6574;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>%</code></td>
+<td style="text-align:left">&#x53D6;&#x6A21;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">assert</span>(<span class="hljs-number">2</span> + <span class="hljs-number">3</span> == <span class="hljs-number">5</span>);
+<span class="hljs-keyword">assert</span>(<span class="hljs-number">2</span> - <span class="hljs-number">3</span> == <span class="hljs-number">-1</span>);
+<span class="hljs-keyword">assert</span>(<span class="hljs-number">2</span> * <span class="hljs-number">3</span> == <span class="hljs-number">6</span>);
+<span class="hljs-keyword">assert</span>(<span class="hljs-number">5</span> / <span class="hljs-number">2</span> == <span class="hljs-number">2.5</span>);   <span class="hljs-comment">// Result is a double</span>
+<span class="hljs-keyword">assert</span>(<span class="hljs-number">5</span> ~/ <span class="hljs-number">2</span> == <span class="hljs-number">2</span>);    <span class="hljs-comment">// Result is an integer</span>
+<span class="hljs-keyword">assert</span>(<span class="hljs-number">5</span> % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>);     <span class="hljs-comment">// Remainder</span>
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;5/2 = <span class="hljs-subst">${<span class="hljs-number">5</span>~/<span class="hljs-number">2</span>}</span> r <span class="hljs-subst">${<span class="hljs-number">5</span>%<span class="hljs-number">2</span>}</span>&apos;</span>); <span class="hljs-comment">// 5/2 = 2 r 1</span>
+</code></pre>
+<p>Dart &#x8FD8;&#x652F;&#x6301;&#x9012;&#x589E;&#x3001;&#x9012;&#x51CF;&#x524D;&#x7F00; &#x548C;&#x540E;&#x7F00;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x64CD;&#x4F5C;&#x7B26;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>++var</code></td>
+<td style="text-align:left"><code>var = var + 1</code> (&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x662F; <code>var + 1</code>&#xFF0C;&#x56E0;&#x4E3A;&#x5148;&#x8FDB;&#x884C;<code>+1</code>&#x64CD;&#x4F5C;&#xFF0C;&#x518D;&#x6267;&#x884C;&#x8868;&#x8FBE;&#x5F0F;)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>var++</code></td>
+<td style="text-align:left"><code>var = var + 1</code> (&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x662F; <code>var</code>&#xFF0C;&#x56E0;&#x4E3A;&#x5148;&#x6267;&#x884C;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x518D;&#x8FDB;&#x884C;<code>+1</code>&#x64CD;&#x4F5C;)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--var</code></td>
+<td style="text-align:left"><code>var = var &#x2013; 1</code> (&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x662F; <code>var &#x2013; 1</code>&#xFF0C;&#x56E0;&#x4E3A;&#x5148;&#x8FDB;&#x884C;<code>-1</code>&#x64CD;&#x4F5C;&#xFF0C;&#x518D;&#x6267;&#x884C;&#x8868;&#x8FBE;&#x5F0F;)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>var--</code></td>
+<td style="text-align:left"><code>var = var &#x2013; 1</code> (&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x662F; <code>var</code>&#xFF0C;&#x56E0;&#x4E3A;&#x5148;&#x6267;&#x884C;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x518D;&#x8FDB;&#x884C;<code>+1</code>&#x64CD;&#x4F5C;)</td>
+</tr>
+</tbody>
+</table>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> a, b;
+
+a = <span class="hljs-number">0</span>;
+b = ++a;        <span class="hljs-comment">// Increment a before b gets its value.</span>
+<span class="hljs-keyword">assert</span>(a == b); <span class="hljs-comment">// 1 == 1</span>
+
+a = <span class="hljs-number">0</span>;
+b = a++;        <span class="hljs-comment">// Increment a AFTER b gets its value.</span>
+<span class="hljs-keyword">assert</span>(a != b); <span class="hljs-comment">// 1 != 0</span>
+
+a = <span class="hljs-number">0</span>;
+b = --a;        <span class="hljs-comment">// Decrement a before b gets its value.</span>
+<span class="hljs-keyword">assert</span>(a == b); <span class="hljs-comment">// -1 == -1</span>
+
+a = <span class="hljs-number">0</span>;
+b = a--;        <span class="hljs-comment">// Decrement a AFTER b gets its value.</span>
+<span class="hljs-keyword">assert</span>(a != b); <span class="hljs-comment">// -1 != 0</span>
+</code></pre>
+<h5 id="&#x76F8;&#x7B49;&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x7B26;">&#x76F8;&#x7B49;&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x7B26;</h5>
+<p>&#x4E0B;&#x8868;&#x662F;&#x548C;&#x76F8;&#x7B49;&#x64CD;&#x4F5C;&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x64CD;&#x4F5C;&#x7B26;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>==</code></td>
+<td style="text-align:left">&#x76F8;&#x7B49;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>!=</code></td>
+<td style="text-align:left">&#x4E0D;&#x7B49;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&gt;</code></td>
+<td style="text-align:left">&#x5927;&#x4E8E;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;</code></td>
+<td style="text-align:left">&#x5C0F;&#x4E8E;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&gt;=</code></td>
+<td style="text-align:left">&#x5927;&#x4E8E;&#x7B49;&#x4E8E;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;=</code></td>
+<td style="text-align:left">&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8981;&#x6D4B;&#x8BD5;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x5426;&#x4E3A;&#x540C;&#x6837;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F7F;&#x7528; <code>==</code> &#x64CD;&#x4F5C;&#x7B26;&#x3002;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x77E5;&#x9053;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;<code>identical()</code>&#x65B9;&#x6CD5;&#x3002;</p>
+<p> &#x4E0B;&#x9762;&#x662F; <code>==</code> &#x64CD;&#x4F5C;&#x7B26;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x89E3;&#x91CA;&#xFF1A;</p>
+<ol>
+<li>&#x5982;&#x679C; <em>x</em> &#x6216;&#x8005; <em>y</em> &#x662F; null&#xFF1A;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x90FD;&#x662F; null &#x5219;&#x8FD4;&#x56DE; true&#xFF0C;&#x5982;&#x679C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x662F; null &#x8FD4;&#x56DE; false&#x3002;</li>
+<li>&#x5982;&#x679C;x&#x548C;y&#x90FD;&#x4E0D;&#x662F;null&#xFF1A;&#x8FD4;&#x56DE; <code>x.==(y)</code>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF08;&#x50CF; <code>==</code> &#x8FD9;&#x79CD;&#x64CD;&#x4F5C;&#x7B26;&#x662F;&#x5B9A;&#x4E49;&#x5728;&#x5DE6;&#x8FB9;&#x5BF9;&#x8C61;&#x4E0A;&#x7684;&#x65B9;&#x6CD5;&#x3002; &#x4F60;&#x751A;&#x81F3;&#x8FD8;&#x53EF;&#x4EE5;&#x91CD;&#x5199;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x7B26;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#xFF0C;&#x5728;&#x540E;&#x9762;&#x7684;&#x7AE0;&#x8282;&#x5C06;&#x4F1A;&#x5177;&#x4F53;&#x4ECB;&#x7ECD;&#x3002;&#xFF09;</li>
+</ol>
+<p>&#x4E0B;&#x9762;&#x662F;&#x76F8;&#x7B49;&#x5173;&#x7CFB;&#x64CD;&#x4F5C;&#x7B26;&#x7684; &#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">assert</span>(<span class="hljs-number">2</span> == <span class="hljs-number">2</span>);
+<span class="hljs-keyword">assert</span>(<span class="hljs-number">2</span> != <span class="hljs-number">3</span>);
+<span class="hljs-keyword">assert</span>(<span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span>);
+<span class="hljs-keyword">assert</span>(<span class="hljs-number">2</span> &lt; <span class="hljs-number">3</span>);
+<span class="hljs-keyword">assert</span>(<span class="hljs-number">3</span> &gt;= <span class="hljs-number">3</span>);
+<span class="hljs-keyword">assert</span>(<span class="hljs-number">2</span> &lt;= <span class="hljs-number">3</span>);
+</code></pre>
+<h5 id="&#x7C7B;&#x578B;&#x5224;&#x5B9A;&#x64CD;&#x4F5C;&#x7B26;">&#x7C7B;&#x578B;&#x5224;&#x5B9A;&#x64CD;&#x4F5C;&#x7B26;</h5>
+<p><code>as</code>&#x3001; <code>is</code>&#x3001; &#x548C; <code>is!</code> &#x64CD;&#x4F5C;&#x7B26;&#x662F;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x5224;&#x5B9A;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x64CD;&#x4F5C;&#x7B26;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>as</code></td>
+<td style="text-align:left">&#x7C7B;&#x578B;&#x8F6C;&#x6362;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>is</code></td>
+<td style="text-align:left">&#x5982;&#x679C;&#x5BF9;&#x8C61;&#x662F;&#x6307;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#x8FD4;&#x56DE; <code>True</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>is!</code></td>
+<td style="text-align:left">&#x5982;&#x679C;&#x5BF9;&#x8C61;&#x662F;&#x6307;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#x8FD4;&#x56DE; <code>False</code></td>
+</tr>
+</tbody>
+</table>
+<p>&#x53EA;&#x6709;&#x5F53; <code>obj</code> &#x5B9E;&#x73B0;&#x4E86; <code>T</code> &#x7684;&#x63A5;&#x53E3;&#xFF0C; <code>obj is T</code> &#x624D;&#x662F; <code>true</code>&#x3002;&#x4F8B;&#x5982; <code>obj is Object</code> &#x603B;&#x662F; <code>true</code>&#x3002;</p>
+<p>&#x4F7F;&#x7528; <code>as</code> &#x64CD;&#x4F5C;&#x7B26;&#x628A;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x4E3A;&#x7279;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#x3002; &#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x5F53;&#x505A;&#x7528; <code>is</code> &#x5224;&#x5B9A;&#x7C7B;&#x578B;&#x7136;&#x540E;&#x8C03;&#x7528;&#x6240;&#x5224;&#x5B9A;&#x5BF9;&#x8C61;&#x7684;&#x51FD;&#x6570;&#x7684;&#x7F29;&#x5199;&#x5F62;&#x5F0F;&#x3002;&#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x7684; &#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">if</span> (emp <span class="hljs-keyword">is</span> Person) { <span class="hljs-comment">// Type check</span>
+  emp.firstName = <span class="hljs-string">&apos;Bob&apos;</span>;
+}
+</code></pre>
+<p>&#x4F7F;&#x7528; <code>as</code> &#x64CD;&#x4F5C;&#x7B26;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-dart">(emp <span class="hljs-keyword">as</span> Person).firstName = <span class="hljs-string">&apos;Bob&apos;</span>;
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> &#x4E0A;&#x9762;&#x8FD9;&#x4E24;&#x4E2A;&#x4EE3;&#x7801;&#x6548;&#x679C;&#x662F;&#x6709;&#x533A;&#x522B;&#x7684;&#x3002;&#x5982;&#x679C; <code>emp</code> &#x662F; null &#x6216;&#x8005;&#x4E0D;&#x662F; Person &#x7C7B;&#x578B;&#xFF0C; &#x5219;&#x7B2C;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x4F7F;&#x7528; <code>is</code> &#x5219;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x6761;&#x4EF6;&#x91CC;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x800C;&#x7B2C;&#x4E8C;&#x4E2A;&#x60C5;&#x51B5;&#x4F7F;&#x7528; <code>as</code> &#x5219;&#x4F1A;<strong>&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;</strong>&#x3002;</p>
+<h5 id="&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x7B26;">&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x7B26;</h5>
+<p>&#x4F7F;&#x7528; <code>=</code> &#x64CD;&#x4F5C;&#x7B26;&#x6765;&#x8D4B;&#x503C;&#xFF0C;&#x7528; <code>??=</code> &#x64CD;&#x4F5C;&#x7B26;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x503C;&#x4E3A; null &#x7684;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x3002;</p>
+<pre><code class="lang-dart">a = value;   <span class="hljs-comment">// &#x7ED9; a &#x53D8;&#x91CF;&#x8D4B;&#x503C;</span>
+b ??= value; <span class="hljs-comment">// &#x5982;&#x679C; b &#x662F; null&#xFF0C;&#x5219;&#x5C06;value&#x8D4B;&#x503C;&#x7ED9; b&#xFF1B;</span>
+             <span class="hljs-comment">// &#x5982;&#x679C;&#x4E0D;&#x662F; null&#xFF0C;&#x5219; b &#x7684;&#x503C;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;</span>
+</code></pre>
+<p>&#x8FD8;&#x6709;&#x590D;&#x5408;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x7B26; <code>+=</code> &#x7B49;&#x53EF;&#x4EE5; &#x8D4B;&#x503C;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th><code>=</code></th>
+<th><code>-=</code></th>
+<th><code>/=</code></th>
+<th><code>%=</code></th>
+<th><code>&gt;&gt;=</code></th>
+<th><code>^=</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+=</code></td>
+<td><code>*=</code></td>
+<td><code>~/=</code></td>
+<td><code>&lt;&lt;=</code></td>
+<td><code>&amp;=</code></td>
+<td>`</td>
+<td>=`</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E0B;&#x9762;&#x662F;&#x590D;&#x5408;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x7B26;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x89E3;&#x91CA;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">&#x590D;&#x5408;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x7B26;</th>
+<th style="text-align:left">&#x5BF9;&#x5E94;&#x7684;&#x5B8C;&#x6574;&#x8868;&#x8FBE;&#x5F0F;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>&#x5BF9;&#x4E8E; &#x64CD;&#x4F5C;&#x7B26; op:</strong></td>
+<td style="text-align:left"><code>a op = b</code></td>
+<td style="text-align:left"><code>a = a op b</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>&#x793A;&#x4F8B;:</strong></td>
+<td style="text-align:left"><code>a += b</code></td>
+<td style="text-align:left"><code>a = a + b</code></td>
+</tr>
+</tbody>
+</table>
+<p>&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> a = <span class="hljs-number">2</span>;           <span class="hljs-comment">// Assign using =</span>
+a *= <span class="hljs-number">3</span>;              <span class="hljs-comment">// Assign and multiply: a = a * 3</span>
+<span class="hljs-keyword">assert</span>(a == <span class="hljs-number">6</span>);
+</code></pre>
+<h5 id="&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;">&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;</h5>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;&#x6765;&#x64CD;&#x4F5C;&#x5E03;&#x5C14;&#x503C;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x64CD;&#x4F5C;&#x7B26;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>!expr</code></td>
+<td style="text-align:left">&#x5BF9;&#x8868;&#x8FBE;&#x5F0F;&#x7ED3;&#x679C;&#x53D6;&#x53CD;&#xFF08;<code>true</code> &#x53D8;&#x4E3A; <code>false</code> &#xFF0C;<code>false</code> &#x53D8;&#x4E3A; <code>true</code>&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">`</td>
+<td style="text-align:left"></td>
+<td>`</td>
+<td>&#x903B;&#x8F91;&#x6216;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&amp;&amp;</code></td>
+<td style="text-align:left">&#x903B;&#x8F91;&#x4E0E;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">if</span> (!done &amp;&amp; (col == <span class="hljs-number">0</span> || col == <span class="hljs-number">3</span>)) {
+  <span class="hljs-comment">// ...Do something...</span>
+}
+</code></pre>
+<h5 id="&#x4F4D;&#x548C;&#x79FB;&#x4F4D;&#x64CD;&#x4F5C;&#x7B26;">&#x4F4D;&#x548C;&#x79FB;&#x4F4D;&#x64CD;&#x4F5C;&#x7B26;</h5>
+<p>&#x5728; Dart &#x4E2D;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x64CD;&#x4F5C;&#x6570;&#x5B57;&#x7684;&#x67D0;&#x4E00;&#x4F4D;&#xFF0C; &#x4E0B;&#x9762;&#x64CD;&#x4F5C;&#x7B26;&#x540C;&#x6837;&#x5E94;&#x7528;&#x4E8E;&#x6574;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x64CD;&#x4F5C;&#x7B26;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&amp;</code></td>
+<td style="text-align:left">&#x4E0E;</td>
+</tr>
+<tr>
+<td style="text-align:left">`</td>
+<td style="text-align:left">`</td>
+<td>&#x6216;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>^</code></td>
+<td style="text-align:left">&#x5F02;&#x6216;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>~expr</code></td>
+<td style="text-align:left">&#x6309;&#x4F4D;&#x53D6;&#x53CD;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;&lt;</code></td>
+<td style="text-align:left">Shift left</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&gt;&gt;</code></td>
+<td style="text-align:left">Shift right</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4F7F;&#x7528;&#x4F4D;&#x4E8E;&#x548C;&#x79FB;&#x4F4D;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">final</span> value = <span class="hljs-number">0x22</span>;
+<span class="hljs-keyword">final</span> bitmask = <span class="hljs-number">0x0f</span>;
+
+<span class="hljs-keyword">assert</span>((value &amp; bitmask)  == <span class="hljs-number">0x02</span>);  <span class="hljs-comment">// AND</span>
+<span class="hljs-keyword">assert</span>((value &amp; ~bitmask) == <span class="hljs-number">0x20</span>);  <span class="hljs-comment">// AND NOT</span>
+<span class="hljs-keyword">assert</span>((value | bitmask)  == <span class="hljs-number">0x2f</span>);  <span class="hljs-comment">// OR</span>
+<span class="hljs-keyword">assert</span>((value ^ bitmask)  == <span class="hljs-number">0x2d</span>);  <span class="hljs-comment">// XOR</span>
+<span class="hljs-keyword">assert</span>((value &lt;&lt; <span class="hljs-number">4</span>)       == <span class="hljs-number">0x220</span>); <span class="hljs-comment">// Shift left</span>
+<span class="hljs-keyword">assert</span>((value &gt;&gt; <span class="hljs-number">4</span>)       == <span class="hljs-number">0x02</span>);  <span class="hljs-comment">// Shift right</span>
+</code></pre>
+<h5 id="&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;">&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;</h5>
+<p>Dart &#x6709;&#x4E24;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x66FF;&#x4EE3; <code>if-else</code>&#x8BED;&#x53E5;&#xFF1A;</p>
+<ul>
+<li><p><code>condition ? expr1 : expr2</code></p>
+<p>&#x5982;&#x679C; <em>condition</em> &#x662F; true&#xFF0C;&#x6267;&#x884C; <em>expr1</em> (&#x5E76;&#x8FD4;&#x56DE;&#x6267;&#x884C;&#x7684;&#x7ED3;&#x679C;)&#xFF0C; &#x5426;&#x5219;&#x6267;&#x884C; <em>expr2</em> &#x5E76;&#x8FD4;&#x56DE;&#x5176;&#x7ED3;&#x679C;&#x3002;</p>
+</li>
+<li><p><code>expr1?? expr2</code></p>
+<p>&#x5982;&#x679C; <em>expr1</em> &#x4E0D;&#x4E3A;null&#xFF0C;&#x8FD4;&#x56DE;&#x5176;&#x503C;&#xFF0C; &#x5426;&#x5219;&#x6267;&#x884C; <em>expr2</em> &#x5E76;&#x8FD4;&#x56DE;&#x5176;&#x7ED3;&#x679C;&#x3002;</p>
+</li>
+</ul>
+<p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x57FA;&#x4E8E;&#x5E03;&#x5C14;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x6765;&#x8D4B;&#x503C;&#xFF0C; &#x8003;&#x8651;&#x4F7F;&#x7528; <code>?:</code>&#x3002;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> finalStatus = m.isFinal ? <span class="hljs-string">&apos;final&apos;</span> : <span class="hljs-string">&apos;not final&apos;</span>;
+</code></pre>
+<p>&#x5982;&#x679C;&#x5E03;&#x5C14;&#x8868;&#x8FBE;&#x5F0F;&#x662F;&#x6D4B;&#x8BD5;&#x503C;&#x662F;&#x5426;&#x4E3A; null&#xFF0C; &#x8003;&#x8651;&#x4F7F;&#x7528; <code>??</code>&#x3002;</p>
+<pre><code class="lang-dart"><span class="hljs-built_in">String</span> toString() =&gt; msg ?? <span class="hljs-keyword">super</span>.toString();
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x6837;&#x6548;&#x679C;&#x7684;&#x5B9E;&#x73B0;&#xFF0C; &#x4F46;&#x662F;&#x4EE3;&#x7801;&#x4E0D;&#x662F;&#x90A3;&#x4E48;&#x7B80;&#x6D01;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-comment">// Slightly longer version uses ?: operator.</span>
+<span class="hljs-built_in">String</span> toString() =&gt; msg == <span class="hljs-keyword">null</span> ? <span class="hljs-keyword">super</span>.toString() : msg;
+
+<span class="hljs-comment">// Very long version uses if-else statement.</span>
+<span class="hljs-built_in">String</span> toString() {
+  <span class="hljs-keyword">if</span> (msg == <span class="hljs-keyword">null</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.toString();
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> msg;
+  }
+}
+</code></pre>
+<h5 id="&#x7EA7;&#x8054;&#x64CD;&#x4F5C;&#x7B26;">&#x7EA7;&#x8054;&#x64CD;&#x4F5C;&#x7B26;</h5>
+<p>&#x7EA7;&#x8054;&#x64CD;&#x4F5C;&#x7B26; (<code>..</code>) &#x53EF;&#x4EE5;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0A;&#x8FDE;&#x7EED;&#x8C03;&#x7528;&#x591A;&#x4E2A;&#x51FD;&#x6570;&#x4EE5;&#x53CA;&#x8BBF;&#x95EE;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x3002; &#x4F7F;&#x7528;&#x7EA7;&#x8054;&#x64CD;&#x4F5C;&#x7B26;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x521B;&#x5EFA;&#x4E34;&#x65F6;&#x53D8;&#x91CF;&#xFF0C; &#x5E76;&#x4E14;&#x5199;&#x51FA;&#x6765;&#x7684;&#x4EE3;&#x7801;&#x770B;&#x8D77;&#x6765;&#x66F4;&#x52A0;&#x6D41;&#x7545;&#xFF1A;</p>
+<p>&#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-built_in">querySelector</span>(<span class="hljs-string">&apos;#button&apos;</span>) <span class="hljs-comment">// Get an object.</span>
+  ..text = <span class="hljs-string">&apos;Confirm&apos;</span>   <span class="hljs-comment">// Use its members.</span>
+  ..classes.add(<span class="hljs-string">&apos;important&apos;</span>)
+  ..onClick.listen((e) =&gt; <span class="hljs-built_in">window</span>.alert(<span class="hljs-string">&apos;Confirmed!&apos;</span>));
+</code></pre>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5; <code>querySelector()</code> &#x8FD4;&#x56DE;&#x4E86;&#x4E00;&#x4E2A; <code>selector</code> &#x5BF9;&#x8C61;&#x3002; &#x540E;&#x9762;&#x7684;&#x7EA7;&#x8054;&#x64CD;&#x4F5C;&#x7B26;&#x90FD;&#x662F;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x6210;&#x5458;&#xFF0C; &#x5E76;&#x5FFD;&#x7565;&#x6BCF;&#x4E2A;&#x64CD;&#x4F5C;&#x6240;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x3002;</p>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x548C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x529F;&#x80FD;&#x4E00;&#x6837;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> button = <span class="hljs-built_in">querySelector</span>(<span class="hljs-string">&apos;#button&apos;</span>);
+button.text = <span class="hljs-string">&apos;Confirm&apos;</span>;
+button.classes.add(<span class="hljs-string">&apos;important&apos;</span>);
+button.onClick.listen((e) =&gt; <span class="hljs-built_in">window</span>.alert(<span class="hljs-string">&apos;Confirmed!&apos;</span>));
+</code></pre>
+<p>&#x7EA7;&#x8054;&#x8C03;&#x7528;&#x4E5F;&#x53EF;&#x4EE5;&#x5D4C;&#x5957;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">final</span> addressBook = (<span class="hljs-keyword">new</span> AddressBookBuilder()
+      ..name = <span class="hljs-string">&apos;jenny&apos;</span>
+      ..email = <span class="hljs-string">&apos;jenny@example.com&apos;</span>
+      ..phone = (<span class="hljs-keyword">new</span> PhoneNumberBuilder()
+            ..number = <span class="hljs-string">&apos;415-555-0100&apos;</span>
+            ..label = <span class="hljs-string">&apos;home&apos;</span>)
+          .build())
+    .build();
+</code></pre>
+<p>&#x5728;&#x65B9;&#x6CD5;&#x4E0A;&#x4F7F;&#x7528;&#x7EA7;&#x8054;&#x64CD;&#x4F5C;&#x7B26;&#x9700;&#x8981;&#x975E;&#x5E38;&#x5C0F;&#x5FC3;&#xFF0C; &#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5C31;&#x662F;&#x4E0D;&#x5408;&#x6CD5;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-comment">// Does not work</span>
+<span class="hljs-keyword">var</span> sb = <span class="hljs-keyword">new</span> <span class="hljs-built_in">StringBuffer</span>();
+sb.write(<span class="hljs-string">&apos;foo&apos;</span>)..write(<span class="hljs-string">&apos;bar&apos;</span>);
+</code></pre>
+<p><code>sb.write()</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>void</code>&#xFF0C; &#x65E0;&#x6CD5;&#x5728; <code>void</code> &#x4E0A;&#x4F7F;&#x7528;&#x7EA7;&#x8054;&#x64CD;&#x4F5C;&#x7B26;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> &#x4E25;&#x683C;&#x6765;&#x8BF4;&#xFF0C; &#x4E24;&#x4E2A;&#x70B9;&#x7684;&#x7EA7;&#x8054;&#x8BED;&#x6CD5;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C; &#x53EA;&#x662F;&#x4E00;&#x4E2A; Dart &#x7279;&#x6B8A;&#x8BED;&#x6CD5;&#x3002;</p>
+<h5 id="&#x5176;&#x4ED6;&#x64CD;&#x4F5C;&#x7B26;">&#x5176;&#x4ED6;&#x64CD;&#x4F5C;&#x7B26;</h5>
+<p>&#x4E0B;&#x9762;&#x662F;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Operator</th>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>()</code></td>
+<td style="text-align:left">&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</td>
+<td style="text-align:left">&#x4EE3;&#x8868;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>[]</code></td>
+<td style="text-align:left">&#x8BBF;&#x95EE; <code>List</code></td>
+<td style="text-align:left">&#x8BBF;&#x95EE; <code>list</code> &#x4E2D;&#x7279;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.</code></td>
+<td style="text-align:left">&#x8BBF;&#x95EE; <code>Member</code></td>
+<td style="text-align:left">&#x8BBF;&#x95EE;&#x5143;&#x7D20;&#xFF0C;&#x4F8B;&#x5982; <code>foo.bar</code> &#x4EE3;&#x8868;&#x8BBF;&#x95EE; <code>foo</code> &#x7684; <code>bar</code> &#x6210;&#x5458;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>?.</code></td>
+<td style="text-align:left">&#x6761;&#x4EF6;&#x6210;&#x5458;&#x8BBF;&#x95EE;</td>
+<td style="text-align:left">&#x548C; <code>.</code> &#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x662F;&#x5DE6;&#x8FB9;&#x7684;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;&#x4E0D;&#x80FD;&#x4E3A; <code>null</code>&#xFF0C;&#x4F8B;&#x5982; <code>foo?.bar</code> &#x5982;&#x679C; <code>foo</code> &#x4E3A; <code>null</code> &#x5219;&#x8FD4;&#x56DE; <code>null</code>&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; <code>bar</code> &#x6210;&#x5458;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5173;&#x4E8E; <code>.</code>&#x3001; <code>?.</code>&#x3001;&#x548C; <code>..</code> &#x7684;&#x8BE6;&#x60C5;&#xFF0C;&#x8BF7;&#x53C2;&#x8003; <a href="http://dart.goodev.org/guides/language/language-tour#classes" target="_blank">Classes</a>&#x3002;</p>
+<h3 id="&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x8BED;&#x53E5;">&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x8BED;&#x53E5;</h3>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x8BED;&#x53E5;&#x6765;&#x63A7;&#x5236; Dart &#x4EE3;&#x7801;&#x7684;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<ul>
+<li><code>if</code> &#x4EE5;&#x53CA; <code>else</code></li>
+<li><code>for</code> &#x5FAA;&#x73AF;</li>
+<li><code>while</code>&#x4EE5;&#x53CA; <code>do</code>-<code>while</code> &#x5FAA;&#x73AF;</li>
+<li><code>break</code> &#x548C; <code>continue</code></li>
+<li><code>switch</code> &#x548C; <code>case</code></li>
+<li><code>assert</code></li>
+</ul>
+<h5 id="if&#x548C;else">If&#x548C;else</h5>
+<p>Dart &#x652F;&#x6301; <code>if</code> &#x8BED;&#x53E5;&#x4EE5;&#x53CA;&#x53EF;&#x9009;&#x7684; <code>else</code>&#xFF0C;&#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">if</span> (isRaining()) {
+  you.bringRainCoat();
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isSnowing()) {
+  you.wearJacket();
+} <span class="hljs-keyword">else</span> {
+  car.putTopDown();
+}
+</code></pre>
+<h5 id="for&#x5FAA;&#x73AF;">For&#x5FAA;&#x73AF;</h5>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x7684; <code>for</code> &#x5FAA;&#x73AF;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> message = <span class="hljs-keyword">new</span> <span class="hljs-built_in">StringBuffer</span>(<span class="hljs-string">&quot;Dart is fun&quot;</span>);
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+  message.write(<span class="hljs-string">&apos;!&apos;</span>);
+}
+</code></pre>
+<p>Dart <code>for</code> &#x5FAA;&#x73AF;&#x4E2D;&#x7684;&#x95ED;&#x5305;&#x4F1A;&#x6355;&#x83B7;&#x5FAA;&#x73AF;&#x7684; <code>index</code> &#x7D22;&#x5F15;&#x503C;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> callbacks = [];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">2</span>; i++) {
+  callbacks.add(() =&gt; <span class="hljs-built_in">print</span>(i));
+}
+callbacks.forEach((c) =&gt; c());
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#x4E3A;&#x6240;&#x671F;&#x671B;&#x7684; <code>0</code> &#x548C; <code>1</code>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8981;&#x904D;&#x5386;&#x7684;&#x5BF9;&#x8C61;&#x5B9E;&#x73B0;&#x4E86; <code>Iterable</code> &#x63A5;&#x53E3;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>forEach()</code>&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x5FC5;&#x8981;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x904D;&#x5386;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5219;&#x4F7F;&#x7528; <code>forEach()</code> &#x65B9;&#x6CD5;&#x662F;&#x4E2A;&#x975E;&#x5E38;&#x597D;&#x7684;&#x9009;&#x62E9;&#xFF1A;</p>
+<pre><code class="lang-dart">candidates.forEach((candidate) =&gt; candidate.interview());
+</code></pre>
+<p><code>List</code> &#x548C; <code>Set</code> &#x7B49;&#x5B9E;&#x73B0;&#x4E86; <code>Iterable</code> &#x63A5;&#x53E3;&#xFF0C;&#x53E6;&#x5916;&#x5B9E;&#x73B0;&#x4E86;<code>Iterable</code>&#x7684;&#x7C7B;&#x8FD8;&#x652F;&#x6301; <code>for-in</code> &#x5F62;&#x5F0F;&#x7684;&#x904D;&#x5386;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> collection = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> x <span class="hljs-keyword">in</span> collection) {
+  <span class="hljs-built_in">print</span>(x);
+}
+</code></pre>
+<h5 id="while-&#x4EE5;&#x53CA;-do-while">While &#x4EE5;&#x53CA; do-while</h5>
+<p><code>while</code> &#x5FAA;&#x73AF;&#x5728;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x4E4B;&#x524D;&#x5148;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">while</span> (!isDone()) {
+  doSomething();
+}
+</code></pre>
+<p>&#x800C; <code>do</code>-<code>while</code> &#x5FAA;&#x73AF;&#x662F;&#x5148;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x4EE3;&#x7801;&#x518D;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">do</span> {
+  printLine();
+} <span class="hljs-keyword">while</span> (!atEndOfPage());
+</code></pre>
+<h5 id="break-&#x548C;-continue">Break &#x548C; continue</h5>
+<p>&#x4F7F;&#x7528; <code>break</code> &#x6765;&#x7EC8;&#x6B62;&#x5FAA;&#x73AF;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) {
+  <span class="hljs-keyword">if</span> (shutDownRequested()) <span class="hljs-keyword">break</span>;
+  processIncomingRequests();
+}
+</code></pre>
+<p>&#x4F7F;&#x7528; <code>continue</code> &#x6765;&#x5F00;&#x59CB;&#x4E0B;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; candidates.length; i++) {
+  <span class="hljs-keyword">var</span> candidate = candidates[i];
+  <span class="hljs-keyword">if</span> (candidate.yearsExperience &lt; <span class="hljs-number">5</span>) {
+    <span class="hljs-keyword">continue</span>;
+  }
+  candidate.interview();
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5728;&#x5B9E;&#x73B0; <code>Iterable</code> &#x63A5;&#x53E3;&#x7684;&#x5BF9;&#x8C61;&#x4E0A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x5199;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-dart">candidates.where((c) =&gt; c.yearsExperience &gt;= <span class="hljs-number">5</span>)
+          .forEach((c) =&gt; c.interview());
+</code></pre>
+<h5 id="switch-&#x548C;-case">Switch &#x548C; case</h5>
+<p>Dart &#x4E2D;&#x7684; Switch &#x8BED;&#x53E5;&#x4F7F;&#x7528; <code>==</code> &#x6BD4;&#x8F83; integer&#x3001;string&#x3001;&#x6216;&#x8005;&#x7F16;&#x8BD1;&#x65F6;&#x5E38;&#x91CF;&#x3002; &#x6BD4;&#x8F83;&#x7684;&#x5BF9;&#x8C61;&#x5FC5;&#x987B;&#x90FD;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF08;&#x4E5F;&#x4E0D;&#x80FD;&#x662F;&#x5176;&#x5B50;&#x7C7B;&#xFF09;&#xFF0C;&#x800C;&#x4E14;&#x5BF9;&#x5E94;&#x7C7B;&#x5FC5;&#x987B;&#x6CA1;&#x6709;&#x91CD;&#x5199; <code>==</code> &#x64CD;&#x4F5C;&#x7B26;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x975E;&#x7A7A;&#x7684; <code>case</code> &#x8BED;&#x53E5;&#x90FD;&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A; <code>break</code> &#x8BED;&#x53E5;&#x3002; &#x53E6;&#x5916;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>continue</code>&#x3001; <code>throw</code> &#x6216;&#x8005; <code>return</code> &#x6765;&#x7ED3;&#x675F;&#x975E;&#x7A7A; <code>case</code> &#x8BED;&#x53E5;&#x3002;</p>
+<p>&#x5F53;&#x6CA1;&#x6709; <code>case</code> &#x8BED;&#x53E5;&#x5339;&#x914D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>default</code> &#x8BED;&#x53E5;&#x6765;&#x5339;&#x914D;&#x8FD9;&#x79CD;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x3002;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> command = <span class="hljs-string">&apos;OPEN&apos;</span>;
+<span class="hljs-keyword">switch</span> (command) {
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;CLOSED&apos;</span>:
+    executeClosed();
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;PENDING&apos;</span>:
+    executePending();
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;APPROVED&apos;</span>:
+    executeApproved();
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;DENIED&apos;</span>:
+    executeDenied();
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;OPEN&apos;</span>:
+    executeOpen();
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">default</span>:
+    executeUnknown();
+}
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5728; <code>case</code> &#x4E2D;&#x7701;&#x7565;&#x4E86; <code>break</code> &#x8BED;&#x53E5;&#xFF0C; &#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x5C06;&#x4F1A;&#x51FA;&#x73B0;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> command = <span class="hljs-string">&apos;OPEN&apos;</span>;
+<span class="hljs-keyword">switch</span> (command) {
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;OPEN&apos;</span>:
+    executeOpen();
+    <span class="hljs-comment">// ERROR: Missing break causes an exception!!</span>
+
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;CLOSED&apos;</span>:
+    executeClosed();
+    <span class="hljs-keyword">break</span>;
+}
+</code></pre>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x5728; Dart &#x4E2D;&#x7684;&#x7A7A; <code>case</code> &#x8BED;&#x53E5;&#x4E2D;&#x53EF;&#x4EE5;&#x4E0D;&#x8981; <code>break</code> &#x8BED;&#x53E5;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> command = <span class="hljs-string">&apos;CLOSED&apos;</span>;
+<span class="hljs-keyword">switch</span> (command) {
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;CLOSED&apos;</span>: <span class="hljs-comment">// Empty case falls through.</span>
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;NOW_CLOSED&apos;</span>:
+    <span class="hljs-comment">// Runs for both CLOSED and NOW_CLOSED.</span>
+    executeNowClosed();
+    <span class="hljs-keyword">break</span>;
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x8FD9;&#x79CD;&#x7EE7;&#x7EED;&#x5230;&#x4E0B;&#x4E00;&#x4E2A; <code>case</code> &#x8BED;&#x53E5;&#x4E2D;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#xFF0C;&#x5219;&#x53EF;&#x4EE5; &#x4F7F;&#x7528; <code>continue</code> &#x8BED;&#x53E5;&#x8DF3;&#x8F6C;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x6807;&#x7B7E;&#xFF08;<code>label</code>&#xFF09;&#x5904;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> command = <span class="hljs-string">&apos;CLOSED&apos;</span>;
+<span class="hljs-keyword">switch</span> (command) {
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;CLOSED&apos;</span>:
+    executeClosed();
+    <span class="hljs-keyword">continue</span> nowClosed;
+    <span class="hljs-comment">// Continues executing at the nowClosed label.</span>
+
+nowClosed:
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;NOW_CLOSED&apos;</span>:
+    <span class="hljs-comment">// Runs for both CLOSED and NOW_CLOSED.</span>
+    executeNowClosed();
+    <span class="hljs-keyword">break</span>;
+}
+</code></pre>
+<p>&#x6BCF;&#x4E2A; <code>case</code> &#x8BED;&#x53E5;&#x90FD;&#x53EF;&#x4EE5;&#x6709;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x53EA;&#x6709;&#x5728;&#x8FD9;&#x4E2A;&#x8BED;&#x53E5;&#x5185;&#x53EF;&#x89C1;&#x3002;</p>
+<h5 id="assert&#xFF08;&#x65AD;&#x8A00;&#xFF09;">Assert&#xFF08;&#x65AD;&#x8A00;&#xFF09;</h5>
+<p>&#x5982;&#x679C;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x7ED3;&#x679C;&#x4E0D;&#x6EE1;&#x8DB3;&#x9700;&#x8981;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>assert</code> &#x8BED;&#x53E5;&#x6765;&#x6253;&#x65AD;&#x4EE3;&#x7801;&#x7684;&#x6267;&#x884C;&#x3002; &#x4E0B;&#x9762;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x65AD;&#x8A00;&#x3002; &#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E9B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-comment">// Make sure the variable has a non-null value.</span>
+<span class="hljs-keyword">assert</span>(text != <span class="hljs-keyword">null</span>);
+
+<span class="hljs-comment">// Make sure the value is less than 100.</span>
+<span class="hljs-keyword">assert</span>(number &lt; <span class="hljs-number">100</span>);
+
+<span class="hljs-comment">// Make sure this is an https URL.</span>
+<span class="hljs-keyword">assert</span>(urlString.startsWith(<span class="hljs-string">&apos;https&apos;</span>));
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> &#x65AD;&#x8A00;&#x53EA;&#x5728;<strong>&#x68C0;&#x67E5;&#x6A21;&#x5F0F;</strong>&#x4E0B;&#x8FD0;&#x884C;&#x6709;&#x6548;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x751F;&#x4EA7;&#x6A21;&#x5F0F;&#x8FD0;&#x884C;&#xFF0C;&#x5219;&#x65AD;&#x8A00;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x3002;</p>
+<p><code>assert</code> &#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x4E3A;&#x4EFB;&#x4F55;&#x8FD4;&#x56DE;&#x5E03;&#x5C14;&#x503C;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x6216;&#x8005;&#x65B9;&#x6CD5;&#x3002; &#x5982;&#x679C;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x4E3A; true&#xFF0C; &#x65AD;&#x8A00;&#x6267;&#x884C;&#x901A;&#x8FC7;&#xFF0C;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x3002; &#x5982;&#x679C;&#x8FD4;&#x56DE;&#x503C;&#x4E3A; <code>false</code>&#xFF0C; &#x65AD;&#x8A00;&#x6267;&#x884C;&#x5931;&#x8D25;&#xFF0C;&#x4F1A;&#x629B;&#x51FA;&#x4E00;&#x4E2A;<code>AssertionError</code>&#x5F02;&#x5E38; &#x3002;</p>
+<h3 id="&#x5F02;&#x5E38;&#xFF08;exceptions&#xFF09;">&#x5F02;&#x5E38;&#xFF08;Exceptions&#xFF09;</h3>
+<p>&#x4EE3;&#x7801;&#x4E2D;&#x53EF;&#x4EE5;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#x548C;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x3002;&#x5F02;&#x5E38;&#x8868;&#x793A;&#x4E00;&#x4E9B;&#x672A;&#x77E5;&#x7684;&#x9519;&#x8BEF;&#x60C5;&#x51B5;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5BF9;&#x5F02;&#x5E38;&#x8FDB;&#x884C;&#x6355;&#x83B7;&#xFF0C; &#x5219;&#x5F02;&#x5E38;&#x4F1A;&#x88AB;&#x629B;&#x51FA;&#xFF0C;&#x5BFC;&#x81F4;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x7EC8;&#x6B62;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x548C; Java &#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x6240;&#x6709;&#x7684; Dart &#x5F02;&#x5E38;&#x662F;&#x975E;&#x68C0;&#x67E5;&#x5F02;&#x5E38;&#x3002; &#x65B9;&#x6CD5;&#x4E0D;&#x4E00;&#x5B9A;&#x58F0;&#x660E;&#x4E86;&#x4ED6;&#x4EEC;&#x6240;&#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;&#xFF0C; &#x5E76;&#x4E14;&#x4E0D;&#x8981;&#x6C42;&#x4F60;&#x6355;&#x83B7;&#x4EFB;&#x4F55;&#x5F02;&#x5E38;&#x3002;</p>
+<p>Dart &#x63D0;&#x4F9B;&#x4E86; <code>Exception</code> &#x548C; <code>Error</code> &#x7C7B;&#x578B;&#xFF0C; &#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x5B50;&#x7C7B;&#x578B;&#x3002;&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x81EA;&#x5DF1;&#x7684;&#x5F02;&#x5E38;&#x7C7B;&#x578B;&#x3002;&#x4F46;&#x662F;&#xFF0C; Dart &#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x629B;&#x51FA;&#x4EFB;&#x4F55;&#x975E; <code>null</code> &#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x4E3A;&#x5F02;&#x5E38;&#xFF0C;&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x5B9E;&#x73B0;&#x4E86; <code>Exception</code> &#x6216;&#x8005; <code>Error</code> &#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<h4 id="throw">Throw</h4>
+<p>&#x4E0B;&#x9762;&#x662F;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> FormatException(<span class="hljs-string">&apos;Expected at least 1 section&apos;</span>);
+</code></pre>
+<p>&#x8FD8;&#x53EF;&#x4EE5;&#x629B;&#x51FA;&#x4EFB;&#x610F;&#x7684;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">throw</span> <span class="hljs-string">&apos;Out of llamas!&apos;</span>;
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x662F;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5728; =&gt; &#x8BED;&#x53E5;&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x5176;&#x4ED6;&#x80FD;&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5730;&#x65B9;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;</p>
+<pre><code class="lang-dart">distanceTo(Point other) =&gt;
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> UnimplementedError();
+</code></pre>
+<h4 id="catch">Catch</h4>
+<p>&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5F02;&#x5E38;&#x7EE7;&#x7EED;&#x4F20;&#x9012;&#xFF08;&#x4F60;&#x5728;<code>catch</code>&#x8BED;&#x53E5;&#x4E2D;&#x53C8;&#x91CD;&#x65B0;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x9664;&#x5916;&#xFF09;&#x3002; &#x6355;&#x83B7;&#x5F02;&#x5E38;&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x5904;&#x7406;&#x8BE5;&#x5F02;&#x5E38;&#x7684;&#x673A;&#x4F1A;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">try</span> {
+  breedMoreLlamas();
+} on OutOfLlamasException {
+  buyMoreLlamas();
+}
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x53EF;&#x4EE5;&#x629B;&#x51FA;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x5F02;&#x5E38;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x6355;&#x83B7;&#x8BED;&#x53E5;&#x3002;&#x6BCF;&#x4E2A;&#x8BED;&#x53E5;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x7C7B;&#x578B;&#xFF0C; &#x5982;&#x679C;&#x6355;&#x83B7;&#x8BED;&#x53E5;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x5F02;&#x5E38;&#x7C7B;&#x578B;&#xFF0C;&#x5219;&#x8BE5;&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x6355;&#x83B7;&#x4EFB;&#x4F55;&#x5F02;&#x5E38;&#x7C7B;&#x578B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">try</span> {
+  breedMoreLlamas();
+} on OutOfLlamasException {
+  <span class="hljs-comment">// A specific exception</span>
+  buyMoreLlamas();
+} on Exception <span class="hljs-keyword">catch</span> (e) {
+  <span class="hljs-comment">// Anything else that is an exception</span>
+  <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Unknown exception: $e&apos;</span>);
+} <span class="hljs-keyword">catch</span> (e) {
+  <span class="hljs-comment">// No specified type, handles all</span>
+  <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Something really unknown: $e&apos;</span>);
+}
+</code></pre>
+<p>&#x5982;&#x4E4B;&#x524D;&#x4EE3;&#x7801;&#x6240;&#x793A;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>on</code> &#x6216;&#x8005; <code>catch</code> &#x6765;&#x58F0;&#x660E;&#x6355;&#x83B7;&#x8BED;&#x53E5;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x3002;&#x4F7F;&#x7528; <code>on</code> &#x6765;&#x6307;&#x5B9A;&#x5F02;&#x5E38;&#x7C7B;&#x578B;&#xFF0C;&#x4F7F;&#x7528; <code>catch</code> &#x6765; &#x6355;&#x83B7;&#x5F02;&#x5E38;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x51FD;&#x6570; <code>catch()</code> &#x53EF;&#x4EE5;&#x5E26;&#x6709;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C; &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;&#x5BF9;&#x8C61;&#xFF0C; &#x7B2C;&#x4E8C;&#x4E2A;&#x4E3A;&#x5806;&#x6808;&#x4FE1;&#x606F; (&#x4E00;&#x4E2A; <code>StackTrace</code> &#x5BF9;&#x8C61;)&#x3002;</p>
+<pre><code class="lang-dart">  ...
+} on Exception <span class="hljs-keyword">catch</span> (e) {
+  <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Exception details:\n $e&apos;</span>);
+} <span class="hljs-keyword">catch</span> (e, s) {
+  <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Exception details:\n $e&apos;</span>);
+  <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Stack trace:\n $s&apos;</span>);
+}
+</code></pre>
+<p>&#x4F7F;&#x7528; <code>rethrow</code> &#x5173;&#x952E;&#x5B57;&#x53EF;&#x4EE5; &#x628A;&#x6355;&#x83B7;&#x7684;&#x5F02;&#x5E38;&#x7ED9; &#x91CD;&#x65B0;&#x629B;&#x51FA;&#x3002;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">final</span> foo = <span class="hljs-string">&apos;&apos;</span>;
+
+<span class="hljs-keyword">void</span> misbehave() {
+  <span class="hljs-keyword">try</span> {
+    foo = <span class="hljs-string">&quot;You can&apos;t change a final variable&apos;s value.&quot;</span>;
+  } <span class="hljs-keyword">catch</span> (e) {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;misbehave() partially handled <span class="hljs-subst">${e.runtimeType}</span>.&apos;</span>);
+    <span class="hljs-keyword">rethrow</span>; <span class="hljs-comment">// Allow callers to see the exception.</span>
+  }
+}
+
+<span class="hljs-keyword">void</span> main() {
+  <span class="hljs-keyword">try</span> {
+    misbehave();
+  } <span class="hljs-keyword">catch</span> (e) {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;main() finished handling <span class="hljs-subst">${e.runtimeType}</span>.&apos;</span>);
+  }
+}
+</code></pre>
+<h4 id="finally">Finally</h4>
+<p>&#x8981;&#x786E;&#x4FDD;&#x67D0;&#x4E9B;&#x4EE3;&#x7801;&#x6267;&#x884C;&#xFF0C;&#x4E0D;&#x7BA1;&#x6709;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#x90FD;&#x9700;&#x8981;&#x6267;&#x884C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &#x4E00;&#x4E2A; <code>finally</code> &#x8BED;&#x53E5;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709; <code>catch</code> &#x8BED;&#x53E5;&#x6765;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#xFF0C; &#x5219;&#x5728;&#x6267;&#x884C;&#x5B8C; <code>finally</code> &#x8BED;&#x53E5;&#x540E;&#xFF0C; &#x5F02;&#x5E38;&#x88AB;&#x629B;&#x51FA;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">try</span> {
+  breedMoreLlamas();
+} <span class="hljs-keyword">finally</span> {
+  <span class="hljs-comment">// Always clean up, even if an exception is thrown.</span>
+  cleanLlamaStalls();
+}
+</code></pre>
+<p>&#x5B9A;&#x4E49;&#x7684; <code>finally</code> &#x8BED;&#x53E5;&#x5728;&#x4EFB;&#x4F55;&#x5339;&#x914D;&#x7684; <code>catch</code> &#x8BED;&#x53E5;&#x4E4B;&#x540E;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">try</span> {
+  breedMoreLlamas();
+} <span class="hljs-keyword">catch</span>(e) {
+  <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Error: $e&apos;</span>);  <span class="hljs-comment">// Handle the exception first.</span>
+} <span class="hljs-keyword">finally</span> {
+  cleanLlamaStalls();  <span class="hljs-comment">// Then clean up.</span>
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch1-readme.html" class="navigation navigation-prev " aria-label="Previous page: 第一章：Dart入门学习">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dart2.html" class="navigation navigation-next " aria-label="Next page: Dart高级特性学习">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Dart基础语法入门","level":"1.2.1","depth":2,"next":{"title":"Dart高级特性学习","level":"1.2.2","depth":2,"path":"chapter1-dart/dart2.md","ref":"chapter1-dart/dart2.md","articles":[]},"previous":{"title":"第一章：Dart入门学习","level":"1.2","depth":1,"path":"chapter1-dart/ch1-readme.md","ref":"chapter1-dart/ch1-readme.md","articles":[{"title":"Dart基础语法入门","level":"1.2.1","depth":2,"path":"chapter1-dart/dart1.md","ref":"chapter1-dart/dart1.md","articles":[]},{"title":"Dart高级特性学习","level":"1.2.2","depth":2,"path":"chapter1-dart/dart2.md","ref":"chapter1-dart/dart2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1-dart/dart1.md","mtime":"2019-06-06T09:28:32.582Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-10T14:21:30.740Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,944 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>在Flutter中构建布局 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="布局教程.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../chapter1-dart/ch1-readme.html">
+            
+                <a href="../../chapter1-dart/ch1-readme.html">
+            
+                    
+                    第一章：Dart入门学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../chapter1-dart/dart1.html">
+            
+                <a href="../../chapter1-dart/dart1.html">
+            
+                    
+                    Dart基础语法入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../chapter1-dart/dart2.html">
+            
+                <a href="../../chapter1-dart/dart2.html">
+            
+                    
+                    Dart高级特性学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ch2-readme.html">
+            
+                <a href="../ch2-readme.html">
+            
+                    
+                    第二章：Flutter UI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Widgets介绍.html">
+            
+                <a href="../Widgets介绍.html">
+            
+                    
+                    Widget介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    构建布局
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.2.1" data-path="在Flutter中构建布局.html">
+            
+                <a href="在Flutter中构建布局.html">
+            
+                    
+                    在Flutter中构建布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="布局教程.html">
+            
+                <a href="布局教程.html">
+            
+                    
+                    布局实例教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="处理盒约束.html">
+            
+                <a href="处理盒约束.html">
+            
+                    
+                    Flutter中的盒约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../给你的App添加交互.html">
+            
+                <a href="../给你的App添加交互.html">
+            
+                    
+                    给你的App添加交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >在Flutter中构建布局</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>[TOC]</p>
+<h1 id="&#x5728;flutter&#x4E2D;&#x6784;&#x5EFA;&#x5E03;&#x5C40;">&#x5728;Flutter&#x4E2D;&#x6784;&#x5EFA;&#x5E03;&#x5C40;</h1>
+<blockquote>
+<p>&#x9996;&#x5148;&#x660E;&#x786E;&#x51E0;&#x70B9;&#x6982;&#x5FF5;&#xFF1A;</p>
+<ul>
+<li><code>Widget</code>&#x662F;&#x6784;&#x5EFA;<code>UI</code>&#x7684;&#x7C7B;</li>
+<li><code>Widget</code>&#x5728;&#x6784;&#x5EFA;<code>UI</code>&#x5143;&#x7D20;&#x548C;&#x6784;&#x5EFA;&#x5E03;&#x5C40;&#x65F6;&#x90FD;&#x4F1A;&#x7528;&#x5230;</li>
+<li>&#x5C06;&#x7B80;&#x5355;&#x7684;<code>Widget</code>&#x7EC4;&#x5408;&#x8D77;&#x6765;&#x53EF;&#x4EE5;&#x6784;&#x5EFA;&#x590D;&#x6742;&#x7684;<code>Widget</code></li>
+</ul>
+</blockquote>
+<p><code>Flutter</code>&#x5E03;&#x5C40;&#x673A;&#x5236;&#x7684;&#x6838;&#x5FC3;&#x662F;<code>Widget</code>&#x3002;&#x5728;<code>Flutter</code>&#x4E2D;&#xFF0C;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x4E1C;&#x897F;&#x90FD;&#x662F;&#x4E00;&#x4E2A;<code>Widget</code>&#xFF0C;&#x5373;&#x4F7F;&#x5E03;&#x5C40;&#x6A21;&#x578B;&#x4E5F;&#x4E0D;&#x4F8B;&#x5916;&#x3002;&#x5728;<code>Flutter</code>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x770B;&#x5230;&#x7684;&#x56FE;&#x50CF;&#xFF08;<code>image</code>&#xFF09;&#x3001;&#x56FE;&#x6807;&#xFF08;<code>icon</code>&#xFF09;&#x548C;&#x6587;&#x672C;&#xFF08;<code>text</code>&#xFF09;&#x90FD;&#x662F;<code>Widget</code>&#x3002;&#x90A3;&#x4E9B;&#x4F60;&#x770B;&#x4E0D;&#x5230;&#x7684;&#x4E1C;&#x897F;&#x4E5F;&#x662F;<code>Widget</code>&#xFF0C;&#x6BD4;&#x5982;&#x7528;&#x6765;&#x6392;&#x5217;&#xFF08;<code>arrange</code>&#xFF09;&#x3001;&#x7EA6;&#x675F;&#xFF08;<code>constrain</code>&#xFF09;&#x548C;&#x5BF9;&#x9F50;&#xFF08;<code>align</code>&#xFF09;&#x53EF;&#x89C1;<code>Widget</code>&#x7684;&#x884C;&#xFF08;<code>Row</code>&#xFF09;&#x3001;&#x5217;&#xFF08;<code>Column</code>&#xFF09;&#x548C;&#x7F51;&#x683C;&#xFF08;<code>grid</code>&#xFF09;&#xFF0C;&#x90FD;&#x662F;<code>Widget</code>&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7EC4;&#x5408;&#x591A;&#x4E2A;<code>Widget</code>&#x6765;&#x521B;&#x5EFA;&#x5E03;&#x5C40;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x6784;&#x5EFA;&#x51FA;&#x66F4;&#x590D;&#x6742;&#x7684;<code>Widget</code>&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E0B;&#x56FE;&#x663E;&#x793A;&#x4E86;3&#x4E2A;&#x56FE;&#x6807;&#xFF08;<code>icon</code>&#xFF09;&#xFF0C;&#x6BCF;&#x4E2A;&#x56FE;&#x6807;&#x4E0B;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#xFF08;<code>label</code>&#xFF09;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-070647.png" alt="Sample layout"></p>
+<p>&#x6211;&#x4EEC;&#x900F;&#x8FC7;&#x73B0;&#x8C61;&#x770B;&#x672C;&#x8D28;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-070733.png" alt="Sample layout with visual debugging"></p>
+<p>&#x4E0A;&#x56FE;&#x663E;&#x793A;&#x4E86;&#x771F;&#x6B63;&#x7684;&#x89C6;&#x89C9;&#x5E03;&#x5C40;&#xFF0C;&#x5B83;&#x6709;&#x4E00;&#x884C;&#x4E09;&#x5217;&#xFF0C;&#x5176;&#x4E2D;&#x6BCF;&#x5217;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x56FE;&#x6807;&#xFF08;<code>icon</code>&#xFF09;&#x548C;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#xFF08;<code>label</code>&#xFF09;&#xFF0C;&#x5C31;&#x662F;&#x8FD9;&#x79CD;&#x7B80;&#x5355;<code>Widget</code>&#x7684;&#x7EC4;&#x5408;&#x6700;&#x7EC8;&#x6784;&#x6210;&#x4E86;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x7684;&#x590D;&#x6742;<code>Widget</code>&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5728;&#x672C;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x5927;&#x591A;&#x6570;&#x63D2;&#x56FE;&#x90FD;&#x662F;&#x5728;<code>debugPaintSizeEnabled=true</code>&#x7684;&#x524D;&#x63D0;&#x4E0B;&#x83B7;&#x53D6;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x7ED8;&#x5236;&#x51FA;&#x89C6;&#x89C9;&#x5E03;&#x5C40;&#xFF08;&#x5982;&#x4E0A;&#x56FE;&#xFF0C;&#x7ED8;&#x5236;&#x51FA;&#x4E86;&#x6BCF;&#x4E00;&#x4E2A;&#x53EF;&#x89C1;&#x3001;&#x4E0D;&#x53EF;&#x89C1;<code>Widget</code>&#x7684;&#x5206;&#x9694;&#x7EBF;&#xFF0C;&#x5373;&#x5B9E;&#x9645;&#x7684;&#x5E03;&#x5C40;&#xFF09;&#x3002;</p>
+</blockquote>
+<p>&#x4E0B;&#x56FE;&#x753B;&#x51FA;&#x4E86;&#x4E0A;&#x56FE;&#x5E03;&#x5C40;&#x7684;<code>Widget</code>&#x6811;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-071244.png" alt="Node tree"></p>
+<p>&#x8FD9;&#x5176;&#x4E2D;&#x7684;&#x5927;&#x90E8;&#x5206;&#x770B;&#x8D77;&#x6765;&#x548C;&#x6211;&#x4EEC;&#x9884;&#x60F3;&#x7684;&#x5DEE;&#x4E0D;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x5BF9;<code>Container</code>&#xFF08;&#x7C89;&#x7EA2;&#x8272;&#x7684;&#x5708;&#xFF09;&#x611F;&#x5230;&#x7591;&#x60D1;&#xFF0C;<code>Container</code>&#x662F;&#x4E00;&#x4E2A;<code>Widget</code>&#x7C7B;&#xFF0C;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x81EA;&#x5B9A;&#x4E49;&#x5176;&#x5B50;<code>Widget</code>&#x3002;&#x5982;&#x679C;&#x8981;&#x6DFB;&#x52A0;&#x586B;&#x5145;(<code>padding</code>)&#x3001;&#x9875;&#x8FB9;&#x8DDD;(<code>margin</code>)&#x3001;&#x8FB9;&#x6846;(<code>border</code>)&#x6216;&#x80CC;&#x666F;&#x8272;(<code>background color</code>)&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;<code>Container</code>&#x6765;&#x8BBE;&#x7F6E;&#x5BF9;&#x5E94;&#x529F;&#x80FD;&#x3002;
+&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;<code>Text Widget</code>&#x90FD;&#x653E;&#x7F6E;&#x5728;&#x4E00;&#x4E2A;<code>Container</code>&#x4E2D;&#x4EE5;&#x6DFB;&#x52A0;&#x9875;&#x8FB9;&#x8DDD;&#xFF08;<code>margin</code>&#xFF09;&#x3002;&#x6574;&#x4E2A;&#x884C;&#xFF08;<code>Row</code>&#xFF09;&#x4E5F;&#x653E;&#x7F6E;&#x5728;&#x4E00;&#x4E2A;<code>Container</code>&#x4E2D;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x8BE5;&#x884C;&#x7684;&#x5468;&#x56F4;&#x6DFB;&#x52A0;&#x586B;&#x5145;&#xFF08;<code>padding</code>&#xFF09;&#x3002;
+&#x672C;&#x4F8B;&#x4E2D;&#x7684;&#x5176;&#x4F59;UI&#x5143;&#x7D20;&#x5747;&#x7531;&#x5C5E;&#x6027;&#x63A7;&#x5236;&#x3002;&#x4F7F;&#x7528;<code>Icon</code>&#x7684;<code>color</code>&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x56FE;&#x6807;&#x7684;&#x989C;&#x8272;&#x3002;&#x4F7F;&#x7528;<code>Text.Style</code>&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x5B57;&#x4F53;&#x3001;&#x989C;&#x8272;&#x3001;&#x7C97;&#x7EC6;&#x7B49;&#x3002;<code>Row</code>&#x548C;<code>Column</code>&#x7684;&#x5C5E;&#x6027;&#x5141;&#x8BB8;&#x60A8;&#x6307;&#x5B9A;&#x5176;&#x5B50;&#x7EA7;&#x5782;&#x76F4;&#x6216;&#x6C34;&#x5E73;&#x5BF9;&#x9F50;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4EE5;&#x53CA;&#x5B50;&#x7EA7;&#x5E94;&#x5360;&#x7528;&#x7684;&#x7A7A;&#x95F4;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x53EF;&#x80FD;&#x6709;&#x7684;&#x8BFB;&#x8005;&#x5BF9;<code>margin</code>&#x548C;<code>padding</code>&#x7684;&#x533A;&#x522B;&#x4E0D;&#x662F;&#x5F88;&#x6E05;&#x695A;&#xFF0C;<code>margin</code>&#x6307;&#x7684;&#x662F;&#x5F53;&#x524D;<code>Widget</code>&#x8DDD;&#x79BB;&#x5176;&#x4ED6;<code>Widget</code>&#x7684;&#x8DDD;&#x79BB;&#xFF0C;<code>padding</code>&#x6307;&#x7684;&#x662F;&#x5F53;&#x524D;<code>Widget</code>&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x8DDD;&#x79BB;&#x5F53;&#x524D;<code>Widget</code>&#x8FB9;&#x754C;&#x7684;&#x8DDD;&#x79BB;(&#x6BD4;&#x5982;<code>Text</code>&#x4E2D;&#x7684;&#x6587;&#x5B57;&#x663E;&#x793A;&#x51FA;&#x6765;&#x8DDD;&#x79BB;<code>Text Widget</code>&#x5916;&#x8FB9;&#x7F18;&#x7684;&#x8DDD;&#x79BB;)&#x3002;</p>
+</blockquote>
+<h3 id="&#x5BF9;widget&#x8FDB;&#x884C;&#x5E03;&#x5C40;">&#x5BF9;Widget&#x8FDB;&#x884C;&#x5E03;&#x5C40;</h3>
+<p>&#x5728;<code>Flutter</code>&#x4E2D;&#x4F60;&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x5BF9;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;<code>Widget</code>&#x8FDB;&#x884C;&#x5E03;&#x5C40;&#xFF1F;&#x8FD9;&#x8282;&#x5C06;&#x5411;&#x4F60;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x5E76;&#x5C55;&#x793A;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;<code>Widget</code>&#xFF0C;&#x540C;&#x65F6;&#x4F1A;&#x5411;&#x4F60;&#x4ECB;&#x7ECD;<code>Hello World</code>&#x793A;&#x4F8B;<code>app</code>&#x7684;&#x5168;&#x90E8;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x5728;<code>Flutter</code>&#x4E2D;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5F88;&#x5C11;&#x7684;&#x6B65;&#x9AA4;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;<code>Text</code>&#x3001;<code>Icon</code>&#x6216;&#x8005;<code>Image</code>&#x653E;&#x7F6E;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#xFF1A;</p>
+<h4 id="1-&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x5E03;&#x5C40;widget">1. &#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x5E03;&#x5C40;Widget</h4>
+<p>&#x6839;&#x636E;&#x60A8;&#x5E0C;&#x671B;&#x5982;&#x4F55;&#x5BF9;&#x9F50;&#x6216;&#x7EA6;&#x675F;&#x53EF;&#x89C1;&#x7684;<code>Widget</code>&#x4ECE;&#x5404;&#x79CD;&#x5E03;&#x5C40;<code>Widget</code>&#x4E2D;&#x8FDB;&#x884C;&#x9009;&#x62E9;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x5E03;&#x5C40;<code>Widget</code>&#x7684;&#x7279;&#x6027;&#x901A;&#x5E38;&#x4F1A;&#x4F20;&#x9012;&#x7ED9;&#x4ED6;&#x4EEC;&#x6240;&#x5305;&#x542B;&#x7684;<code>Widget</code>&#x3002;
+&#x6B64;&#x793A;&#x4F8B;&#x4F7F;&#x7528;<code>Center</code>&#x8FD9;&#x4E2A;<code>Widget</code>&#xFF0C;&#x8BE5;<code>Widget</code>&#x7684;&#x7279;&#x70B9;&#x662F;&#x5C06;&#x5176;&#x5305;&#x88F9;&#x7684;&#x5185;&#x5BB9;&#x6C34;&#x5E73;&#x548C;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x3002;</p>
+<h4 id="2-&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53EF;&#x89C1;&#x7684;widget">2. &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53EF;&#x89C1;&#x7684;Widget</h4>
+<p>&#x6BD4;&#x5982;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>Text Widget</code>:</p>
+<pre><code class="lang-dart">Text(<span class="hljs-string">&apos;Hello World&apos;</span>),
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>Image Widget</code>&#xFF1A;</p>
+<pre><code class="lang-dart">Image.asset(
+  <span class="hljs-string">&apos;images/lake.jpg&apos;</span>,
+  fit: BoxFit.cover,
+),
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>Icon Widget</code>&#xFF1A;</p>
+<pre><code class="lang-dart">Icon(
+  Icons.star,
+  color: Colors.red[<span class="hljs-number">500</span>],
+),
+</code></pre>
+<h4 id="3-&#x5C06;&#x53EF;&#x89C1;&#x7684;widget&#x6DFB;&#x52A0;&#x5230;&#x5E03;&#x5C40;widget&#x4E2D;">3. &#x5C06;&#x53EF;&#x89C1;&#x7684;Widget&#x6DFB;&#x52A0;&#x5230;&#x5E03;&#x5C40;Widget&#x4E2D;</h4>
+<p>&#x6240;&#x6709;&#x7684;&#x5E03;&#x5C40;<code>Widget</code>&#x90FD;&#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x7279;&#x6027;&#xFF1A;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x4FEE;&#x9970;&#x7684;&#x662F;&#x5355;&#x4E2A;<code>Widget</code>&#x5219;&#x5177;&#x6709;&#x4E00;&#x4E2A;<code>child</code>&#x5C5E;&#x6027;&#xFF0C;&#x6BD4;&#x5982;<code>Center</code>&#x6216;&#x8005;<code>Container</code></li>
+<li>&#x5982;&#x679C;&#x4FEE;&#x9970;&#x7684;&#x662F;&#x591A;&#x4E2A;<code>Widget</code>&#x5219;&#x5177;&#x6709;&#x4E00;&#x4E2A;<code>children</code>&#x5C5E;&#x6027;&#xFF0C;&#x6BD4;&#x5982;<code>Row</code>&#x3001;<code>Column</code>&#x3001;<code>ListView</code>&#x3001;<code>Stack</code>&#x3002;</li>
+</ul>
+<p>&#x5C06;<code>Text Widget</code>&#x6DFB;&#x52A0;&#x5230;<code>Center Widget</code>&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-dart">Center(
+  child: Text(<span class="hljs-string">&apos;Hello World&apos;</span>),
+),
+</code></pre>
+<h4 id="4-&#x5C06;&#x5E03;&#x5C40;widget&#x6DFB;&#x52A0;&#x5230;&#x9875;&#x9762;&#x4E2D;">4. &#x5C06;&#x5E03;&#x5C40;Widget&#x6DFB;&#x52A0;&#x5230;&#x9875;&#x9762;&#x4E2D;</h4>
+<p>&#x4E00;&#x4E2A;<code>Flutter App</code>&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E00;&#x4E2A;<code>Widget</code>&#xFF0C;&#x800C;&#x5927;&#x591A;&#x6570;<code>Widget</code>&#x90FD;&#x5177;&#x6709;&#x4E00;&#x4E2A;<code>build()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;<code>app</code>&#x7684;<code>build()</code>&#x65B9;&#x6CD5;&#x4E2D;&#x5B9E;&#x4F8B;&#x5316;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>Widget</code>&#xFF0C;&#x8FD9;&#x6837;&#x88AB;&#x8FD4;&#x56DE;&#x7684;Widget&#x5C31;&#x53EF;&#x4EE5;&#x88AB;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;</p>
+<h5 id="material-app">Material app</h5>
+<p>&#x5BF9;&#x4E8E;<code>Material</code>&#x98CE;&#x683C;&#x7684;<code>app</code>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;<code>Scaffold Widget</code>&#xFF0C;&#x8FD9;&#x4E2A;<code>Widget</code>&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x6A2A;&#x680F;&#x3001;&#x9ED8;&#x8BA4;&#x7684;&#x80CC;&#x666F;&#x8272;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x50CF;&#x6DFB;&#x52A0;<code>drawer</code>&#x3001;&#x6DFB;&#x52A0;<code>snack bar</code>&#x3001;&#x6DFB;&#x52A0;<code>bottom sheet</code>&#x8FD9;&#x6837;&#x7684;<code>API</code>&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;<code>Center Widget</code>&#x4F5C;&#x4E3A;<code>Scaffold</code>&#x7684;<code>body</code>&#x5C5E;&#x6027;&#x8FDB;&#x800C;&#x6DFB;&#x52A0;&#x5230;&#x9875;&#x9762;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">StatelessWidget</span> </span>{
+  <span class="hljs-meta">@override</span>
+  Widget build(BuildContext context) {
+    <span class="hljs-keyword">return</span> MaterialApp(
+      title: <span class="hljs-string">&apos;Flutter layout demo&apos;</span>,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="hljs-string">&apos;Flutter layout demo&apos;</span>),
+        ),
+        body: Center(
+          child: Text(<span class="hljs-string">&apos;Hello World&apos;</span>),
+        ),
+      ),
+    );
+  }
+}
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;<code>Material</code>&#x5E93;&#xFF08;&#x5730;&#x5740;&#xFF1A;<code>https://api.flutter.dev/flutter/material/material-library.html</code>&#xFF09;&#x4E2D;&#x5B9E;&#x73B0;&#x7684;<code>Widget</code>&#x90FD;&#x662F;&#x9075;&#x5FAA;<code>Material</code>&#x8BBE;&#x8BA1;&#x51C6;&#x5219;&#x7684;&#xFF0C;&#x5F53;&#x4F60;&#x8BBE;&#x8BA1;&#x4F60;&#x7684;<code>UI</code>&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4EC5;&#x4EC5;&#x53EA;&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x7684;<code>Widget</code>&#x5E93;&#xFF08;&#x5730;&#x5740;&#xFF1A;<code>https://api.flutter.dev/flutter/widgets/widgets-library.html</code>&#xFF09;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>Material</code>&#x5E93;&#x4E2D;&#x7684;<code>Widget</code>&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x6DF7;&#x5408;&#x4F7F;&#x7528;&#x8FD9;&#x4E24;&#x79CD;<code>Widget</code>&#x5E93;&#x4E2D;&#x7684;<code>Widget</code>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x73B0;&#x6709;<code>Widget</code>&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x81EA;&#x5B9A;&#x4E49;<code>Widget</code>&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x57FA;&#x4E8E;&#x73B0;&#x6709;&#x7684;<code>Widget</code>&#x6784;&#x5EFA;&#x5B8C;&#x5168;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;<code>Widget</code>&#x3002;</p>
+</blockquote>
+<h5 id="non-material-app">Non-Material app</h5>
+<p>&#x5BF9;&#x4E8E;&#x975E;<code>Material</code>&#x98CE;&#x683C;&#x7684;<code>app</code>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x4F60;<code>app</code>&#x7684;<code>build()</code>&#x65B9;&#x6CD5;&#x4E2D;&#x8FD4;&#x56DE;<code>Center Widget</code>&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">StatelessWidget</span> </span>{
+  <span class="hljs-meta">@override</span>
+  Widget build(BuildContext context) {
+    <span class="hljs-keyword">return</span> Container(
+      decoration: BoxDecoration(color: Colors.white),
+      child: Center(
+        child: Text(
+          <span class="hljs-string">&apos;Hello World&apos;</span>,
+          textDirection: TextDirection.ltr,
+          style: TextStyle(
+            fontSize: <span class="hljs-number">32</span>,
+            color: Colors.black87,
+          ),
+        ),
+      ),
+    );
+  }
+}
+</code></pre>
+<p>&#x9ED8;&#x8BA4;&#x7684;&#x975E;<code>Material</code>&#x98CE;&#x683C;&#x7684;<code>App</code>&#x662F;&#x6CA1;&#x6709;<code>AppBar</code>&#x3001;&#x6CA1;&#x6709;&#x6807;&#x9898;&#x3001;&#x6CA1;&#x6709;&#x80CC;&#x666F;&#x8272;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5728;&#x975E;<code>Material</code>&#x98CE;&#x683C;&#x7684;<code>app</code>&#x4E2D;&#x663E;&#x793A;&#x4E0A;&#x8FF0;&#x5143;&#x7D20;&#xFF0C;&#x5C31;&#x53EA;&#x6709;&#x81EA;&#x5DF1;&#x624B;&#x52A8;&#x53BB;&#x6784;&#x5EFA;&#x4E86;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#x624B;&#x52A8;&#x5C06;&#x80CC;&#x666F;&#x8272;&#x8BBE;&#x7F6E;&#x6210;&#x4E3A;&#x4E86;&#x767D;&#x8272;&#x3001;&#x5C06;<code>Text</code>&#x4E2D;&#x7684;&#x6587;&#x5B57;&#x989C;&#x8272;&#x8BBE;&#x7F6E;&#x6210;&#x4E86;&#x9ED1;&#x8272;&#x4EE5;&#x6A21;&#x4EFF;<code>Material</code>&#x98CE;&#x683C;&#x7684;<code>app</code>&#xFF0C;&#x8FD0;&#x884C;&#x8D77;&#x6765;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-080219.png" alt="Hello World"></p>
+<h3 id="&#x5728;&#x5782;&#x76F4;&#x548C;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x6784;&#x5EFA;&#x591A;&#x4E2A;widget">&#x5728;&#x5782;&#x76F4;&#x548C;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x6784;&#x5EFA;&#x591A;&#x4E2A;Widget</h3>
+<p>&#x6700;&#x5E38;&#x89C1;&#x7684;&#x5E03;&#x5C40;&#x6A21;&#x5F0F;&#x662F;&#x5782;&#x76F4;&#x6216;&#x6C34;&#x5E73;&#x6392;&#x5217;&#x591A;&#x4E2A;<code>Widget</code>&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>Row Widget</code>&#x6C34;&#x5E73;&#x6392;&#x5217;<code>Widget</code>&#xFF0C;&#x4F7F;&#x7528;<code>Column Widget</code>&#x5782;&#x76F4;&#x6392;&#x5217;<code>Widget</code>&#x3002;</p>
+<blockquote>
+<p>&#x9996;&#x5148;&#x660E;&#x786E;&#x51E0;&#x70B9;&#x6982;&#x5FF5;&#xFF1A;</p>
+<ul>
+<li><code>Row</code>&#x548C;<code>Column</code>&#x662F;&#x6700;&#x5E38;&#x7528;&#x7684;2&#x79CD;&#x5E03;&#x5C40;&#x6A21;&#x5F0F;</li>
+<li><code>Row</code>&#x548C;<code>Column</code>&#x8FD9;&#x4E24;&#x4E2A;<code>Widget</code>&#x90FD;&#x53EF;&#x4EE5;&#x5305;&#x88F9;&#x591A;&#x4E2A;<code>Widget</code></li>
+<li><code>Row</code>&#x548C;<code>Column</code>&#x7684;&#x5B50;<code>Widget</code>&#x53EF;&#x4EE5;&#x662F;<code>Row</code>&#x6216;<code>Column</code>&#xFF0C;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x4EFB;&#x4F55;&#x590D;&#x6742;&#x7684;<code>Widget</code></li>
+<li>&#x4F60;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;<code>Row</code>&#x548C;<code>Column</code>&#x5982;&#x4F55;&#x5782;&#x76F4;&#x6216;&#x8005;&#x6C34;&#x5E73;&#x6392;&#x5217;&#x5176;&#x5B50;<code>Widget</code></li>
+<li>&#x4F60;&#x53EF;&#x4EE5;&#x62C9;&#x4F38;&#xFF08;<code>stretch</code>&#xFF09;&#x6216;&#x8005;&#x7EA6;&#x675F;&#xFF08;<code>constrain</code>&#xFF09;&#x6307;&#x5B9A;&#x7684;&#x5B50;<code>Widget</code></li>
+<li>&#x4F60;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x5B50;<code>Widget</code>&#x5982;&#x4F55;&#x4F7F;&#x7528;<code>Row</code>&#x6216;&#x8005;<code>Column</code>&#x7684;&#x5269;&#x4F59;&#x53EF;&#x7528;&#x7A7A;&#x95F4;</li>
+</ul>
+</blockquote>
+<p>&#x4E3A;&#x4E86;&#x5728;<code>Flutter</code>&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x884C;&#x6216;&#x8005;&#x5217;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5C06;&#x5B50;<code>Widget</code>&#x7EC4;&#x6210;&#x7684;<code>List</code>&#x653E;&#x8FDB;<code>Row Widget</code>&#x6216;&#x8005;<code>Column Widget</code>&#x4E2D;&#x3002;&#x6BCF;&#x4E2A;&#x5B50;&#x5143;&#x7D20;&#x672C;&#x8EAB;&#x53EF;&#x4EE5;&#x662F;<code>Row</code>&#x6216;<code>Column</code>&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x5C55;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x5728;<code>Row</code>&#x6216;<code>Column</code>&#x4E2D;&#x5D4C;&#x5957;<code>Row</code>&#x6216;<code>Column</code>&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-081700.png" alt="Screenshot with callouts showing the row containing two children"></p>
+<p>&#x6B64;&#x5E03;&#x5C40;&#x6574;&#x4F53;&#x4E0A;&#x4E3A;&#x4E00;&#x884C;&#xFF0C;&#x8FD9;&#x4E00;&#x884C;&#x5305;&#x542B;&#x4E86;&#x4E24;&#x4E2A;&#x5B50;&#x5143;&#x7D20;&#xFF1A;&#x5DE6;&#x4FA7;&#x7684;&#x5217;&#x548C;&#x53F3;&#x4FA7;&#x7684;&#x56FE;&#x50CF;&#xFF0C;&#x800C;&#x5DE6;&#x4FA7;&#x7684;&#x5217;&#x4E2D;&#x7684;<code>Widget</code>&#x6811;&#x53C8;&#x662F;&#x7531;&#x591A;&#x4E2A;&#x884C;&#x548C;&#x5217;&#x7EC4;&#x6210;&#x7684;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-081754.png" alt="Diagram showing a left column broken down to its sub-rows and sub-columns"></p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;<code>Row</code>&#x548C;<code>Column</code>&#x662F;&#x6C34;&#x5E73;&#x548C;&#x5782;&#x76F4;&#x5E03;&#x5C40;&#x7684;&#x57FA;&#x672C;<code>Widget</code>&#xFF0C;&#x8FD9;&#x4E9B;&#x57FA;&#x7840;&#x7684;<code>Widget</code>&#x5141;&#x8BB8;&#x6700;&#x5927;&#x7A0B;&#x5EA6;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x3002;<code>Flutter</code>&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x529F;&#x80FD;&#x66F4;&#x4E13;&#x4E00;&#x7684;&#xFF0C;&#x66F4;&#x9AD8;&#x7EA7;&#x522B;&#x7684;<code>Widget</code>&#xFF0C;&#x8DB3;&#x4EE5;&#x6EE1;&#x8DB3;&#x4F60;&#x7684;&#x9700;&#x8981;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4F60;&#x6709;&#x65F6;&#x53EF;&#x80FD;&#x66F4;&#x559C;&#x6B22;<code>ListTile</code>&#x800C;&#x4E0D;&#x662F;<code>Row</code>&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x6613;&#x4E8E;&#x4F7F;&#x7528;&#x7684;<code>Widget</code>&#xFF0C;&#x5177;&#x6709;&#x7528;&#x4E8E;&#x524D;&#x5BFC;&#xFF08;<code>leading</code>&#xFF09;&#x548C;&#x5C3E;&#x968F;&#x56FE;&#x6807;&#xFF08;<code>trailing icon</code>&#xFF09;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x4E14;&#x6700;&#x591A;&#x6709;3&#x884C;&#x6587;&#x672C;&#x3002;&#x518D;&#x6BD4;&#x5982;&#xFF0C;&#x76F8;&#x6BD4;&#x4E8E;<code>Column</code>&#xFF0C;&#x60A8;&#x6709;&#x65F6;&#x53EF;&#x80FD;&#x66F4;&#x559C;&#x6B22;<code>ListView</code>&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x79CD;&#x7C7B;&#x4F3C;&#x4E8E;<code>Column</code>&#x7684;&#x5E03;&#x5C40;&#xFF0C;&#x5982;&#x679C;&#x5176;&#x5305;&#x88F9;&#x7684;&#x5185;&#x5BB9;&#x592A;&#x957F;&#x5BFC;&#x81F4;&#x53EF;&#x7528;&#x7A7A;&#x95F4;&#x65E0;&#x6CD5;&#x5B8C;&#x5168;&#x5BB9;&#x7EB3;&#xFF0C;&#x5B83;&#x4F1A;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x6EDA;&#x52A8;&#x3002;</p>
+</blockquote>
+<h4 id="&#x8BBE;&#x7F6E;&#x884C;&#x548C;&#x5217;&#x4E2D;&#x5B50;widget&#x7684;&#x5BF9;&#x5176;&#x65B9;&#x5F0F;">&#x8BBE;&#x7F6E;&#x884C;&#x548C;&#x5217;&#x4E2D;&#x5B50;Widget&#x7684;&#x5BF9;&#x5176;&#x65B9;&#x5F0F;</h4>
+<p>&#x5C06;&#x591A;&#x4E2A;Widget&#x653E;&#x5728;&#x540C;&#x4E00;&#x884C;&#x6216;&#x540C;&#x4E00;&#x5217;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x65F6;&#x8FD8;&#x9700;&#x8981;&#x5BF9;&#x8FD9;&#x4E9B;&#x540C;&#x4E00;&#x884C;&#x6216;&#x8005;&#x540C;&#x4E00;&#x5217;&#x7684;Widget&#x8FDB;&#x884C;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-083654.png" alt="image-20190609163653308"></p>
+<p>&#x4E0A;&#x56FE;&#x4E2D;&#x9ED1;&#x8272;&#x6846;&#x4EE3;&#x8868;<code>Row</code>(&#x884C;)&#xFF0C;1&#x3001;2&#x3001;3&#x5206;&#x522B;&#x662F;3&#x4E2A;&#x5B50;<code>Widget</code>&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;<code>a</code>&#x3001;<code>b</code>&#x3001;<code>c</code>&#x5C55;&#x793A;&#x51FA;&#x4E86;3&#x4E2D;&#x4E0D;&#x4E0D;&#x540C;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x8FD9;&#x662F;&#x7531;&#x4E8E;<code>a</code>&#x3001;<code>b</code>&#x3001;<code>c</code>&#x4E2D;&#x5BF9;&#x5B50;<code>Widget</code>&#x7684;&#x5BF9;&#x5176;&#x65B9;&#x5F0F;&#x7684;&#x8BBE;&#x7F6E;&#x7B56;&#x7565;&#x4E0D;&#x540C;&#x5BFC;&#x81F4;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x5728;<code>Flutter</code>&#x4E2D;&#x4E3A;&#x4E86;&#x5728;<code>Row</code>&#x548C;<code>Column</code>&#x4E2D;&#x5BF9;&#x5B50;<code>Widget</code>&#x8FDB;&#x884C;&#x66F4;&#x52A0;&#x660E;&#x786E;&#x7684;&#x6392;&#x5217;&#x8BBE;&#x7F6E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>mainAxisAlignment</code>&#x548C;<code>crossAxisAlignment</code>&#x5C5E;&#x6027;&#x6765;&#x63A7;&#x5236;<code>Row</code>&#x548C;<code>Column</code>&#x5982;&#x4F55;&#x6392;&#x5217;&#x5B50;<code>Widget</code>&#x3002;&#x5BF9;&#x4E8E;<code>Row</code>&#xFF0C;<code>mainAxis</code>&#x6307;&#x7684;&#x662F;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#xFF0C;<code>crossAxis</code>&#x6307;&#x7684;&#x662F;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x3002;&#x5BF9;&#x4E8E;<code>Column</code>&#xFF0C;<code>mainAxis</code>&#x6307;&#x7684;&#x662F;&#x5782;&#x76F4;&#x65B9;&#x5411;&#xFF0C;<code>crossAxis</code>&#x6307;&#x7684;&#x662F;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x3002;&#x6BD4;&#x5982;&#x50CF;&#x4E0A;&#x56FE;&#x4E2D;<code>a</code>&#x3001;<code>b</code>&#x3001;<code>c</code>&#x4E09;&#x79CD;&#x6548;&#x679C;&#xFF0C;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x7ED9;<code>Row</code>&#x7684;<code>crossAxisAlignment</code>&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x4E86;<code>top</code>&#x3001;<code>center</code>&#x3001;<code>bottom</code>&#x3002;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-082753.png" alt="image-20190609162752853"></p>
+<p><code>MainAxisAlignment</code>&#x548C;<code>CrossAxisAlignment</code>&#x8FD9;&#x4E24;&#x4E2A;&#x7C7B;&#x63D0;&#x4F9B;&#x4E86;&#x5404;&#x79CD;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5BF9;&#x9F50;&#x7684;&#x5E38;&#x91CF;&#xFF0C;&#x4E00;&#x822C;&#x8BBE;&#x7F6E;&#x7684;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x4F1A;&#x8FD9;&#x6837;&#x8BBE;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">new</span> Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+  ...
+&#xFF09;;
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5F53;&#x4F60;&#x5C06;&#x4E00;&#x5F20;&#x672C;&#x5730;&#x56FE;&#x7247;&#x6DFB;&#x52A0;&#x5230;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#x4EE5;&#x540E;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x66F4;&#x65B0;&#x4F60;&#x9879;&#x76EE;&#x7684;<code>pubspec</code>&#x6587;&#x4EF6;&#x4EE5;&#x8BA9;&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;&#x4F60;&#x6DFB;&#x52A0;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5F15;&#x7528;&#x7684;&#x662F;&#x7F51;&#x7EDC;&#x56FE;&#x7247;&#x7684;&#x8BDD;&#x5C31;&#x4E0D;&#x7528;&#x66F4;&#x65B0;<code>pubspec</code>&#x6587;&#x4EF6;&#x4E86;&#x3002;</p>
+</blockquote>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#x90FD;&#x662F;<code>100px</code>&#x5BBD;&#xFF0C;&#x800C;&#x5176;&#x5BB9;&#x5668;&#xFF08;&#x5728;&#x8FD9;&#x91CC;&#x662F;&#x6574;&#x4E2A;&#x5C4F;&#x5E55;&#xFF09;&#x7684;&#x5BBD;&#x5EA6;&#x662F;&#x5927;&#x4E8E;<code>300px</code>&#x7684;&#xFF0C;&#x5C06;<code>mainAxis</code>&#x8BBE;&#x7F6E;&#x4E3A;<code>spaceEvently</code>&#x540E;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x8FD9;3&#x5F20;&#x56FE;&#x7247;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x5F20;&#x5728;&#x4E4B;&#x524D;&#x3001;&#x4E4B;&#x95F4;&#x3001;&#x4E4B;&#x540E;&#x5C06;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x7684;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#x81EA;&#x7531;&#x5212;&#x5206;&#x6389;&#xFF1A;</p>
+<pre><code class="lang-dart">Row(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+    Image.asset(<span class="hljs-string">&apos;images/pic1.jpg&apos;</span>),
+    Image.asset(<span class="hljs-string">&apos;images/pic2.jpg&apos;</span>),
+    Image.asset(<span class="hljs-string">&apos;images/pic3.jpg&apos;</span>),
+  ],
+);
+</code></pre>
+<p>&#x6548;&#x679C;&#x56FE;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-084826.png" alt="Row with 3 evenly spaced images"></p>
+<p><code>Column</code>&#x548C;<code>Row</code>&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x5DE5;&#x4F5C;&#x903B;&#x8F91;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x8FD9;3&#x5F20;&#x56FE;&#x7247;&#xFF0C;&#x6BCF;&#x4E00;&#x5F20;&#x7684;&#x9AD8;&#x5EA6;&#x662F;<code>100px</code>&#xFF0C;&#x800C;&#x5176;&#x5BB9;&#x5668;&#xFF08;&#x5728;&#x8FD9;&#x91CC;&#x662F;&#x6574;&#x4E2A;&#x5C4F;&#x5E55;&#xFF09;&#x7684;&#x9AD8;&#x5EA6;&#x5927;&#x4E8E;<code>300px</code>&#xFF0C;&#x5C06;<code>mainAxis</code>&#x8BBE;&#x7F6E;&#x4E3A;<code>spaceEvenly</code>&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x8FD9;3&#x5F20;&#x56FE;&#x7247;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x5F20;&#x5728;&#x4E4B;&#x4E0A;&#x3001;&#x4E4B;&#x95F4;&#x3001;&#x4E4B;&#x4E0B;&#x5C06;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x7684;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#x81EA;&#x7531;&#x5212;&#x5206;&#x6389;&#xFF1A;</p>
+<pre><code class="lang-dart">Column(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+    Image.asset(<span class="hljs-string">&apos;images/pic1.jpg&apos;</span>),
+    Image.asset(<span class="hljs-string">&apos;images/pic2.jpg&apos;</span>),
+    Image.asset(<span class="hljs-string">&apos;images/pic3.jpg&apos;</span>),
+  ],
+);
+</code></pre>
+<p>&#x6548;&#x679C;&#x56FE;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-085152.png" alt="Column showing 3 images spaced evenly"></p>
+<h4 id="&#x8BBE;&#x7F6E;widget&#x7684;&#x5C3A;&#x5BF8;">&#x8BBE;&#x7F6E;Widget&#x7684;&#x5C3A;&#x5BF8;</h4>
+<p>&#x5F53;&#x4E00;&#x4E2A;<code>layout</code>&#x7684;&#x5C3A;&#x5BF8;&#x592A;&#x5927;&#x4EE5;&#x81F3;&#x4E8E;&#x8D85;&#x8FC7;&#x4E86;&#x8BBE;&#x5907;&#x5C4F;&#x5E55;&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x8D85;&#x51FA;&#x7684;&#x5C4F;&#x5E55;&#x8FB9;&#x7F18;&#x4F1A;&#x51FA;&#x73B0;&#x9EC4;&#x8272;&#x548C;&#x9ED1;&#x8272;&#x6761;&#x7EB9;&#x56FE;&#x6848;&#xFF0C;&#x5C31;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-085627.png" alt="Overly-wide row">&#x3001;</p>
+<p>&#x5728;<code>Row</code>&#x6216;&#x8005;<code>Column</code>&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>Expanded</code> &#x8FD9;&#x4E2A;<code>Widget</code>&#x6765;&#x8BBE;&#x7F6E;&#x5B50;<code>Widget</code>&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x4E3A;&#x4E86;&#x4FEE;&#x590D;&#x4E0A;&#x56FE;&#x4E2D;&#x56FE;&#x50CF;&#x5C3A;&#x5BF8;&#x6BD4;&#x5176;&#x5BB9;&#x5668;&#x5C3A;&#x5BF8;&#x8FD8;&#x5927;&#x7684;&#x73B0;&#x8C61;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>Expanded</code>&#x6765;&#x5305;&#x88F9;&#x6BCF;&#x4E00;&#x4E2A;<code>Image Widget</code>&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x8FD9;&#x4E9B;&#x56FE;&#x7247;&#x5E73;&#x5747;&#x5206;&#x5272;&#x53EF;&#x7528;&#x7A7A;&#x95F4;&#x800C;&#x4E0D;&#x81F3;&#x4E8E;&#x5C3A;&#x5BF8;&#x592A;&#x5927;&#x5BFC;&#x81F4;&#x51FA;&#x73B0;&#x4E0A;&#x56FE;&#x5C3A;&#x5BF8;&#x8D8A;&#x754C;&#x7684;&#x95EE;&#x9898;&#xFF1A;</p>
+<pre><code class="lang-dart">Row(
+  crossAxisAlignment: CrossAxisAlignment.center,
+  children: [
+    Expanded(
+      child: Image.asset(<span class="hljs-string">&apos;images/pic1.jpg&apos;</span>),
+    ),
+    Expanded(
+      child: Image.asset(<span class="hljs-string">&apos;images/pic2.jpg&apos;</span>),
+    ),
+    Expanded(
+      child: Image.asset(<span class="hljs-string">&apos;images/pic3.jpg&apos;</span>),
+    ),
+  ],
+);
+</code></pre>
+<p>&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-085839.png" alt="Row of 3 images that are too wide, but each is constrained to take only 1/3 of the space"></p>
+<p>&#x6709;&#x65F6;&#x4F60;&#x4E5F;&#x8BB8;&#x60F3;&#x8BA9;&#x4E00;&#x4E2A;<code>Widget</code>&#x5360;&#x7528;&#x7684;&#x7A7A;&#x95F4;&#x662F;&#x5176;&#x76F8;&#x90BB;<code>Widget</code>&#x6240;&#x5360;&#x7A7A;&#x95F4;&#x7684;&#x4E24;&#x500D;&#xFF0C;&#x8FD9;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>Expanded Widget</code>&#x7684;<code>flex</code>&#x5C5E;&#x6027;&#xFF0C;&#x8BE5;&#x5C5E;&#x6027;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x7C7B;&#x578B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;1&#xFF0C;&#x8868;&#x793A;&#x5F53;&#x524D;<code>Expanded Widget</code>&#x6240;&#x5360;&#x7684;&#x6BD4;&#x4F8B;&#x3002;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x5C06;&#x4E2D;&#x95F4;&#x56FE;&#x50CF;&#x7684;&#x5F39;&#x6027;&#x7CFB;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A;2&#xFF1A;</p>
+<pre><code class="lang-dart">Row(
+  crossAxisAlignment: CrossAxisAlignment.center,
+  children: [
+    Expanded(
+      child: Image.asset(<span class="hljs-string">&apos;images/pic1.jpg&apos;</span>),
+    ),
+    Expanded(
+      flex: <span class="hljs-number">2</span>,
+      child: Image.asset(<span class="hljs-string">&apos;images/pic2.jpg&apos;</span>),
+    ),
+    Expanded(
+      child: Image.asset(<span class="hljs-string">&apos;images/pic3.jpg&apos;</span>),
+    ),
+  ],
+);
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x5176;&#x4ED6;&#x4E24;&#x4E2A;<code>Expanded</code>&#x9ED8;&#x8BA4;&#x522B;&#x7684;<code>flex</code>&#x4E3A;1&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x7EC8;&#x7684;&#x6548;&#x679C;&#x662F;&#x4E2D;&#x95F4;&#x56FE;&#x50CF;&#x7684;&#x5C3A;&#x5BF8;&#x662F;&#x4E24;&#x8FB9;&#x56FE;&#x50CF;&#x7684;2&#x500D;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-144548.png" alt="Row of 3 images with the middle image twice as wide as the others"></p>
+<h4 id="&#x4F7F;&#x5B50;widget&#x66F4;&#x52A0;&#x7D27;&#x5BC6;">&#x4F7F;&#x5B50;Widget&#x66F4;&#x52A0;&#x7D27;&#x5BC6;</h4>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;<code>Row</code>&#x6216;<code>Column</code>&#x4F1A;&#x5C3D;&#x53EF;&#x80FD;&#x5728;&#x4E3B;&#x8F74;&#x65B9;&#x5411;&#x5360;&#x636E;&#x5C3D;&#x53EF;&#x80FD;&#x591A;&#x7684;&#x53EF;&#x7528;&#x7A7A;&#x95F4;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#x5982;&#x679C;&#x53EF;&#x7528;&#x7A7A;&#x95F4;&#x5F88;&#x5927;&#x4F46;&#x662F;<code>Row</code>&#x6216;<code>Column</code>&#x4E2D;&#x7684;&#x5B50;<code>Widget</code>&#x5F88;&#x5C11;&#x65F6;&#x51FA;&#x73B0;&#x5B50;<code>Widget</code>&#x4E4B;&#x95F4;&#x8DDD;&#x79BB;&#x5F88;&#x5927;&#x7684;&#x60C5;&#x51B5;&#xFF08;&#x5206;&#x5E03;&#x5F88;&#x5206;&#x6563;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5E0C;&#x671B;&#x8BA9;<code>Row</code>&#x6216;<code>Column</code>&#x4E2D;&#x7684;&#x5B50;<code>Widget</code>&#x4EEC;&#x5C3D;&#x53EF;&#x80FD;&#x8FD1;&#x5730;&#x51FA;&#x73B0;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;<code>mainAxisSize</code>&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x4E3A;<code>MainAxisSize.min</code>&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x901A;&#x8FC7;&#x6B64;&#x5C5E;&#x6027;&#x7684;&#x8BBE;&#x7F6E;&#x5C06;&#x661F;&#x5F62;&#x56FE;&#x6807;&#x7D27;&#x5BC6;&#x5730;&#x653E;&#x7F6E;&#x5728;&#x4E86;&#x4E00;&#x8D77;&#xFF1A;</p>
+<pre><code class="lang-dart">Row(
+  mainAxisSize: MainAxisSize.min,
+  children: [
+    Icon(Icons.star, color: Colors.green[<span class="hljs-number">500</span>]),
+    Icon(Icons.star, color: Colors.green[<span class="hljs-number">500</span>]),
+    Icon(Icons.star, color: Colors.green[<span class="hljs-number">500</span>]),
+    Icon(Icons.star, color: Colors.black),
+    Icon(Icons.star, color: Colors.black),
+  ],
+)
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-145025.png" alt="Row of 5 stars, packed together in the middle of the row"></p>
+<h4 id="&#x5D4C;&#x5957;row&#x548C;column">&#x5D4C;&#x5957;Row&#x548C;Column</h4>
+<p><code>Flutter</code>&#x7684;&#x5E03;&#x5C40;&#x6846;&#x67B6;&#x5141;&#x8BB8;&#x4F60;&#x6839;&#x636E;&#x4F60;&#x7684;&#x9700;&#x8981;&#x4E0D;&#x9650;&#x91CF;&#x5730;&#x5728;<code>Row/Column</code>&#x4E2D;&#x5D4C;&#x5957;<code>Row/Column</code>&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x4E0B;&#x56FE;&#x4E2D;&#x7EA2;&#x8272;&#x6846;&#x5708;&#x51FA;&#x6765;&#x7684;&#x90E8;&#x5206;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-145332.png" alt="Screenshot of the pavlova app, with the ratings and icon rows outlined in red"></p>
+<p>&#x7EA2;&#x8272;&#x6846;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x7531;2&#x4E2A;<code>Row</code>&#x6784;&#x6210;&#x7684;&#xFF0C;&#x4E0A;&#x9762;&#x7684;<code>Row Widget</code>&#x5305;&#x542B;&#x4E86;5&#x4E2A;&#x661F;&#x661F;&#x548C;&#x4E00;&#x4E2A;&#x6570;&#x5B57;<code>Reviews</code>&#xFF0C;&#x5BF9;&#x5E94;&#x7684;<code>Widget</code>&#x6811;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-145527.png" alt="Ratings row widget tree"></p>
+<p>&#x5BF9;&#x5E94;&#x7684;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> stars = Row(
+  mainAxisSize: MainAxisSize.min,
+  children: [
+    Icon(Icons.star, color: Colors.green[<span class="hljs-number">500</span>]),
+    Icon(Icons.star, color: Colors.green[<span class="hljs-number">500</span>]),
+    Icon(Icons.star, color: Colors.green[<span class="hljs-number">500</span>]),
+    Icon(Icons.star, color: Colors.black),
+    Icon(Icons.star, color: Colors.black),
+  ],
+);
+
+<span class="hljs-keyword">final</span> ratings = Container(
+  padding: EdgeInsets.all(<span class="hljs-number">20</span>),
+  child: Row(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      stars,
+      Text(
+        <span class="hljs-string">&apos;170 Reviews&apos;</span>,
+        style: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.w800,
+          fontFamily: <span class="hljs-string">&apos;Roboto&apos;</span>,
+          letterSpacing: <span class="hljs-number">0.5</span>,
+          fontSize: <span class="hljs-number">20</span>,
+        ),
+      ),
+    ],
+  ),
+);
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x4E3B;&#x8981;&#x7684;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#x662F;5&#x4E2A;<code>Icon</code>(&#x7528;&#x4E8E;&#x5C55;&#x793A;&#x661F;&#x661F;)&#x548C;&#x4E00;&#x4E2A;<code>Text</code>(&#x7528;&#x4E8E;&#x5C55;&#x793A;&#x6570;&#x5B57;<code>+Reviews</code>)&#x3002;</p>
+<blockquote>
+<p>&#x63D0;&#x793A;&#xFF1A;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x7531;&#x4E8E;&#x5E03;&#x5C40;&#x7684;&#x5927;&#x91CF;&#x5D4C;&#x5957;&#x5BFC;&#x81F4;&#x7684;&#x5E03;&#x5C40;&#x4EE3;&#x7801;&#x6DF7;&#x4E71;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x6216;&#x8005;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;<code>Widget</code>&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x7684;<code>ratings</code>&#x3002;</p>
+</blockquote>
+<p>&#x6211;&#x4EEC;&#x518D;&#x6765;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x4E00;&#x884C;&#xFF0C;&#x8BE5;<code>Row Widget</code>&#x5305;&#x542B;&#x4E86;3&#x4E2A;<code>Column</code>&#xFF0C;&#x6BCF;&#x4E2A;<code>Column</code>&#x90FD;&#x5305;&#x542B;&#x6709;&#x4E00;&#x4E2A;<code>icon</code>&#x548C;2&#x884C;<code>Text</code>&#xFF0C;&#x5BF9;&#x5E94;&#x7684;<code>Widget</code>&#x6811;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-150205.png" alt="Icon widget tree"></p>
+<p>&#x5BF9;&#x5E94;&#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">final</span> descTextStyle = TextStyle(
+  color: Colors.black,
+  fontWeight: FontWeight.w800,
+  fontFamily: <span class="hljs-string">&apos;Roboto&apos;</span>,
+  letterSpacing: <span class="hljs-number">0.5</span>,
+  fontSize: <span class="hljs-number">18</span>,
+  height: <span class="hljs-number">2</span>,
+);
+
+<span class="hljs-comment">// &#x501F;&#x52A9;DefaultTextStyle.merge()&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Text&#x7684;&#x4E3B;&#x9898;&#x6837;&#x5F0F;</span>
+<span class="hljs-keyword">final</span> iconList = DefaultTextStyle.merge(
+  style: descTextStyle,
+  child: Container(
+    padding: EdgeInsets.all(<span class="hljs-number">20</span>),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Column(
+          children: [
+            Icon(Icons.kitchen, color: Colors.green[<span class="hljs-number">500</span>]),
+            Text(<span class="hljs-string">&apos;PREP:&apos;</span>),
+            Text(<span class="hljs-string">&apos;25 min&apos;</span>),
+          ],
+        ),
+        Column(
+          children: [
+            Icon(Icons.timer, color: Colors.green[<span class="hljs-number">500</span>]),
+            Text(<span class="hljs-string">&apos;COOK:&apos;</span>),
+            Text(<span class="hljs-string">&apos;1 hr&apos;</span>),
+          ],
+        ),
+        Column(
+          children: [
+            Icon(Icons.restaurant, color: Colors.green[<span class="hljs-number">500</span>]),
+            Text(<span class="hljs-string">&apos;FEEDS:&apos;</span>),
+            Text(<span class="hljs-string">&apos;4-6&apos;</span>),
+          ],
+        ),
+      ],
+    ),
+  ),
+);
+</code></pre>
+<p>&#x518D;&#x770B;&#x8FD9;&#x5F20;&#x56FE;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-145332.png" alt="Screenshot of the pavlova app, with the ratings and icon rows outlined in red"></p>
+<p>&#x6574;&#x4F53;&#x662F;&#x4E00;&#x4E2A;<code>Row</code>&#xFF0C;&#x5DE6;&#x8FB9;&#x662F;&#x4E00;&#x4E2A;<code>Column</code>&#xFF0C;&#x8BE5;<code>Column</code>&#x7531;&#x4E00;&#x4E2A;&#x6807;&#x9898;&#x6587;&#x5B57;&#x3001;&#x4E00;&#x4E2A;&#x6458;&#x8981;&#x6587;&#x5B57;&#x3001;&#x4EE5;&#x53CA;&#x7EA2;&#x8272;&#x6846;&#x4E2D;&#x7684;2&#x4E2A;<code>Row</code>&#x7EC4;&#x6210;&#xFF0C;&#x6240;&#x4EE5;&#x5DE6;&#x8FB9;&#x8FD9;&#x4E2A;<code>Column</code>&#x7684;&#x6574;&#x4F53;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">final</span> leftColumn = Container(
+  padding: EdgeInsets.fromLTRB(<span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">20</span>, <span class="hljs-number">20</span>),
+  child: Column(
+    children: [
+      titleText,<span class="hljs-comment">//&#x6807;&#x9898;(Strawberry Paova)</span>
+      subTitle,<span class="hljs-comment">//&#x6458;&#x8981;&#x6587;&#x5B57;(Pavlova is a....)</span>
+      ratings,<span class="hljs-comment">//&#x7EA2;&#x8272;&#x6846;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;Row</span>
+      iconList,<span class="hljs-comment">//&#x7EA2;&#x8272;&#x6846;&#x4E2D;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;Row</span>
+    ],
+  ),
+);
+</code></pre>
+<p>&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x628A;&#x5DE6;&#x8FB9;&#x7684;&#x8FD9;&#x4E2A;leftColumn&#x653E;&#x7F6E;&#x5728;&#x6574;&#x4E2A;&#x5E03;&#x5C40;&#x4E2D;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-dart">body: Center(
+  child: Container(
+    margin: EdgeInsets.fromLTRB(<span class="hljs-number">0</span>, <span class="hljs-number">40</span>, <span class="hljs-number">0</span>, <span class="hljs-number">30</span>),
+    height: <span class="hljs-number">600</span>,
+    child: Card(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: <span class="hljs-number">440</span>,
+            child: leftColumn,<span class="hljs-comment">//&#x5DE6;&#x8FB9;&#x7684;Column</span>
+          ),
+          mainImage,<span class="hljs-comment">//&#x53F3;&#x8FB9;&#x7684;&#x90A3;&#x4E2A;&#x56FE;&#x50CF;</span>
+        ],
+      ),
+    ),
+  ),
+),
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5DE6;&#x8FB9;&#x7684;<code>Column</code>&#x88AB;&#x6574;&#x4E2A;&#x653E;&#x7F6E;&#x5728;&#x4E86;&#x4E00;&#x4E2A;<code>Container Widget</code>&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x76EE;&#x7684;&#x662F;&#x901A;&#x8FC7;<code>Container</code>&#x6765;&#x8BBE;&#x7F6E;&#x8BE5;<code>Column</code>&#x7684;&#x5BBD;&#x5EA6;&#x3002;</p>
+<h3 id="&#x5E38;&#x7528;&#x7684;&#x5E03;&#x5C40;widget">&#x5E38;&#x7528;&#x7684;&#x5E03;&#x5C40;Widget</h3>
+<p><code>Flutter</code>&#x6709;&#x4E30;&#x5BCC;&#x7684;&#x5E03;&#x5C40;<code>Widget</code>&#x5E93;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E9B;&#x6700;&#x5E38;&#x7528;&#x7684;&#x5E03;&#x5C40;<code>Widget</code>&#x3002;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x4F60;&#x88AB;&#x4E00;&#x6574;&#x5F20;&#x5E03;&#x5C40;<code>Widget</code>&#x7684;&#x6E05;&#x5355;&#x5413;&#x5230;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x5217;&#x4E3E;&#x51FA;&#x4E86;&#x5E38;&#x89C1;&#x7684;&#x5E03;&#x5C40;<code>Widget</code>&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x8BA9;&#x4F60;&#x5FEB;&#x901F;&#x4E0A;&#x624B;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5E0C;&#x671B;&#x4E86;&#x89E3;&#x66F4;&#x591A;<code>Flutter</code>&#x4E2D;&#x7684;&#x5E03;&#x5C40;<code>Widget</code>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x9605;&#x8BFB;&#x5B98;&#x65B9;&#x7684;<code>Widget</code>&#x6587;&#x6863;&#xFF08;&#x5730;&#x5740;&#xFF1A;<code>https://flutter.dev/docs/development/ui/widgets</code>&#xFF09;&#x3002;
+&#x4EE5;&#x4E0B;&#x5C0F;&#x90E8;&#x4EF6;&#x5206;&#x4E3A;&#x4E24;&#x7C7B;&#xFF1A;&#x6765;&#x81EA;<code>Widget</code>&#x5E93;&#x7684;&#x6807;&#x51C6;<code>Widget</code>&#x548C;&#x6765;&#x81EA;<code>Material</code>&#x5E93;&#x7684;&#x4E13;&#x7528;<code>Widget</code>&#x3002;&#x4EFB;&#x4F55;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x7684;<code>Widget</code>&#x5E93;&#xFF0C;&#x4F46;&#x53EA;&#x6709;<code>Material</code>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>Material</code>&#x5E93;&#x4E2D;&#x7684;<code>Widget</code>&#x3002;</p>
+<h4 id="&#x6807;&#x51C6;widget">&#x6807;&#x51C6;Widget</h4>
+<ul>
+<li><code>Container</code>&#xFF1A;&#x4E3A;&#x4E00;&#x4E2A;<code>Widget</code>&#x6DFB;&#x52A0;&#x5411;&#x5C0F;&#x90E8;&#x4EF6;&#x6DFB;&#x52A0;&#x586B;&#x5145;&#xFF08;<code>padding</code>&#xFF09;&#x3001;&#x9875;&#x8FB9;&#x8DDD;&#xFF08;<code>margin</code>&#xFF09;&#x3001;&#x8FB9;&#x6846;&#xFF08;<code>border</code>&#xFF09;&#x3001;&#x80CC;&#x666F;&#x8272;&#xFF08;<code>background color</code>&#xFF09;&#x7B49;</li>
+<li><code>GridView</code>&#xFF1A;&#x5728;&#x4E00;&#x4E2A;&#x53EF;&#x6EDA;&#x52A8;&#x7684;&#x7F51;&#x683C;&#x4E2D;&#x653E;&#x7F6E;&#x5B50;<code>Widget</code></li>
+<li><code>ListView</code>&#xFF1A;&#x5728;&#x4E00;&#x4E2A;&#x53EF;&#x6EDA;&#x52A8;&#x7684;&#x5217;&#x8868;&#x4E2D;&#x653E;&#x7F6E;&#x5B50;<code>Widget</code></li>
+<li><code>Stack</code>&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;Widget&#x91CD;&#x53E0;&#x5728;&#x53E6;&#x4E00;&#x4E2A;<code>Widget</code>&#x4E4B;&#x4E0A;</li>
+</ul>
+<h4 id="material&#x98CE;&#x683C;&#x7684;widget">Material&#x98CE;&#x683C;&#x7684;Widget</h4>
+<ul>
+<li><code>Card</code>&#xFF1A;&#x5C06;&#x76F8;&#x5173;&#x5185;&#x5BB9;&#x5E03;&#x5C40;&#x5230;&#x5177;&#x6709;&#x5706;&#x89D2;&#x548C;&#x9634;&#x5F71;&#x7684;&#x6846;&#x4E2D;&#x3002;</li>
+<li><code>ListTile</code>&#xFF1A;&#x6700;&#x591A;&#x5C06;3&#x884C;&#x6587;&#x672C;&#xFF08;<code>text</code>&#xFF09;&#x4EE5;&#x53CA;&#x53EF;&#x9009;&#x7684;&#x524D;&#x5BFC;&#xFF08;<code>leading</code>&#xFF09;&#x548C;&#x5C3E;&#x968F;&#x56FE;&#x6807;&#xFF08;<code>trailing icon</code>&#xFF09;&#x5E03;&#x5C40;&#x5230;&#x4E00;&#x884C;&#x3002;</li>
+</ul>
+<h4 id="container">Container</h4>
+<p>&#x8BB8;&#x591A;&#x5E03;&#x5C40;&#x90FD;&#x5145;&#x5206;&#x5229;&#x7528;<code>Container</code>&#x6765;&#x7684;<code>padding</code>&#x5C5E;&#x6027;&#x6765;&#x6DFB;&#x52A0;&#x586B;&#x5145;&#xFF0C;&#x6216;&#x8005;&#x5176;<code>border</code>&#x5C5E;&#x6027;&#x6DFB;&#x52A0;&#x8FB9;&#x6846;&#x6216;&#x5229;&#x7528;<code>margin</code>&#x5C5E;&#x6027;&#x6DFB;&#x52A0;&#x9875;&#x8FB9;&#x8DDD;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C06;&#x6574;&#x4E2A;&#x5E03;&#x5C40;&#x653E;&#x7F6E;&#x5230;<code>Container</code>&#x4E2D;&#x5E76;&#x66F4;&#x6539;&#x5176;&#x80CC;&#x666F;&#x8272;&#x6216;&#x80CC;&#x666F;&#x56FE;&#x50CF;&#x6765;&#x66F4;&#x6539;&#x5C4F;&#x5E55;&#x7684;&#x80CC;&#x666F;&#x3002;</p>
+<h5 id="container&#x603B;&#x7ED3;">Container&#x603B;&#x7ED3;</h5>
+<ul>
+<li>&#x6DFB;&#x52A0;&#x586B;&#x5145;(<code>padding</code>)&#x3001;&#x9875;&#x8FB9;&#x8DDD;(<code>margin</code>)&#x3001;&#x8FB9;&#x6846;(<code>border</code>)</li>
+<li>&#x6539;&#x53D8;&#x80CC;&#x666F;&#x8272;&#x6216;&#x8005;&#x80CC;&#x666F;&#x56FE;&#x7247;</li>
+<li>&#x5305;&#x88F9;&#x5355;&#x4E2A;&#x7B80;&#x5355;&#x7684;<code>Widget</code>&#x6216;&#x8005;&#x50CF;<code>Row</code>&#x3001;<code>Column</code>&#x8FD9;&#x6837;&#x590D;&#x6742;&#x7684;<code>Widget</code>&#xFF0C;&#x751A;&#x81F3;&#x5305;&#x88F9;<code>Widget</code>&#x6811;&#x7684;&#x6839;<code>Widget</code></li>
+</ul>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-153057.png" alt="Diagram showing: margin, border, padding, and content"></p>
+<h5 id="container&#x5B9E;&#x4F8B;">Container&#x5B9E;&#x4F8B;</h5>
+<p>&#x4E0B;&#x9762;&#x7684;&#x8FD9;&#x4E2A;&#x5E03;&#x5C40;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E2A;<code>Column</code>&#xFF0C;&#x8FD9;&#x4E2A;<code>Column</code>&#x4E2D;&#x5305;&#x542B;&#x4E86;2&#x4E2A;<code>Row</code>&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;Row<code>&#x5305;&#x542B;&#x4E86;</code>2&#x4E2A;<code>Image</code>&#xFF0C;&#x4F7F;&#x7528;<code>Container</code>&#x8FBE;&#x5230;&#x4E86;&#x5C06;<code>Column</code>&#x7684;&#x80CC;&#x666F;&#x989C;&#x8272;&#x6539;&#x4E3A;&#x4EAE;&#x7070;&#x8272;&#x7684;&#x76EE;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-dart">Widget _buildImageColumn() =&gt; Container(
+      decoration: BoxDecoration(
+        color: Colors.black26,
+      ),
+      child: Column(
+        children: [
+          _buildImageRow(<span class="hljs-number">1</span>),
+          _buildImageRow(<span class="hljs-number">3</span>),
+        ],
+      ),
+    );
+</code></pre>
+<p>&#x6548;&#x679C;&#x56FE;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-153347.png" alt="Screenshot showing 2 rows, each containing 2 images"></p>
+<p>&#x540C;&#x6837;&#x4E5F;&#x53EF;&#x4EE5;&#x501F;&#x52A9;<code>Container</code>&#x6765;&#x5B9E;&#x73B0;&#x4E3A;&#x6BCF;&#x4E2A;<code>Image</code>&#x6DFB;&#x52A0;&#x5706;&#x5F62;&#x8FB9;&#x6846;&#x548C;&#x9875;&#x8FB9;&#x8DDD;&#xFF1A;</p>
+<pre><code class="lang-dart">Widget _buildDecoratedImage(<span class="hljs-built_in">int</span> imageIndex) =&gt; Expanded(
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(width: <span class="hljs-number">10</span>, color: Colors.black38),
+          borderRadius: <span class="hljs-keyword">const</span> BorderRadius.all(<span class="hljs-keyword">const</span> Radius.circular(<span class="hljs-number">8</span>)),
+        ),
+        margin: <span class="hljs-keyword">const</span> EdgeInsets.all(<span class="hljs-number">4</span>),
+        child: Image.asset(<span class="hljs-string">&apos;images/pic$imageIndex.jpg&apos;</span>),
+      ),
+    );
+
+Widget _buildImageRow(<span class="hljs-built_in">int</span> imageIndex) =&gt; Row(
+      children: [
+        _buildDecoratedImage(imageIndex),
+        _buildDecoratedImage(imageIndex + <span class="hljs-number">1</span>),
+      ],
+    );
+</code></pre>
+<h4 id="gridview">GridView</h4>
+<p>&#x4F7F;&#x7528;<code>GridView</code>&#x53EF;&#x4EE5;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x7684;&#x5217;&#x8868;&#xFF0C;<code>GridView</code>&#x9ED8;&#x8BA4;&#x63D0;&#x4F9B;&#x4E24;&#x4E2A;&#x5217;&#xFF0C;&#x5F53;&#x7136;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x6784;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7F51;&#x683C;&#x3002;&#x5F53;<code>GridView</code>&#x68C0;&#x6D4B;&#x5230;&#x5B83;&#x7684;&#x5185;&#x5BB9;&#x592A;&#x957F;&#x65F6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x8FDB;&#x884C;&#x6EDA;&#x52A8;&#x3002;</p>
+<h5 id="gridview&#x603B;&#x7ED3;">GridView&#x603B;&#x7ED3;</h5>
+<ul>
+<li>&#x5C06;<code>Widget</code>&#x5E03;&#x5C40;&#x5728;&#x7F51;&#x683C;&#x4E2D;</li>
+<li>&#x68C0;&#x6D4B;&#x5217;&#x5185;&#x5BB9;&#x4F55;&#x65F6;&#x8D85;&#x51FA;&#x53EF;&#x89C1;&#x6846;&#xFF0C;&#x5E76;&#x81EA;&#x52A8;&#x63D0;&#x4F9B;&#x6EDA;&#x52A8;</li>
+<li>&#x6784;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7F51;&#x683C;&#xFF0C;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;&#x7F51;&#x683C;&#xFF1A;<ul>
+<li><code>GridView.count</code>&#x5141;&#x8BB8;&#x4F60;&#x8BBE;&#x7F6E;&#x7F51;&#x683C;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x5217;</li>
+<li><code>GridView.extent</code>&#x5141;&#x8BB8;&#x4F60;&#x8BBE;&#x7F6E;tile&#x7684;&#x6700;&#x5927;&#x50CF;&#x7D20;</li>
+</ul>
+</li>
+</ul>
+<h5 id="gridview&#x5B9E;&#x4F8B;">GridView&#x5B9E;&#x4F8B;</h5>
+<p>&#x4F7F;&#x7528;<code>GridView.extent</code> &#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>tile</code>&#x6700;&#x5927;&#x4E3A;<code>150px</code>&#x7684;&#x7F51;&#x683C;&#xFF1A;</p>
+<pre><code class="lang-dart">Widget _buildGrid() =&gt; GridView.extent(
+    maxCrossAxisExtent: <span class="hljs-number">150</span>,
+    padding: <span class="hljs-keyword">const</span> EdgeInsets.all(<span class="hljs-number">4</span>),
+    mainAxisSpacing: <span class="hljs-number">4</span>,
+    crossAxisSpacing: <span class="hljs-number">4</span>,
+    children: _buildGridTileList(<span class="hljs-number">30</span>));
+
+<span class="hljs-comment">// The images are saved with names pic0.jpg, pic1.jpg...pic29.jpg.</span>
+<span class="hljs-comment">// The List.generate() constructor allows an easy way to create</span>
+<span class="hljs-comment">// a list when objects have a predictable naming pattern.</span>
+<span class="hljs-built_in">List</span>&lt;Container&gt; _buildGridTileList(<span class="hljs-built_in">int</span> count) =&gt; <span class="hljs-built_in">List</span>.generate(
+    count, (i) =&gt; Container(child: Image.asset(<span class="hljs-string">&apos;images/pic$i.jpg&apos;</span>)));
+</code></pre>
+<p>&#x6548;&#x679C;&#x56FE;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-154242.png" alt="A 3-column grid of photos"></p>
+<h4 id="listview">ListView</h4>
+<p><code>ListView</code>&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x591A;&#x884C;&#x7684;<code>Widget</code>&#xFF0C;&#x5F53;&#x5185;&#x5BB9;&#x591A;&#x5230;&#x5176;&#x5BB9;&#x5668;&#x4E0D;&#x80FD;&#x4E00;&#x6B21;&#x6027;&#x663E;&#x793A;&#x5B8C;&#x5168;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x81EA;&#x52A8;&#x63D0;&#x4F9B;&#x6EDA;&#x52A8;&#x673A;&#x5236;&#x3002;</p>
+<h5 id="listview&#x603B;&#x7ED3;">ListView&#x603B;&#x7ED3;</h5>
+<ul>
+<li>&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x5217;&#x8868;&#x6846;&#x7684;<code>Widget</code></li>
+<li>&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;&#x6C34;&#x5E73;&#x6216;&#x5782;&#x76F4;&#x6EDA;&#x52A8;</li>
+<li>&#x5F53;&#x5185;&#x5BB9;&#x7684;&#x5C3A;&#x5BF8;&#x6BD4;&#x5BB9;&#x5668;&#x7684;&#x5C3A;&#x5BF8;&#x5927;&#x65F6;&#x4F1A;&#x63D0;&#x4F9B;&#x6EDA;&#x52A8;&#x673A;&#x5236;</li>
+<li>&#x76F8;&#x6BD4;&#x4E8E;<code>Column</code>&#x914D;&#x7F6E;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#xFF0C;&#x800C;&#x4E14;&#x4F7F;&#x7528;&#x6EDA;&#x52A8;&#x673A;&#x5236;&#x4F1A;&#x66F4;&#x65B9;&#x4FBF;</li>
+</ul>
+<h5 id="listview&#x5B9E;&#x4F8B;">ListView&#x5B9E;&#x4F8B;</h5>
+<p>&#x4F7F;&#x7528;<code>ListView</code>&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x4F01;&#x4E1A;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-dart">Widget _buildList() =&gt; ListView(
+      children: [
+        _tile(<span class="hljs-string">&apos;CineArts at the Empire&apos;</span>, <span class="hljs-string">&apos;85 W Portal Ave&apos;</span>, Icons.theaters),
+        _tile(<span class="hljs-string">&apos;The Castro Theater&apos;</span>, <span class="hljs-string">&apos;429 Castro St&apos;</span>, Icons.theaters),
+        _tile(<span class="hljs-string">&apos;Alamo Drafthouse Cinema&apos;</span>, <span class="hljs-string">&apos;2550 Mission St&apos;</span>, Icons.theaters),
+        _tile(<span class="hljs-string">&apos;Roxie Theater&apos;</span>, <span class="hljs-string">&apos;3117 16th St&apos;</span>, Icons.theaters),
+        _tile(<span class="hljs-string">&apos;United Artists Stonestown Twin&apos;</span>, <span class="hljs-string">&apos;501 Buckingham Way&apos;</span>,
+            Icons.theaters),
+        _tile(<span class="hljs-string">&apos;AMC Metreon 16&apos;</span>, <span class="hljs-string">&apos;135 4th St #3000&apos;</span>, Icons.theaters),
+        Divider(),
+        _tile(<span class="hljs-string">&apos;Kescaped_code#39;s Kitchen&apos;</span>, <span class="hljs-string">&apos;757 Monterey Blvd&apos;</span>, Icons.restaurant),
+        _tile(<span class="hljs-string">&apos;Emmyescaped_code#39;s Restaurant&apos;</span>, <span class="hljs-string">&apos;1923 Ocean Ave&apos;</span>, Icons.restaurant),
+        _tile(
+            <span class="hljs-string">&apos;Chaiya Thai Restaurant&apos;</span>, <span class="hljs-string">&apos;272 Claremont Blvd&apos;</span>, Icons.restaurant),
+        _tile(<span class="hljs-string">&apos;La Ciccia&apos;</span>, <span class="hljs-string">&apos;291 30th St&apos;</span>, Icons.restaurant),
+      ],
+    );
+
+ListTile _tile(<span class="hljs-built_in">String</span> title, <span class="hljs-built_in">String</span> subtitle, IconData icon) =&gt; ListTile(
+      title: Text(title,
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: <span class="hljs-number">20</span>,
+          )),
+      subtitle: Text(subtitle),
+      leading: Icon(
+        icon,
+        color: Colors.blue[<span class="hljs-number">500</span>],
+      ),
+    );
+</code></pre>
+<p>&#x5BF9;&#x5E94;&#x6548;&#x679C;&#x56FE;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-155130.png" alt="ListView containing movie theaters and restaurants"></p>
+<h4 id="stack">Stack</h4>
+<p>&#x4F7F;&#x7528;<code>stack</code>&#x5728;&#x57FA;<code>Widget</code>&#xFF08;&#x901A;&#x5E38;&#x662F;<code>Image</code>&#xFF09;&#x4E0A;&#x6392;&#x5217;<code>Widget</code>&#x3002;<code>Widget</code>&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x6216;&#x90E8;&#x5206;&#x5730;&#x4E0E;&#x57FA;<code>Widget</code>&#x91CD;&#x53E0;&#x3002;</p>
+<h5 id="stack&#x603B;&#x7ED3;">Stack&#x603B;&#x7ED3;</h5>
+<ul>
+<li>&#x5F53;&#x4E00;&#x4E2A;<code>Widget</code>&#x9700;&#x8981;&#x4F4D;&#x4E8E;&#x53E6;&#x4E00;&#x4E2A;<code>Widget</code>&#x7684;&#x4E0A;&#x5C42;&#x65F6;&#x4F7F;&#x7528;</li>
+<li>&#x5B50;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;<code>Widget</code>&#x662F;&#x57FA;<code>Widget</code>&#xFF0C;&#x4E4B;&#x540E;&#x7684;&#x5B50;<code>Widget</code>&#x8986;&#x76D6;&#x5728;&#x8BE5;&#x57FA;<code>Widget</code>&#x7684;&#x9876;&#x90E8;&#x3002;</li>
+<li>&#x5806;&#x6808;&#x7684;&#x5185;&#x5BB9;&#x65E0;&#x6CD5;&#x6EDA;&#x52A8;</li>
+<li>&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5207;&#x5272;&#x8D85;&#x51FA;&#x6E32;&#x67D3;&#x6846;&#x7684;&#x5B50;<code>Widget</code></li>
+</ul>
+<h5 id="stack&#x5B9E;&#x4F8B;">Stack&#x5B9E;&#x4F8B;</h5>
+<p>&#x501F;&#x52A9;<code>Stack</code>&#x5B9E;&#x73B0;&#x5C06;&#x4E00;&#x4E2A;<code>Container</code>&#xFF08;&#x5728;&#x534A;&#x900F;&#x660E;&#x9ED1;&#x8272;&#x80CC;&#x666F;&#x4E0A;&#x663E;&#x793A;<code>text</code>&#xFF09;&#x8986;&#x76D6;&#x5728;<code>CircleAvatar</code>&#x7684;&#x9876;&#x90E8;&#xFF1A;</p>
+<pre><code class="lang-dart">Widget _buildStack() =&gt; Stack(
+    alignment: <span class="hljs-keyword">const</span> Alignment(<span class="hljs-number">0.6</span>, <span class="hljs-number">0.6</span>),
+    children: [
+      CircleAvatar(
+        backgroundImage: AssetImage(<span class="hljs-string">&apos;images/pic.jpg&apos;</span>),
+        radius: <span class="hljs-number">100</span>,
+      ),
+      Container(
+        decoration: BoxDecoration(
+          color: Colors.black45,
+        ),
+        child: Text(
+          <span class="hljs-string">&apos;Mia B&apos;</span>,
+          style: TextStyle(
+            fontSize: <span class="hljs-number">20</span>,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+      ),
+    ],
+  );
+</code></pre>
+<p>&#x6548;&#x679C;&#x56FE;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-155610.png" alt="Circular avatar image with a label"></p>
+<h4 id="card">Card</h4>
+<p>&#x6765;&#x81EA;<code>Material</code>&#x5E93;&#x7684;<code>Card Widget</code>&#x7528;&#x6765;&#x5305;&#x88F9;&#x76F8;&#x5173;&#x7684;&#x4FE1;&#x606F;&#x5757;&#xFF0C;&#x88AB;&#x5305;&#x88F9;&#x7684;&#x4FE1;&#x606F;&#x5757;&#x53EF;&#x4EE5;&#x7531;&#x51E0;&#x4E4E;&#x4EFB;&#x4F55;<code>Widget</code>&#x7EC4;&#x6210;&#xFF0C;&#x4F46;&#x901A;&#x5E38;&#x4E0E;<code>ListTile</code>&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;<code>Card</code>&#x53EA;&#x6709;&#x4E00;&#x4E2A;<code>child</code>&#x5C5E;&#x6027;&#xFF0C;&#x5373;&#x88AB;&#x5305;&#x88F9;&#x7684;<code>Widget</code>&#xFF0C;&#x4F46;&#x5B83;&#x7684;&#x8FD9;&#x4E2A;<code>child</code>&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x652F;&#x6301;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x5B50;<code>Widget</code>&#x7684;<code>Row</code>&#x3001;<code>Column</code>&#x3001;<code>ListView</code>&#x3001;<code>GridView</code>&#x7684;<code>Widget</code>&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x8BBE;&#x7F6E;<code>Card</code>&#x7684;<code>child</code>&#x5C5E;&#x6027;&#xFF0C;&#x5373;&#x4E0D;&#x88AB;&#x8BBE;&#x7F6E;<code>Card</code>&#x5305;&#x88F9;&#x7684;<code>Widget</code>&#xFF0C;<code>Card</code>&#x7684;&#x5927;&#x5C0F;&#x5C06;&#x7F29;&#x5C0F;&#x5230;0 x 0&#x50CF;&#x7D20;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>sizedbox</code>&#x9650;&#x5236;<code>Card</code>&#x7684;&#x5927;&#x5C0F;&#x3002;
+&#x5728;<code>Flutter</code>&#x4E2D;&#xFF0C;&#x4E00;&#x4E2A;<code>Card</code>&#x9ED8;&#x8BA4;&#x6709;&#x8F7B;&#x5FAE;&#x7684;&#x5706;&#x89D2;&#x548C;&#x9634;&#x5F71;&#xFF0C;&#x8FD9;&#x6837;&#x4F7F;&#x5176;&#x5177;&#x6709;<code>3D</code>&#x6548;&#x679C;&#x3002;&#x66F4;&#x6539;<code>Card</code>&#x7684;<code>Elevation</code>&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x9634;&#x5F71;&#x7684;&#x6548;&#x679C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5C06;<code>&#x201C;elevation&#x201D;</code>&#x8BBE;&#x7F6E;&#x4E3A;24&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;&#x89C6;&#x89C9;&#x4E0A;&#x5C06;<code>Card</code>&#x63D0;&#x5347;&#x5230;&#x79BB;&#x8868;&#x9762;&#x66F4;&#x8FDC;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x4F7F;&#x9634;&#x5F71;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x5206;&#x6563;&#x3002;</p>
+<h5 id="card&#x603B;&#x7ED3;">Card&#x603B;&#x7ED3;</h5>
+<ul>
+<li><code>Material Card</code>&#x7684;&#x5B9E;&#x73B0;&#x7C7B;</li>
+<li>&#x7528;&#x4E8E;&#x5448;&#x73B0;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x5757;</li>
+<li>&#x63A5;&#x53D7;&#x5355;&#x4E2A;&#x5B50;&#x9879;&#xFF0C;&#x4F46;&#x8BE5;&#x5B50;&#x9879;&#x53EF;&#x4EE5;&#x662F;<code>Row</code>&#x3001;<code>Column</code>&#x6216;&#x5176;&#x4ED6;&#x5305;&#x542B;&#x5B50;&#x9879;&#x5217;&#x8868;&#x7684;<code>Widget</code></li>
+<li>&#x663E;&#x793A;&#x5706;&#x89D2;&#x548C;&#x9634;&#x5F71;</li>
+<li><code>Card</code>&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x65E0;&#x6CD5;&#x6EDA;&#x52A8;</li>
+<li>&#x6765;&#x81EA;&#x4E8E;<code>Material</code>&#x5E93;</li>
+</ul>
+<h5 id="card&#x5B9E;&#x4F8B;">Card&#x5B9E;&#x4F8B;</h5>
+<p>&#x4F7F;&#x7528;&#x4E00;&#x4E2A;SizedBox&#x5305;&#x88F9;&#x7684;&#x5305;&#x542B;3&#x4E2A;&#x5217;&#x8868;&#x5757;&#x7684;Card&#xFF0C;Card&#x4E2D;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;Divider&#x5C06;&#x7B2C;1&#x4E2A;&#x548C;&#x540E;2&#x4E2A;&#x5217;&#x8868;&#x5757;&#x5206;&#x5272;&#x5F00;&#xFF1A;</p>
+<pre><code class="lang-dart">Widget _buildCard() =&gt; SizedBox(
+    height: <span class="hljs-number">210</span>,
+    child: Card(
+      child: Column(
+        children: [
+          ListTile(
+            title: Text(<span class="hljs-string">&apos;1625 Main Street&apos;</span>,
+                style: TextStyle(fontWeight: FontWeight.w500)),
+            subtitle: Text(<span class="hljs-string">&apos;My City, CA 99984&apos;</span>),
+            leading: Icon(
+              Icons.restaurant_menu,
+              color: Colors.blue[<span class="hljs-number">500</span>],
+            ),
+          ),
+          Divider(),
+          ListTile(
+            title: Text(<span class="hljs-string">&apos;(408) 555-1212&apos;</span>,
+                style: TextStyle(fontWeight: FontWeight.w500)),
+            leading: Icon(
+              Icons.contact_phone,
+              color: Colors.blue[<span class="hljs-number">500</span>],
+            ),
+          ),
+          ListTile(
+            title: Text(<span class="hljs-string">&apos;costa@example.com&apos;</span>),
+            leading: Icon(
+              Icons.contact_mail,
+              color: Colors.blue[<span class="hljs-number">500</span>],
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+</code></pre>
+<p>&#x6548;&#x679C;&#x56FE;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-160721.png" alt="Card containing 3 ListTiles"></p>
+<h4 id="listtile">ListTile</h4>
+<p><code>ListTile</code>&#x662F;&#x4E00;&#x4E2A;<code>Material</code>&#x5E93;&#x4E2D;&#x7684;&#x7279;&#x6B8A;&#x884C;(<code>Row</code>)&#xFF0C;&#x8BE5;<code>Widget</code>&#x7684;&#x7279;&#x6027;&#x662F;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x5730;&#x521B;&#x5EFA;&#x6700;&#x591A;&#x5305;&#x62EC;3&#x884C;<code>Text</code>&#x548C;&#x53EF;&#x9009;&#x5F15;&#x5BFC;&#xFF08;<code>leading</code>&#xFF09;&#x3001;&#x53EF;&#x9009;&#x5C3E;&#x6807;&#xFF08;<code>trailing icon</code>&#xFF09;&#x7684;<code>widget</code>&#x3002;<code>ListTile</code>&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x88AB;&#x7528;&#x5728;<code>Card</code>&#x6216;&#x8005;<code>ListView</code>&#x4E2D;&#x3002;</p>
+<h5 id="listtile&#x603B;&#x7ED3;">ListTile&#x603B;&#x7ED3;</h5>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;<code>Row</code>&#xFF0C;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x6700;&#x591A;3&#x884C;<code>Text</code>&#x4EE5;&#x53CA;&#x5F15;&#x5BFC;&#x3001;&#x5C3E;&#x6807;</li>
+<li>&#x6BD4;<code>Row</code>&#x66F4;&#x6613;&#x914D;&#x7F6E;&#xFF0C;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x66F4;&#x7B80;&#x5355;</li>
+<li>&#x662F;<code>Material</code>&#x5E93;&#x4E2D;&#x7684;<code>Widget</code></li>
+</ul>
+<h5 id="listtile&#x5B9E;&#x4F8B;">ListTile&#x5B9E;&#x4F8B;</h5>
+<p>&#x4E0A;&#x9762;Card&#x4E2D;&#x7684;&#x5B9E;&#x4F8B;&#x5C31;&#x662F;&#x8D64;&#x88F8;&#x88F8;&#x7684;<code>ListTile</code>&#x7684;&#x4F7F;&#x7528;&#xFF1A;</p>
+<p><img src="http://picture-pool.oss-cn-beijing.aliyuncs.com/2019-06-09-161102.png" alt="Card containing 3 ListTiles"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="布局教程.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 布局实例教程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"在Flutter中构建布局","level":"1.3.2.1","depth":3,"next":{"title":"布局实例教程","level":"1.3.2.2","depth":3,"path":"chapter2-user-interface/Building-layouts/布局教程.md","ref":"chapter2-user-interface/Building-layouts/布局教程.md","articles":[]},"previous":{"title":"构建布局","level":"1.3.2","depth":2,"ref":"","articles":[{"title":"在Flutter中构建布局","level":"1.3.2.1","depth":3,"path":"chapter2-user-interface/Building-layouts/在Flutter中构建布局.md","ref":"chapter2-user-interface/Building-layouts/在Flutter中构建布局.md","articles":[]},{"title":"布局实例教程","level":"1.3.2.2","depth":3,"path":"chapter2-user-interface/Building-layouts/布局教程.md","ref":"chapter2-user-interface/Building-layouts/布局教程.md","articles":[]},{"title":"Flutter中的盒约束","level":"1.3.2.3","depth":3,"path":"chapter2-user-interface/Building-layouts/处理盒约束.md","ref":"chapter2-user-interface/Building-layouts/处理盒约束.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2-user-interface/Building-layouts/在Flutter中构建布局.md","mtime":"2019-06-09T16:14:37.962Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-10T14:21:30.740Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
